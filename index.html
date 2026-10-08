@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>TKY Dungeon</title>
+  <style>
+    :root { color-scheme: dark; background: #000; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; min-height: 100%; margin: 0; }
+    body { background: #000; overflow: hidden; }
+    .intro {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: #000;
+      isolation: isolate;
+    }
+    .intro__logo {
+      display: block;
+      width: min(90vw, 90vh, 760px);
+      height: auto;
+      max-height: 90vh;
+      object-fit: contain;
+      opacity: 0;
+      animation: logo-reveal 1.5s ease-in-out 2s forwards;
+    }
+    @keyframes logo-reveal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .intro__logo { animation-duration: 0.01ms; }
+    }
+  </style>
+</head>
+<body>
+  <main class="intro" aria-label="TKY Dungeon スプラッシュ画面">
+    <img class="intro__logo" src="./assets/tky-games-logo.png" alt="TKY GAMES ロゴ" width="1254" height="1254">
+  </main>
+</body>
+</html>
