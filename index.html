@@ -83,7 +83,7 @@
     }
 
     /* 完全に不透明な霧を挟んでから、背景を切り替える。 */
-    .smoke-layer::after {
+    .smoke-layer.fallback::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -91,19 +91,18 @@
       opacity: 0;
       transition: opacity 0.8s ease-in-out;
     }
-    body.fog-cover .smoke-layer::after { opacity: 1; }
-    body.fog-switched .smoke-layer::after { opacity: 1; transition: none; }
-    body.fog-clear .smoke-layer {
-      opacity: 0;
-      transition: opacity 1.7s ease-in-out;
-    }
+    body.fog-cover .smoke-layer.fallback::after { opacity: 1; }
+    body.fog-switched .smoke-layer.fallback::after { opacity: 1; transition: none; }
     .smoke-layer.fallback {
       background: linear-gradient(to top, #c7ced3, #aebbc400);
       opacity: 0;
       transition: opacity 2.7s ease-in;
     }
     body.smoke-start .smoke-layer.fallback { opacity: 1; }
-    body.fog-clear .smoke-layer.fallback { opacity: 0; }
+    body.fog-clear .smoke-layer.fallback {
+      opacity: 0;
+      transition: opacity 3.2s ease-out;
+    }
 
     /* ===== Start Screen ===== */
     .main-screen {
@@ -190,7 +189,7 @@
       const canvas = document.getElementById("smokeCanvas");
       const layer = canvas.parentElement;
       if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        return { start() {}, stop() {} };
+        return { start() {}, clear() {}, stop() {} };
       }
       const gl = canvas.getContext("webgl", {
         alpha: true, premultipliedAlpha: false, antialias: false,
@@ -199,7 +198,7 @@
       const fallback = () => {
         layer.classList.add("fallback");
         canvas.hidden = true;
-        return { start() {}, stop() {} };
+        return { start() {}, clear() {}, stop() {} };
       };
       if (!gl) return fallback();
 
@@ -228,6 +227,7 @@
           varying vec2 uv;
           uniform vec2 resolution;
           uniform float time;
+          uniform float clearing;
           float hash(vec2 p) {
             p = mod(p, 289.0);
             return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
@@ -240,7 +240,7 @@
           }
           float fbm(vec2 p) {
             float value = 0.0, amplitude = 0.5;
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 4; i++) {
               value += amplitude * noise(p);
               p = mat2(0.8, -0.6, 0.6, 0.8) * p * 2.03 + 7.1;
               amplitude *= 0.5;
@@ -250,27 +250,33 @@
           void main() {
             float t = time;
             vec2 p = vec2(uv.x * resolution.x / resolution.y, uv.y);
-            // 横に長い層を異なる速度で流し、丸い塊ではなく裂けた薄い筋を作る。
-            vec2 flow = p * vec2(3.6, 6.8) - vec2(t * 0.27, t * 0.52);
-            vec2 warp = vec2(fbm(flow * 0.6 + vec2(t * 0.09, 0.0)),
-                             fbm(flow * 0.55 + vec2(9.2, -t * 0.12)));
-            vec2 wisps = flow + (warp - 0.5) * vec2(1.5, 3.6);
-            float nearFog = fbm(wisps * vec2(0.65, 1.7));
-            float farFog = fbm(flow * vec2(0.48, 0.9) + vec2(14.0, t * 0.22));
-            float fine = fbm(wisps * vec2(1.2, 3.4));
-            float texture = nearFog * 0.46 + farFog * 0.38 + fine * 0.16;
-            float front = t * 0.5 - 0.28;
-            float irregularity = (farFog - 0.5) * 0.65 + (nearFog - 0.5) * 0.24;
-            float bottom = 1.0 - smoothstep(-0.22, 0.24, uv.y - front + irregularity);
-            float side = 1.0 - smoothstep(-0.1, 0.23,
-              min(uv.x, 1.0 - uv.x) - (t * 0.17 - 0.24) + irregularity * 0.4);
-            float envelope = max(bottom, side * 0.7);
-            float filling = smoothstep(1.6, 3.2, t);
-            float density = mix(envelope * (0.55 + texture), 3.8 + texture, filling);
-            float alpha = (1.0 - exp(-density * 1.35)) * smoothstep(0.0, 0.55, t);
-            // 穏やかな濃淡を維持。強い輪郭の陰影は付けない。
-            vec3 color = vec3(0.76, 0.79, 0.81) + (texture - 0.5) * 0.35;
-            color = mix(color, vec3(0.824, 0.839, 0.847), smoothstep(2.4, 3.5, t));
+            // 深さの異なる霧を別々の風で運ぶ。強い座標変形や輪郭照明を避ける。
+            vec2 drift = vec2(t * 0.19, t * 0.065);
+            float distant = fbm(p * vec2(2.2, 3.1) - drift * 0.45 + 12.7);
+            float middle = fbm(p * vec2(4.0, 5.7) - drift + vec2(3.1, 8.2));
+            float close = fbm(p * vec2(7.3, 11.0) - drift * 1.7 + vec2(21.0, 2.0));
+            float filaments = fbm(p * vec2(9.0, 21.0) - drift * 2.2);
+            float cloud = distant * 0.40 + middle * 0.36 + close * 0.24;
+            float front = t * 0.51 - 0.24;
+            float envelope = 1.0 - smoothstep(-0.3, 0.32,
+              uv.y - front + (middle - 0.5) * 0.36);
+            float fill = smoothstep(1.7, 3.1, t);
+            float opticalDepth = mix(envelope * (0.45 + cloud * 2.0), 7.0, fill);
+            // 晴れる速度を場所と奥行きで変え、薄い霧が風に流されて残るようにする。
+            float c = clamp(clearing, 0.0, 1.0);
+            float remaining = 1.0 - c;
+            float dispersion = 0.7 + distant * 1.3 + middle * 0.8;
+            float vapor = pow(remaining, dispersion * 2.2);
+            float wisps = mix(1.0, 0.28 + close * 0.95 + filaments * 0.35,
+                              smoothstep(0.0, 0.5, c));
+            opticalDepth *= vapor * wisps;
+            float alpha = (1.0 - exp(-opticalDepth)) * smoothstep(0.0, 0.65, t);
+            // 切り替え時は完全遮蔽。晴れ始めには密度場へ滑らかに戻す。
+            alpha = mix(alpha, 1.0, fill * (1.0 - smoothstep(0.0, 0.12, c)));
+            alpha *= 1.0 - smoothstep(0.92, 1.0, c);
+            // 細かな白い蒸気。大きな明暗差や光沢は付けない。
+            vec3 color = vec3(0.82, 0.84, 0.85) + (cloud - 0.5) * 0.12
+                       + (filaments - 0.5) * 0.025;
             gl_FragColor = vec4(color, alpha);
           }
         `);
@@ -293,6 +299,7 @@
       gl.enableVertexAttribArray(position);
       gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
       const timeUniform = gl.getUniformLocation(program, "time");
+      const clearingUniform = gl.getUniformLocation(program, "clearing");
       const resolutionUniform = gl.getUniformLocation(program, "resolution");
       function resize() {
         // 端末の解像度にかかわらず描画負荷を抑え、拡大で煙を柔らかくする。
@@ -304,10 +311,11 @@
       }
       resize();
       addEventListener("resize", resize);
-      let frame = 0, started = 0, stopped = false;
+      let frame = 0, started = 0, clearingStarted = null, stopped = false;
       function draw(now) {
         if (stopped) return;
         gl.uniform1f(timeUniform, (now - started) / 1000);
+        gl.uniform1f(clearingUniform, clearingStarted === null ? 0 : (now - clearingStarted) / 3200);
         gl.drawArrays(gl.TRIANGLES, 0, 6);
         frame = requestAnimationFrame(draw);
       }
@@ -319,6 +327,7 @@
       });
       return {
         start() { started = performance.now(); frame = requestAnimationFrame(draw); },
+        clear() { clearingStarted = performance.now(); },
         stop() {
           stopped = true;
           cancelAnimationFrame(frame);
@@ -351,11 +360,14 @@
       mainScreen.classList.add("visible");
       intro.style.display = "none";
     }, 7100);
-    setTimeout(() => document.body.classList.add("fog-clear"), 7500);
+    setTimeout(() => {
+      document.body.classList.add("fog-clear");
+      smoke.clear();
+    }, 7500);
     setTimeout(() => {
       document.querySelector(".smoke-layer").style.display = "none";
       smoke.stop();
-    }, 9300);
+    }, 10800);
   </script>
 </body>
 </html>
