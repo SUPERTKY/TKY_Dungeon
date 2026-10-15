@@ -4,11 +4,11 @@
   const settings = {
     enabled: true,
     speed: 1,
-    waterfalls: { enabled: true, intensity: 0.5 },
-    river: { enabled: true, intensity: 0.35 },
-    blueGlow: { enabled: true, intensity: 0.055 },
+    waterfalls: { enabled: true, intensity: 0.7 },
+    river: { enabled: true, intensity: 0.5 },
+    blueGlow: { enabled: true, intensity: 0.09 },
     sunbeams: { enabled: true, intensity: 0.018 },
-    motes: { enabled: true, intensity: 0.2, count: 7 },
+    motes: { enabled: true, intensity: 0.32, count: 7 },
     debugMasks: false,
     maxDpr: 1.5,
     maxPixels: 2073600,
@@ -137,6 +137,20 @@
         c.drawImage(image, x + dx, y + row + dy, w, dh, 0, row, w, dh);
       }
     }
+    // Animated optical texture is visible even where the source water is nearly uniform.
+    // Only darken the sampled source proportionally; RGB ratios and water silhouettes stay intact.
+    c.globalAlpha = 1; c.globalCompositeOperation = "source-atop";
+    for (let row = 0; row < h; row += 2) {
+      const py = row + y;
+      const band = tile.kind === "waterfalls"
+        ? 0.5 + 0.32 * Math.sin(py * 0.31 - t * 8.0 + x * 0.08)
+              + 0.18 * Math.sin(py * 0.73 - t * 15.0 + x * 0.11)
+        : 0.5 + 0.3 * Math.sin(py * 0.19 - t * 2.3 + x * 0.04)
+              + 0.2 * Math.sin(py * 0.47 + t * 1.5);
+      const depth = tile.kind === "waterfalls" ? 0.20 : 0.11;
+      c.fillStyle = `rgba(0, 0, 0, ${clamp(band) * depth})`;
+      c.fillRect(0, row, w, Math.min(2, h - row));
+    }
     c.globalAlpha = 1; c.globalCompositeOperation = "destination-in";
     c.drawImage(tile.mask, 0, 0); c.globalCompositeOperation = "source-over";
     ctx.globalAlpha = clamp(option.intensity); ctx.drawImage(tile.output, x, y);
@@ -246,13 +260,14 @@
     resume() { paused = false; sync(); },
     stop() { active = false; time = 0; sync(); },
     refresh: sync,
-    getState() { return { ready, active, paused, time, running: !!frame, view: { ...view }, maskPixels: tiles.map(tile => {
+    getState() { return { ready, active, paused, time, running: !!frame, reducedMotion: motion.matches, hidden: document.hidden, view: { ...view }, maskPixels: tiles.map(tile => {
       const a = tile.mask.getContext("2d").getImageData(0, 0, tile.w, tile.h).data;
       let n = 0; for (let i = 3; i < a.length; i += 4) if (a[i]) n++;
       return { kind: tile.kind, x: tile.x, y: tile.y, pixels: n };
     }) }; }
   };
-  image.onload = () => {
+  function initialize() {
+    if (ready) return;
     for (const points of waterfallPaths) tiles.push(makeTile(points, "waterfalls"));
     for (const points of riverPaths) tiles.push(makeTile(points, "river"));
     blueSupports.forEach(([x, y, radius], i) => {
@@ -264,7 +279,9 @@
     });
     sunPaths.forEach((points, i) => lights.push(makeLight(points, "sunbeams", i * 1.1)));
     ready = true; resize(); sync();
-  };
+  }
+  image.onload = initialize;
+  if (image.complete && image.naturalWidth) initialize();
   image.onerror = () => { clear(); console.warn("Title effects unavailable; the static background remains enabled."); };
   new ResizeObserver(resize).observe(screen);
   document.addEventListener("visibilitychange", sync);
