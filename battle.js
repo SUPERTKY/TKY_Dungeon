@@ -22,8 +22,8 @@
   const playerBar = document.getElementById("playerHp");
   const monsterBar = document.getElementById("monsterHp");
   const countdown = document.getElementById("attackCountdown");
-  const frame = document.getElementById("quizFrame");
-  const framePanel = frame.closest(".quiz-panel");
+  const framePanel = document.querySelector(".quiz-panel");
+  let frameRequestId = 0;
   let stage = stages[0], state = null, timer = null, last = null;
   const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   function updateHp() {
@@ -112,25 +112,27 @@
   function useFrame(type = defaultFrameType) {
     const requestedType = Object.hasOwn(frameAssets, type) ? type : defaultFrameType;
     const requestedAsset = frameAssets[requestedType];
+    const requestId = ++frameRequestId;
     framePanel.dataset.frameType = requestedType;
-    frame.dataset.fallbackAttempted = "false";
-    frame.src = requestedAsset;
-  }
-
-  frame.addEventListener("load", () => {
-    frame.hidden = false;
-    framePanel.style.setProperty("--quiz-frame-image", `url("${frame.src}")`);
-    framePanel.classList.add("has-frame");
-  });
-  frame.addEventListener("error", () => {
-    if (frame.dataset.fallbackAttempted === "false") {
-      frame.dataset.fallbackAttempted = "true";
-      frame.src = frameAssets.square;
-      return;
-    }
-    frame.hidden = true;
     framePanel.classList.remove("has-frame");
-  });
+
+    function loadFrame(asset, resolvedType, allowFallback) {
+      const image = new Image();
+      image.addEventListener("load", () => {
+        if (requestId !== frameRequestId) return;
+        framePanel.dataset.resolvedFrameType = resolvedType;
+        framePanel.style.setProperty("--quiz-frame-image", `url("${asset}")`);
+        framePanel.classList.add("has-frame");
+      }, { once: true });
+      image.addEventListener("error", () => {
+        if (requestId !== frameRequestId) return;
+        if (allowFallback) loadFrame(frameAssets.square, "square", false);
+      }, { once: true });
+      image.src = asset;
+    }
+
+    loadFrame(requestedAsset, requestedType, requestedType !== "square");
+  }
   useFrame();
   window.dungeonBattle = { start, returnToTitle, useFrame, stages, frameAssets, getState: () => state ? { ...state } : null };
 })();
