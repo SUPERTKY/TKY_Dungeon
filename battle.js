@@ -5,7 +5,13 @@
     { text: "x + 5 = 8 のとき、x の値は？", answer: 3, label: "方程式" },
     { text: "三角形ABCの ∠A = 40°、∠B = 30° のとき、∠C は何度？", answer: 110, label: "三角形の内角" }
   ];
-  const stages = [{ name: "ステージ 1", background: "./assets/background.png", monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, questionIds: [0, 1] }];
+  const frameAssets = {
+    horizontal: "./assets/frame_horizontal.png",
+    vertical: "./assets/frame_vertical.png",
+    square: "./assets/frame.png"
+  };
+  const defaultFrameType = "horizontal";
+  const stages = [{ name: "ステージ 1", background: "./assets/background.png", monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, frameType: "horizontal", questionIds: [0, 1] }];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
   const form = document.getElementById("answerForm");
@@ -17,6 +23,7 @@
   const monsterBar = document.getElementById("monsterHp");
   const countdown = document.getElementById("attackCountdown");
   const frame = document.getElementById("quizFrame");
+  const framePanel = frame.closest(".quiz-panel");
   let stage = stages[0], state = null, timer = null, last = null;
   const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   function updateHp() {
@@ -58,6 +65,7 @@
   }
   function start(index = 0) {
     clearInterval(timer); stage = stages[index] || stages[0];
+    useFrame(stage.frameType);
     state = { running: true, playerHp: stage.playerHp, monsterHp: stage.monsterHp, questionIndex: 0, remainingMs: stage.attackIntervalMs };
     title.hidden = true; title.inert = true; title.style.display = "none";
     window.titleBackground?.stop();
@@ -101,8 +109,28 @@
   document.addEventListener("visibilitychange", () => { last = document.hidden ? null : performance.now(); });
   window.addEventListener("pagehide", () => { clearInterval(timer); timer = null; });
   window.addEventListener("pageshow", () => { if (state?.running && !timer) { last = performance.now(); timer = setInterval(tick, 200); } });
-  frame.addEventListener("load", () => { frame.hidden = false; frame.closest(".quiz-panel").classList.add("has-frame"); });
-  frame.addEventListener("error", () => { frame.hidden = true; frame.closest(".quiz-panel").classList.remove("has-frame"); });
-  frame.src = "./assets/frame.png";
-  window.dungeonBattle = { start, returnToTitle, stages, getState: () => state ? { ...state } : null };
+  function useFrame(type = defaultFrameType) {
+    const requestedType = Object.hasOwn(frameAssets, type) ? type : defaultFrameType;
+    const requestedAsset = frameAssets[requestedType];
+    framePanel.dataset.frameType = requestedType;
+    frame.dataset.fallbackAttempted = "false";
+    frame.src = requestedAsset;
+  }
+
+  frame.addEventListener("load", () => {
+    frame.hidden = false;
+    framePanel.style.setProperty("--quiz-frame-image", `url("${frame.src}")`);
+    framePanel.classList.add("has-frame");
+  });
+  frame.addEventListener("error", () => {
+    if (frame.dataset.fallbackAttempted === "false") {
+      frame.dataset.fallbackAttempted = "true";
+      frame.src = frameAssets.square;
+      return;
+    }
+    frame.hidden = true;
+    framePanel.classList.remove("has-frame");
+  });
+  useFrame();
+  window.dungeonBattle = { start, returnToTitle, useFrame, stages, frameAssets, getState: () => state ? { ...state } : null };
 })();

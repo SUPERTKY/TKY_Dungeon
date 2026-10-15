@@ -55,10 +55,10 @@
   .question-text { font-size: 1rem; margin: 8px 0; }
   .hp-block { width: min(220px, 95%); }
 }
-/* Use the frame as a nine-slice border, preserving the square corner artwork. */
+/* Use the selected frame as a nine-slice border. */
 .quiz-panel.has-frame {
   border: 46px solid transparent;
-  border-image: url('./assets/frame.png') 280 fill / 46px / 0 stretch;
+  border-image: var(--quiz-frame-image, url('./assets/frame.png')) 280 fill / 46px / 0 stretch;
   padding: 0;
 }
 .quiz-panel.has-frame .quiz-frame { display: none; }
