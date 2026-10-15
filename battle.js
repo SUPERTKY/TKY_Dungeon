@@ -27,10 +27,14 @@
   let stage = stages[0], state = null, timer = null, last = null;
   const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   function updateHp() {
-    playerBar.max = stage.playerHp; playerBar.value = state.playerHp;
-    monsterBar.max = stage.monsterHp; monsterBar.value = state.monsterHp;
-    document.getElementById("playerHpText").textContent = `${state.playerHp} / ${stage.playerHp}`;
-    document.getElementById("monsterHpText").textContent = `${state.monsterHp} / ${stage.monsterHp}`;
+    const updateMeter = (meter, value, max) => {
+      const percent = Math.max(0, Math.min(100, value / max * 100));
+      meter.style.setProperty("--hp-percent", `${percent}%`);
+      meter.setAttribute("aria-valuemax", String(max));
+      meter.setAttribute("aria-valuenow", String(value));
+    };
+    updateMeter(playerBar, state.playerHp, stage.playerHp);
+    updateMeter(monsterBar, state.monsterHp, stage.monsterHp);
   }
   function showQuestion() {
     const question = questions[stage.questionIds[state.questionIndex]];

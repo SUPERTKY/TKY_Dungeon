@@ -229,9 +229,12 @@
     </header>
     <div class="enemy-area">
       <img class="enemy-image" id="monsterImage" alt="スライム" />
-      <div class="hp-block">
-        <div class="hp-label"><span id="monsterName">スライム</span><span id="monsterHpText">20 / 20</span></div>
-        <progress class="hp-bar" id="monsterHp" max="20" value="20" aria-label="モンスターの体力"></progress>
+      <div class="hp-block enemy-hp-block">
+        <div class="hp-label" id="monsterName">スライム</div>
+        <div class="hp-meter" id="monsterHp" role="progressbar" aria-label="モンスターの体力" aria-valuemin="0" aria-valuemax="20" aria-valuenow="20">
+          <img class="hp-meter__base" src="./assets/HPbar.png" alt="" draggable="false" />
+          <img class="hp-meter__gauge" src="./assets/HPgage-enemy.png" alt="" draggable="false" />
+        </div>
       </div>
     </div>
     <div class="battle-bottom">
@@ -249,14 +252,17 @@
       </div>
       <div class="player-status">
         <div class="hp-block">
-          <div class="hp-label"><span>あなたの体力</span><span id="playerHpText">100 / 100</span></div>
-          <progress class="hp-bar player-hp" id="playerHp" max="100" value="100" aria-label="あなたの体力"></progress>
+          <div class="hp-label">あなたの体力</div>
+          <div class="hp-meter" id="playerHp" role="progressbar" aria-label="あなたの体力" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+            <img class="hp-meter__base" src="./assets/HPbar.png" alt="" draggable="false" />
+            <img class="hp-meter__gauge" src="./assets/HPgage.png" alt="" draggable="false" />
+          </div>
         </div>
         <button class="battle-end" id="battleRetry" type="button" hidden>もう一度</button>
       </div>
     </div>
   </section>
-  <script src="./battle.js?v=battle1"></script>
+  <script src="./battle.js?v=battle2"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
   <script>
