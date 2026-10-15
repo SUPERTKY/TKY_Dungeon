@@ -17,3 +17,63 @@
 煙は外部素材やライブラリーを使わず、WebGL の乱流ノイズで描画します。濃度による透過、細かい渦、陰影を重ね、描画解像度の上限は長辺900pxです。WebGL が使えない場合はCSSの霧に切り替わります。動きを減らす設定では煙を表示しません。
 
 霧が晴れるときは画面全体の一括フェードではなく、奥・中・手前の風速と密度を変えて散逸させます。濃淡と変形を抑え、液体のような太い縞や光沢を避けています。
+
+## タイトル背景のアニメーション
+
+`title-background.js` が固定背景の上に透明Canvasを重ねます。元画像は変更しません。CanvasとCSS背景は1672×941の画像座標、`cover`、横位置50%（縦画面72%）を共有します。UIはCanvasより手前にあり、Canvasは入力を受け取りません。
+
+- 滝：水の内側を多角形で指定し、元の色から水を抽出。境界を内側へ2px削り、最大1.8pxの下方向サンプリングを2層で連続クロスフェードします。
+- 川：水域を同様に限定し、横0.55px・縦0.18pxまでの微細な流れを加えます。背景全体は動かしません。
+- 青い光：元画像の発光位置だけを色で抽出。元のRGB比率を使う局所加算で、静かに明滅します。入口奥も対象です。
+- 木漏れ日：既存の日差しに沿った細いマスク内で、元の明るい暖色部分だけを弱く変化させます。
+- 光の粒：初期値7個、元画像上の半径0.65〜0.95px。メニューから離れた森の中をゆっくり漂います。
+
+岩・苔・葉を巻き込まないよう、水のマスクは保守的です。細い滝の縁や、色で水と判別できない反射の一部は静止したままです。元画像の構図と色の保持を優先しています。
+
+### 調整
+
+`title-background.js` 冒頭の `settings` を編集します。各項目の `enabled` がON/OFF、`intensity` が強度です。
+
+```js
+const settings = {
+  enabled: true,
+  speed: 1,
+  waterfalls: { enabled: true, intensity: 0.5 },
+  river: { enabled: true, intensity: 0.35 },
+  blueGlow: { enabled: true, intensity: 0.055 },
+  sunbeams: { enabled: true, intensity: 0.018 },
+  motes: { enabled: true, intensity: 0.2, count: 7 },
+  debugMasks: false,
+  maxDpr: 1.5,
+  maxPixels: 2073600,
+  fps: 30
+};
+```
+
+開発者コンソールからも調整できます。
+
+```js
+titleBackground.settings.waterfalls.enabled = false;
+titleBackground.settings.river.intensity = 0.2;
+titleBackground.settings.speed = 0.7;
+titleBackground.settings.debugMasks = true; // 水=水色、発光=青、木漏れ日=黄色
+titleBackground.refresh();
+
+titleBackground.pause();  // 透明Canvasを消し、元画像そのものに戻す
+titleBackground.resume(); // 続きの時刻から再開
+titleBackground.stop();   // 停止して時刻もリセット。ゲームへ移る際に呼ぶ
+titleBackground.start();  // タイトルへ戻る際に呼ぶ
+titleBackground.getState(); // 動作状態・画像の表示座標・水マスクの画素数
+```
+
+`refresh()` は全体の有効/無効や停止中の設定変更を反映するときに使用します。`maxDpr` / `maxPixels` を変更した場合はリサイズまたはページ再読み込みを行ってください。
+
+描画はrequestAnimationFrameで駆動し、初期設定は最大30fps・約207万画素です。経過秒で動かすため表示FPSで速度が変わりません。タブ非表示中と `prefers-reduced-motion: reduce` では停止し、透明Canvasを消します。再表示時は非表示時間を飛ばさず再開します。Canvasや画像読み込みが利用できなくても固定背景を表示します。
+
+### 検証と範囲
+
+原寸1672×941、PC1280×800、縦画面390×844で停止時の画面が固定背景と画素一致することを確認。マスクの拡大確認、リサイズ、個別ON/OFF、停止・再開、動きを減らす設定を検証しています。元の背景画像ファイルのSHA-256は以下のままです。
+
+`eb47472c3b287a5c83b3cfe3805bdbb6f1f1ba104669322c67bc54bccb79f9c0`
+
+既存の「Press Start」は表示のみで、ゲーム開始処理は元から未実装です。この変更で新しいメニュー操作やゲーム遷移は追加していません。検証はChromiumで実施しており、Safari等の実機検証は未実施です。
