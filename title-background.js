@@ -6,9 +6,9 @@
     speed: 1,
     waterfalls: { enabled: true, intensity: 0.9 },
     river: { enabled: true, intensity: 0.75 },
-    blueGlow: { enabled: true, intensity: 0.13 },
-    sunbeams: { enabled: true, intensity: 0.018 },
-    motes: { enabled: true, intensity: 0.32, count: 7 },
+    blueGlow: { enabled: true, intensity: 0.25 },
+    sunbeams: { enabled: true, intensity: 0.065 },
+    motes: { enabled: true, intensity: 0.55, count: 7 },
     debugMasks: false,
     maxDpr: 1.5,
     maxPixels: 2073600,
@@ -206,9 +206,9 @@
       const option = settings[light.kind];
       if (!option.enabled || option.intensity <= 0) continue;
       const pulse = light.kind === "blueGlow"
-        ? 0.5 + 0.5 * Math.sin(t * 0.52 + light.phase)
-        : 0.5 + 0.5 * Math.sin(t * 0.21 + light.phase);
-      ctx.globalAlpha = clamp(option.intensity, 0, 0.2) * pulse;
+        ? 0.5 + 0.5 * Math.sin(t * 0.78 + light.phase)
+        : 0.5 + 0.5 * Math.sin(t * 0.40 + light.phase);
+      ctx.globalAlpha = clamp(option.intensity, 0, light.kind === "blueGlow" ? 0.3 : 0.1) * pulse;
       ctx.drawImage(light.output, light.x, light.y);
     }
     ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
@@ -218,12 +218,17 @@
     if (!option.enabled || option.intensity <= 0) return;
     const count = Math.round(clamp(option.count, 0, 12));
     for (let i = 0; i < count; i++) {
-      const phase = (t / (27 + i * 2) + i * 0.61803398875) % 1;
-      const x = 475 + ((i * 137.5) % 610) + Math.sin(t * 0.11 + i) * 5 + phase * 9;
-      const y = 550 - ((i * 71) % 215) - phase * 35;
-      ctx.globalAlpha = clamp(option.intensity, 0, 0.35) * Math.sin(phase * Math.PI) ** 2;
+      const phase = (t / (20 + i * 1.5) + i * 0.61803398875) % 1;
+      const x = 475 + ((i * 137.5) % 610) + Math.sin(t * 0.18 + i) * 8 + phase * 16;
+      const y = 550 - ((i * 71) % 215) - phase * 55;
+      const alpha = clamp(option.intensity, 0, 0.65) * Math.sin(phase * Math.PI) ** 2;
+      const halo = ctx.createRadialGradient(x, y, 0, x, y, 4);
+      halo.addColorStop(0, "rgba(238,227,192,0.2)");
+      halo.addColorStop(1, "rgba(238,227,192,0)");
+      ctx.globalAlpha = alpha; ctx.fillStyle = halo;
+      ctx.fillRect(x - 4, y - 4, 8, 8);
       ctx.fillStyle = "#eee3c0"; ctx.beginPath();
-      ctx.arc(x, y, 0.65 + (i % 3) * 0.15, 0, Math.PI * 2); ctx.fill();
+      ctx.arc(x, y, 1.0 + (i % 3) * 0.2, 0, Math.PI * 2); ctx.fill();
     }
     ctx.globalAlpha = 1;
   }
