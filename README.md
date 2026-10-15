@@ -38,9 +38,9 @@
 const settings = {
   enabled: true,
   speed: 1,
-  waterfalls: { enabled: true, intensity: 0.7 },
-  river: { enabled: true, intensity: 0.5 },
-  blueGlow: { enabled: true, intensity: 0.09 },
+  waterfalls: { enabled: true, intensity: 0.9 },
+  river: { enabled: true, intensity: 0.75 },
+  blueGlow: { enabled: true, intensity: 0.13 },
   sunbeams: { enabled: true, intensity: 0.018 },
   motes: { enabled: true, intensity: 0.32, count: 7 },
   debugMasks: false,
@@ -78,4 +78,6 @@ titleBackground.getState(); // 動作状態・画像の表示座標・水マス�
 
 既存の「Press Start」は表示のみで、ゲーム開始処理は元から未実装です。この変更で新しいメニュー操作やゲーム遷移は追加していません。検証はChromiumで実施しており、Safari等の実機検証は未実施です。
 
-水の元画像がほぼ均一な箇所でも流れが判別できるよう、同じ水マスク内に下向きの細かな濃淡を追加しています。RGB比率を保つ弱い減光で、滝は最大14%、川は最大5.5%の局所変化です。スクリプトURLには更新識別子を付け、古いJSのキャッシュが残ることを避けています。
+水の元画像がほぼ均一な箇所でも流れが判別できるよう、同じ水マスク内に下向きの細かな濃淡を追加しています。RGB比率を保つ弱い減光で、滝は最大28.8%、川は最大14.25%の局所変化です。スクリプトURLには更新識別子を付け、古いJSのキャッシュが残ることを避けています。
+
+通常の表示でも動きが認識できるよう、滝の濃淡の流れる速度と水面の反射変化を強めています。変形幅とマスク範囲は維持しています。

@@ -4,9 +4,9 @@
   const settings = {
     enabled: true,
     speed: 1,
-    waterfalls: { enabled: true, intensity: 0.7 },
-    river: { enabled: true, intensity: 0.5 },
-    blueGlow: { enabled: true, intensity: 0.09 },
+    waterfalls: { enabled: true, intensity: 0.9 },
+    river: { enabled: true, intensity: 0.75 },
+    blueGlow: { enabled: true, intensity: 0.13 },
     sunbeams: { enabled: true, intensity: 0.018 },
     motes: { enabled: true, intensity: 0.32, count: 7 },
     debugMasks: false,
@@ -120,7 +120,7 @@
     c.globalCompositeOperation = "source-over";
     if (tile.kind === "waterfalls") {
       // Two short, downward UV scrolls crossfade continuously, retaining the source's color.
-      const phase = (t * 0.44 + x * 0.013) % 1;
+      const phase = (t * 0.7 + x * 0.013) % 1;
       const second = (phase + 0.5) % 1;
       const weight = Math.sin(phase * Math.PI) ** 2;
       c.globalAlpha = weight;
@@ -143,11 +143,11 @@
     for (let row = 0; row < h; row += 2) {
       const py = row + y;
       const band = tile.kind === "waterfalls"
-        ? 0.5 + 0.32 * Math.sin(py * 0.31 - t * 8.0 + x * 0.08)
-              + 0.18 * Math.sin(py * 0.73 - t * 15.0 + x * 0.11)
-        : 0.5 + 0.3 * Math.sin(py * 0.19 - t * 2.3 + x * 0.04)
-              + 0.2 * Math.sin(py * 0.47 + t * 1.5);
-      const depth = tile.kind === "waterfalls" ? 0.20 : 0.11;
+        ? 0.5 + 0.32 * Math.sin(py * 0.31 - t * 14.0 + x * 0.08)
+              + 0.18 * Math.sin(py * 0.73 - t * 25.0 + x * 0.11)
+        : 0.5 + 0.3 * Math.sin(py * 0.19 - t * 3.7 + x * 0.04)
+              + 0.2 * Math.sin(py * 0.47 + t * 2.4);
+      const depth = tile.kind === "waterfalls" ? 0.32 : 0.19;
       c.fillStyle = `rgba(0, 0, 0, ${clamp(band) * depth})`;
       c.fillRect(0, row, w, Math.min(2, h - row));
     }
