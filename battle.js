@@ -38,6 +38,7 @@
   const title = document.getElementById("mainScreen");
   const form = document.getElementById("answerForm");
   const choices = document.getElementById("answerChoices");
+  const enemyArea = document.querySelector(".enemy-area");
   const monsterImage = document.getElementById("monsterImage");
   const feedback = document.getElementById("battleFeedback");
   const retry = document.getElementById("battleRetry");
@@ -45,6 +46,7 @@
   const monsterBar = document.getElementById("monsterHp");
   const playerDamageSound = document.getElementById("playerDamageSound");
   const enemyDamageSound = document.getElementById("enemyDamageSound");
+  const winSound = document.getElementById("winSound");
   const countdown = document.getElementById("attackCountdown");
   const startCountdown = document.getElementById("battleStartCountdown");
   const countdownDigit = document.getElementById("battleCountdownDigit");
@@ -62,6 +64,9 @@
     };
     updateMeter(playerBar, state.playerHp, stage.playerHp);
     updateMeter(monsterBar, state.monsterHp, stage.monsterHp);
+    const playerRatio = state.playerHp / stage.playerHp;
+    screen.classList.toggle("low-health", playerRatio > 0 && playerRatio <= .3);
+    screen.classList.toggle("critical-health", playerRatio > 0 && playerRatio <= .15);
   }
   function shuffle(items) {
     const result = [...items];
@@ -138,6 +143,25 @@
     feedback.textContent = won ? (hasNextStage ? "モンスターを倒した！ 次のステージへ進もう！" : "全ステージクリア！ ダンジョンを制覇しました！") : "体力がなくなりました。もう一度挑戦できます。";
     retry.textContent = won ? (hasNextStage ? "次のステージ" : "タイトルへ") : "もう一度";
     retry.hidden = false; retry.focus({ preventScroll: true });
+  }
+  async function defeatMonster() {
+    const defeatedState = state;
+    state.running = false;
+    state.won = true;
+    clearInterval(timer); timer = null;
+    choices.disabled = true;
+    form.querySelector("button").disabled = true;
+    countdown.textContent = "撃破！";
+    feedback.textContent = `${stage.monsterName}を倒した！`;
+    playSound(winSound);
+    enemyArea.classList.add("monster-defeated");
+    await wait(1350);
+    if (state !== defeatedState || screen.hidden) return;
+    if (stageIndex + 1 < stages.length) {
+      await start(stageIndex + 1, { countdownDelayMs: 500, spawn: true });
+    } else {
+      finish(true);
+    }
   }
   function tick(now = performance.now()) {
     if (!state?.running || document.hidden) { last = null; return; }
@@ -217,6 +241,13 @@
     renderStageNumber(stage.number);
     document.getElementById("monsterName").textContent = `${stage.monsterName} Lv.${stage.level}`;
     monsterImage.src = stage.monster; monsterImage.alt = stage.monsterName;
+    enemyArea.classList.remove("monster-defeated");
+    monsterImage.classList.remove("monster-hit", "monster-spawn");
+    if (options.spawn) {
+      void monsterImage.offsetWidth;
+      monsterImage.classList.add("monster-spawn");
+      monsterImage.addEventListener("animationend", () => monsterImage.classList.remove("monster-spawn"), { once: true });
+    }
     choices.disabled = true; submitButton.disabled = true; retry.hidden = true;
     countdown.textContent = "戦闘開始まで…";
     feedback.textContent = "準備して…";
@@ -227,6 +258,8 @@
   function returnToTitle() {
     clearInterval(timer); timer = null; countdownRunId += 1; if (state) state.running = false;
     startCountdown.hidden = true;
+    enemyArea.classList.remove("monster-defeated");
+    screen.classList.remove("low-health", "critical-health", "player-hit");
     screen.hidden = true; title.hidden = false; title.style.display = ""; title.inert = false;
     window.titleBackground?.start();
     document.getElementById("titleMusic").play().catch(() => {});
@@ -248,8 +281,9 @@
     const isCorrect = selected.value === question.answer.choiceId;
     if (isCorrect) {
       state.monsterHp = Math.max(0, state.monsterHp - stage.answerDamage);
-      updateHp(); playHitEffect(monsterImage, "monster-hit"); playSound(enemyDamageSound);
-      if (state.monsterHp === 0) { finish(true); return; }
+      updateHp(); playSound(enemyDamageSound);
+      if (state.monsterHp === 0) { void defeatMonster(); return; }
+      playHitEffect(monsterImage, "monster-hit");
       feedback.textContent = `正解！ モンスターに ${stage.answerDamage} ダメージ！`;
     } else {
       feedback.textContent = "不正解。別の問題に挑戦しよう！";
