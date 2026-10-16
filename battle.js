@@ -24,7 +24,7 @@
     square: "./assets/frame.png"
   };
   const defaultFrameType = "horizontal";
-  const stageDefaults = { background: "./assets/background.png", playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, frameType: "horizontal" };
+  const stageDefaults = { background: "./assets/background.png", playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, wrongAnswerDamage: 5, frameType: "horizontal" };
   const stages = [
     { ...stageDefaults, name: "ステージ 1", number: 1, level: 1, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, questionFilter: { subject: "math", grade: 7, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 2", number: 2, level: 2, monster: "./assets/kinoko.png", monsterName: "キノコ", monsterHp: 25, questionFilter: { subject: "math", grade: 7, difficulty: 1 } },
@@ -354,9 +354,14 @@
       playHitEffect(monsterImage, "monster-hit");
       feedback.textContent = `正解！ モンスターに ${stage.answerDamage} ダメージ！`;
     } else {
-      feedback.textContent = "不正解。別の問題に挑戦しよう！";
+      state.playerHp = Math.max(0, state.playerHp - stage.wrongAnswerDamage);
+      updateHp();
+      playHitEffect(screen, "player-hit");
       showMissEffects();
       playSound(missSound);
+      playSound(playerDamageSound);
+      feedback.textContent = `不正解！ ${stage.wrongAnswerDamage}ダメージを受けた！`;
+      if (state.playerHp === 0) { finish(false); return; }
     }
     state.questionIndex += 1;
     if (state.questionIndex >= state.questionOrder.length) {
