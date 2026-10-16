@@ -243,8 +243,13 @@
           <div class="quiz-meta"><span id="questionCategory">方程式</span><span id="attackCountdown">次の攻撃まで 20秒</span></div>
           <p class="question-text" id="questionText">x + 5 = 8 のとき、x の値は？</p>
           <form class="answer-form" id="answerForm">
-            <label for="answerInput">解答</label>
-            <input class="answer-input" id="answerInput" type="text" inputmode="decimal" autocomplete="off" maxlength="24" aria-describedby="questionText battleFeedback" />
+            <div class="answer-input-row" id="answerInputRow">
+              <label for="answerInput">解答</label>
+              <input class="answer-input" id="answerInput" type="text" inputmode="text" autocomplete="off" maxlength="80" aria-describedby="questionText battleFeedback" />
+            </div>
+            <fieldset class="answer-choices" id="answerChoices" hidden>
+              <legend>選択肢</legend>
+            </fieldset>
             <button class="answer-submit" type="submit">答える</button>
           </form>
           <p class="battle-feedback" id="battleFeedback" role="status" aria-live="polite"></p>
@@ -262,12 +267,26 @@
       </div>
     </div>
   </section>
-  <script src="./battle.js?v=battle2"></script>
+  <script src="./battle.js?v=battle3"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
+  <audio id="titleMusic" src="./assets/title.mp3" preload="auto"></audio>
   <script>
     const intro = document.getElementById("intro");
     const mainScreen = document.getElementById("mainScreen");
+    const titleMusic = document.getElementById("titleMusic");
+
+    // アイコンのフェードイン（2秒）より少し前からタイトル曲を開始する。
+    setTimeout(() => {
+      const resumeTitleMusic = () => {
+        titleMusic.play().catch(() => {});
+      };
+      titleMusic.play().catch(() => {
+        // 自動再生が禁止されたブラウザーでは、最初の操作時に開始する。
+        addEventListener("pointerdown", resumeTitleMusic, { once: true });
+        addEventListener("keydown", resumeTitleMusic, { once: true });
+      });
+    }, 1500);
 
     const playButton = document.getElementById("playButton");
     playButton.addEventListener("click", () => {

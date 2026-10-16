@@ -1,21 +1,36 @@
 (() => {
   "use strict";
-  // Future stages only need to supply new assets, HP, timing and question IDs here.
-  const questions = [
-    { text: "x + 5 = 8 のとき、x の値は？", answer: 3, label: "方程式" },
-    { text: "三角形ABCの ∠A = 40°、∠B = 30° のとき、∠C は何度？", answer: 110, label: "三角形の内角" }
-  ];
+  const questionsUrl = "./data/jhs_math_all_questions.json";
+  let questions = [];
+  let questionsLoadError = null;
+  const questionsReady = fetch(questionsUrl)
+    .then(response => {
+      if (!response.ok) throw new Error(`問題データの読み込みに失敗しました (${response.status})`);
+      return response.json();
+    })
+    .then(data => {
+      if (!Array.isArray(data) || data.length === 0) throw new Error("問題データが空です");
+      questions = data;
+      return data;
+    })
+    .catch(error => {
+      questionsLoadError = error;
+      console.error(error);
+      return [];
+    });
   const frameAssets = {
     horizontal: "./assets/frame_horizontal.png",
     vertical: "./assets/frame_vertical.png",
     square: "./assets/frame.png"
   };
   const defaultFrameType = "horizontal";
-  const stages = [{ name: "ステージ 1", background: "./assets/background.png", monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, frameType: "horizontal", questionIds: [0, 1] }];
+  const stages = [{ name: "ステージ 1", level: 1, background: "./assets/background.png", monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, frameType: "horizontal", questionFilter: { subject: "math", difficulty: 1 } }];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
   const form = document.getElementById("answerForm");
   const input = document.getElementById("answerInput");
+  const inputRow = document.getElementById("answerInputRow");
+  const choices = document.getElementById("answerChoices");
   const monsterImage = document.getElementById("monsterImage");
   const feedback = document.getElementById("battleFeedback");
   const retry = document.getElementById("battleRetry");
@@ -36,11 +51,47 @@
     updateMeter(playerBar, state.playerHp, stage.playerHp);
     updateMeter(monsterBar, state.monsterHp, stage.monsterHp);
   }
+  function shuffle(items) {
+    const result = [...items];
+    for (let index = result.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [result[index], result[randomIndex]] = [result[randomIndex], result[index]];
+    }
+    return result;
+  }
+  function questionsForStage(currentStage) {
+    const filter = currentStage.questionFilter || {};
+    return questions.filter(question =>
+      (!filter.subject || question.subject === filter.subject) &&
+      (!filter.difficulty || question.difficulty === filter.difficulty)
+    );
+  }
+  function currentQuestion() {
+    return state.questionOrder[state.questionIndex];
+  }
   function showQuestion() {
-    const question = questions[stage.questionIds[state.questionIndex]];
-    document.getElementById("questionText").textContent = question.text;
-    document.getElementById("questionCategory").textContent = question.label;
+    const question = currentQuestion();
+    document.getElementById("questionText").textContent = question.prompt;
+    document.getElementById("questionCategory").textContent = `中${question.grade - 6}・${question.category}`;
     input.value = "";
+    choices.replaceChildren();
+    const isChoice = question.type === "choice";
+    inputRow.hidden = isChoice;
+    choices.hidden = !isChoice;
+    input.required = !isChoice;
+    if (isChoice) {
+      question.choices.forEach(option => {
+        const label = document.createElement("label");
+        label.className = "answer-choice";
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "answerChoice";
+        radio.value = option.id;
+        radio.required = true;
+        label.append(radio, document.createTextNode(option.text));
+        choices.append(label);
+      });
+    }
   }
   function animateDamage(element) {
     if (reduced()) return;
@@ -48,7 +99,7 @@
   }
   function finish(won) {
     state.running = false; clearInterval(timer); timer = null;
-    input.disabled = true; form.querySelector("button").disabled = true;
+    input.disabled = true; choices.disabled = true; form.querySelector("button").disabled = true;
     countdown.textContent = won ? "クリア" : "戦闘終了";
     feedback.textContent = won ? "正解！ モンスターを倒しました！" : "体力がなくなりました。もう一度挑戦できます。";
     retry.hidden = false; retry.focus({ preventScroll: true });
@@ -67,36 +118,71 @@
     }
     countdown.textContent = `次の攻撃まで ${Math.ceil(state.remainingMs / 1000)}秒`;
   }
-  function start(index = 0) {
+  async function start(index = 0) {
+    const submitButton = form.querySelector("button");
+    submitButton.disabled = true;
+    try {
+      await questionsReady;
+      if (questionsLoadError) throw questionsLoadError;
+    } catch (error) {
+      feedback.textContent = "問題データを読み込めませんでした。ページをWebサーバーから開いてください。";
+      submitButton.disabled = false;
+      return;
+    }
     clearInterval(timer); stage = stages[index] || stages[0];
+    const questionOrder = shuffle(questionsForStage(stage));
+    if (questionOrder.length === 0) {
+      feedback.textContent = "このステージで使用できる問題がありません。";
+      submitButton.disabled = false;
+      return;
+    }
     useFrame(stage.frameType);
-    state = { running: true, playerHp: stage.playerHp, monsterHp: stage.monsterHp, questionIndex: 0, remainingMs: stage.attackIntervalMs };
+    state = { running: true, playerHp: stage.playerHp, monsterHp: stage.monsterHp, questionIndex: 0, questionOrder, remainingMs: stage.attackIntervalMs };
     title.hidden = true; title.inert = true; title.style.display = "none";
     window.titleBackground?.stop();
+    const titleMusic = document.getElementById("titleMusic");
+    titleMusic.pause();
     screen.hidden = false; screen.style.backgroundImage = `url("${stage.background}")`;
     document.getElementById("stageName").textContent = stage.name;
-    document.getElementById("monsterName").textContent = stage.monsterName;
+    document.getElementById("monsterName").textContent = `${stage.monsterName} Lv.${stage.level}`;
     monsterImage.src = stage.monster; monsterImage.alt = stage.monsterName;
-    input.disabled = false; form.querySelector("button").disabled = false; retry.hidden = true;
+    input.disabled = false; choices.disabled = false; submitButton.disabled = false; retry.hidden = true;
     feedback.textContent = "答えを入力して攻撃しよう。";
     updateHp(); showQuestion(); last = performance.now(); tick(last);
-    timer = setInterval(tick, 200); input.focus({ preventScroll: true });
+    timer = setInterval(tick, 200);
+    (inputRow.hidden ? choices.querySelector("input") : input)?.focus({ preventScroll: true });
   }
   function returnToTitle() {
     clearInterval(timer); timer = null; if (state) state.running = false;
     screen.hidden = true; title.hidden = false; title.style.display = ""; title.inert = false;
-    window.titleBackground?.start(); document.getElementById("playButton").focus({ preventScroll: true });
+    window.titleBackground?.start();
+    document.getElementById("titleMusic").play().catch(() => {});
+    document.getElementById("playButton").focus({ preventScroll: true });
   }
   form.addEventListener("submit", event => {
     event.preventDefault(); if (!state?.running) return;
     // Account for the exact answer submission time before resolving combat.
     tick(); if (!state.running) return;
-    const value = input.value.normalize("NFKC").replace(/[\s°度]/g, "");
-    if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(value)) {
-      feedback.textContent = "答えを数値で入力してください。"; input.focus(); return;
+    const question = currentQuestion();
+    let isCorrect = false;
+    if (question.type === "choice") {
+      const selected = choices.querySelector('input[name="answerChoice"]:checked');
+      if (!selected) {
+        feedback.textContent = "答えを選んでください。";
+        choices.querySelector("input")?.focus();
+        return;
+      }
+      isCorrect = selected.value === question.answer.choiceId;
+    } else {
+      const normalize = value => String(value).normalize("NFKC").toLowerCase().replace(/[\s°度]/g, "");
+      const value = normalize(input.value);
+      if (!value) {
+        feedback.textContent = "答えを入力してください。"; input.focus(); return;
+      }
+      const acceptedAnswers = question.answer.acceptedAnswers || [question.answer.text];
+      isCorrect = acceptedAnswers.some(answer => normalize(answer) === value);
     }
-    const question = questions[stage.questionIds[state.questionIndex]];
-    if (Number(value) === question.answer) {
+    if (isCorrect) {
       state.monsterHp = Math.max(0, state.monsterHp - stage.answerDamage);
       updateHp(); animateDamage(monsterImage);
       if (state.monsterHp === 0) { finish(true); return; }
@@ -104,8 +190,13 @@
     } else {
       feedback.textContent = "不正解。別の問題に挑戦しよう！";
     }
-    state.questionIndex = (state.questionIndex + 1) % stage.questionIds.length;
-    showQuestion(); input.focus({ preventScroll: true });
+    state.questionIndex += 1;
+    if (state.questionIndex >= state.questionOrder.length) {
+      state.questionOrder = shuffle(questionsForStage(stage));
+      state.questionIndex = 0;
+    }
+    showQuestion();
+    (inputRow.hidden ? choices.querySelector("input") : input)?.focus({ preventScroll: true });
   });
   document.addEventListener("game:start", () => start());
   document.getElementById("battleReturn").addEventListener("click", returnToTitle);
