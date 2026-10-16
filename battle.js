@@ -39,6 +39,7 @@
   const form = document.getElementById("answerForm");
   const choices = document.getElementById("answerChoices");
   const enemyArea = document.querySelector(".enemy-area");
+  const missEffects = document.getElementById("missEffects");
   const monsterImage = document.getElementById("monsterImage");
   const feedback = document.getElementById("battleFeedback");
   const retry = document.getElementById("battleRetry");
@@ -47,6 +48,7 @@
   const playerDamageSound = document.getElementById("playerDamageSound");
   const enemyDamageSound = document.getElementById("enemyDamageSound");
   const winSound = document.getElementById("winSound");
+  const missSound = document.getElementById("missSound");
   const countdown = document.getElementById("attackCountdown");
   const startCountdown = document.getElementById("battleStartCountdown");
   const countdownDigit = document.getElementById("battleCountdownDigit");
@@ -143,6 +145,25 @@
     sound.currentTime = 0;
     sound.play().catch(() => {});
   }
+  function showMissEffects() {
+    const count = 3;
+    for (let index = 0; index < count; index += 1) {
+      const angle = (Math.PI * 2 * index / count) + (Math.random() - .5) * .8;
+      const horizontalRadius = 80 + Math.random() * 65;
+      const verticalRadius = 42 + Math.random() * 42;
+      const effect = document.createElement("img");
+      effect.className = "miss-effect";
+      effect.src = "./assets/MISS.png";
+      effect.alt = "";
+      effect.draggable = false;
+      effect.style.setProperty("--x", `${Math.cos(angle) * horizontalRadius}px`);
+      effect.style.setProperty("--y", `${Math.sin(angle) * verticalRadius - 10}px`);
+      effect.style.setProperty("--rotation", `${(Math.random() - .5) * 24}deg`);
+      effect.style.animationDelay = `${index * 45}ms`;
+      effect.addEventListener("animationend", () => effect.remove(), { once: true });
+      missEffects.append(effect);
+    }
+  }
   function finish(won) {
     state.running = false; clearInterval(timer); timer = null;
     state.won = won;
@@ -189,10 +210,12 @@
   const wait = duration => new Promise(resolve => setTimeout(resolve, duration));
   async function beginCountdown(delayMs = 0) {
     const runId = ++countdownRunId;
-    if (delayMs > 0) await wait(delayMs);
-    if (runId !== countdownRunId || !state) return;
     startCountdown.hidden = false;
     countdownText.textContent = "";
+    countdownDigit.hidden = true;
+    startCountdown.setAttribute("aria-label", "戦闘準備中");
+    if (delayMs > 0) await wait(delayMs);
+    if (runId !== countdownRunId || !state) return;
     countdownDigit.hidden = false;
     for (const value of [3, 2, 1]) {
       if (runId !== countdownRunId) return;
@@ -298,6 +321,8 @@
       feedback.textContent = `正解！ モンスターに ${stage.answerDamage} ダメージ！`;
     } else {
       feedback.textContent = "不正解。別の問題に挑戦しよう！";
+      showMissEffects();
+      playSound(missSound);
     }
     state.questionIndex += 1;
     if (state.questionIndex >= state.questionOrder.length) {

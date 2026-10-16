@@ -38,13 +38,15 @@
 .stage-display__number img { display: block; width: auto; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 2px #0008); }
 .battle-screen button { font: inherit; cursor: pointer; touch-action: manipulation; }
 .battle-return { border: 1px solid #a4b6c8; border-radius: 6px; padding: 8px 12px; background: #111c2de6; color: #fff; }
-.enemy-area { align-self: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 0; z-index: 1; }
+.enemy-area { position: relative; align-self: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 0; z-index: 1; transform: translateY(clamp(8px, 1.8vh, 18px)); }
 .enemy-image { display: block; width: min(38vh, 340px, 60vw); height: min(38vh, 340px, 60vw); object-fit: contain; filter: drop-shadow(0 12px 12px #0006); }
 .enemy-image.monster-hit { animation: monster-hit 420ms ease-out; }
 .enemy-area.monster-defeated .enemy-image { animation: monster-defeat 1.3s ease-in forwards; }
 .enemy-area.monster-defeated .enemy-hp-block { animation: enemy-ui-fade 650ms ease-in 350ms forwards; }
 .enemy-image.monster-spawn { animation: monster-spawn 650ms cubic-bezier(.2, .8, .25, 1); }
-.hp-block { width: min(300px, 68vw); }
+.miss-effects { position: absolute; inset: 0; z-index: 5; overflow: visible; pointer-events: none; }
+.miss-effect { --x: 0px; --y: 0px; --rotation: 0deg; position: absolute; left: 50%; top: 38%; width: clamp(100px, 14vw, 178px); height: auto; pointer-events: none; filter: drop-shadow(0 3px 5px #001c48cc); animation: miss-burst 950ms ease-out forwards; }
+.hp-block { width: min(260px, 60vw); }
 .hp-label { margin-bottom: -3%; text-align: center; font-size: .9rem; font-weight: bold; text-shadow: 0 1px 4px #000; }
 .hp-meter { --hp-percent: 100%; position: relative; width: 100%; aspect-ratio: 3 / 1; filter: drop-shadow(0 4px 5px #0009); }
 .hp-meter img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; user-select: none; }
@@ -73,7 +75,7 @@
 .battle-screen :focus-visible { outline: 3px solid #aeeaff; outline-offset: 3px; }
 .battle-feedback { min-height: 1.6em; margin: 12px 0 0; line-height: 1.5; color: #ffe1a0; }
 .player-status { position: relative; z-index: 3; grid-column: 1; grid-row: 1; display: flex; justify-content: space-between; align-items: end; gap: 12px; min-width: 0; padding: 0 5px; }
-.player-status .hp-block { width: min(100%, 300px); }
+.player-status .hp-block { width: min(100%, 260px); }
 .battle-end[hidden] { display: none; }
 .battle-end { padding: 10px 14px; color: #fff; background: #344c6c; border: 1px solid #b3e8ff; border-radius: 6px; }
 @media (max-width: 800px) {
@@ -101,6 +103,7 @@
   .battle-screen.low-health::before, .battle-screen.low-health .player-status .hp-meter { animation: none; opacity: .42; }
   .enemy-area.monster-defeated .enemy-image { animation-name: monster-defeat-reduced; }
   .enemy-image.monster-spawn { animation-name: monster-spawn-reduced; }
+  .miss-effect { animation-name: miss-burst-reduced; }
 }
 @keyframes monster-hit {
   0%, 100% { transform: translateX(0) scale(1); filter: drop-shadow(0 12px 12px #0006); }
@@ -155,6 +158,16 @@
   100% { opacity: 1; transform: translateY(0) scale(1); filter: drop-shadow(0 12px 12px #0006); }
 }
 @keyframes monster-spawn-reduced { from { opacity: 0; } to { opacity: 1; } }
+@keyframes miss-burst {
+  0% { opacity: 0; transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(var(--rotation)) scale(.55); }
+  22% { opacity: 1; transform: translate(-50%, -50%) translate(var(--x), var(--y)) rotate(var(--rotation)) scale(1.08); }
+  58% { opacity: 1; transform: translate(-50%, -50%) translate(var(--x), calc(var(--y) - 5px)) rotate(var(--rotation)) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) translate(var(--x), calc(var(--y) - 18px)) rotate(var(--rotation)) scale(.92); }
+}
+@keyframes miss-burst-reduced {
+  0%, 100% { opacity: 0; transform: translate(-50%, -50%) translate(var(--x), var(--y)); }
+  20%, 70% { opacity: 1; transform: translate(-50%, -50%) translate(var(--x), var(--y)); }
+}
 @keyframes countdown-pop {
   0% { opacity: 0; transform: scale(1.65); }
   35% { opacity: 1; transform: scale(.92); }
