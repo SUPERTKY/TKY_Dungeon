@@ -32,6 +32,7 @@
   const defaultFrameType = "horizontal";
   const stageDefaults = { background: "./assets/background.png", music: "./assets/battle1.mp3", playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, wrongAnswerDamage: 5, frameType: "horizontal" };
   const floor2Defaults = { ...stageDefaults, background: "./assets/backgorund2.png", music: "./assets/battle2.mp3", attackIntervalMs: 12000, damage: 12, wrongAnswerDamage: 8 };
+  const floor3Defaults = { ...stageDefaults, background: "./assets/background3.png", music: "./assets/battle3.mp3", attackIntervalMs: 9000, damage: 16, wrongAnswerDamage: 10 };
   const stages = [
     { ...stageDefaults, name: "ステージ 1", number: 1, level: 1, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, questionFilter: { grade: 7, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 2", number: 2, level: 2, monster: "./assets/kinoko.png", monsterName: "キノコ", monsterHp: 25, questionFilter: { grade: 7, difficulty: 1 } },
@@ -50,7 +51,15 @@
     { ...floor2Defaults, name: "ステージ 15", number: 15, level: 15, monster: "./assets/heruhaundo.png", monsterName: "ヘルハウンド", monsterHp: 80, attackIntervalMs: 10000, damage: 14, questionFilter: { grade: 8, difficulty: 2 } },
     { ...floor2Defaults, name: "ステージ 16", number: 16, level: 16, monster: "./assets/magumago-remu.png", monsterName: "マグマゴーレム", monsterHp: 90, attackIntervalMs: 10000, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
     { ...floor2Defaults, name: "ステージ 17", number: 17, level: 17, monster: "./assets/magumasuraimu.png", monsterName: "マグマスライム", monsterHp: 95, attackIntervalMs: 9000, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor2Defaults, name: "ステージ 18", number: 18, level: 18, monster: "./assets/BOSS2.png", monsterName: "ヘルボアキング", monsterHp: 130, attackIntervalMs: 8500, damage: 18, answerDamage: 5, wrongAnswerDamage: 10, isBoss: true, questionFilter: { difficulty: 2 } }
+    { ...floor2Defaults, name: "ステージ 18", number: 18, level: 18, monster: "./assets/BOSS2.png", monsterName: "ヘルボアキング", monsterHp: 130, attackIntervalMs: 8500, damage: 18, answerDamage: 5, wrongAnswerDamage: 10, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 19", number: 19, level: 19, monster: "./assets/dokukinoko.png", monsterName: "毒キノコ", monsterHp: 100, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 20", number: 20, level: 20, monster: "./assets/foresutobi-.png", monsterName: "フォレストビー", monsterHp: 105, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 21", number: 21, level: 21, monster: "./assets/foresutodeia.png", monsterName: "フォレストディア", monsterHp: 110, attackIntervalMs: 8500, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 22", number: 22, level: 22, monster: "./assets/mani-ta-.png", monsterName: "マンイーター", monsterHp: 115, attackIntervalMs: 8500, damage: 17, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 23", number: 23, level: 23, monster: "./assets/morinogoburin.png", monsterName: "森のゴブリン", monsterHp: 120, attackIntervalMs: 8000, damage: 18, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 24", number: 24, level: 24, monster: "./assets/mosuurufu.png", monsterName: "モスウルフ", monsterHp: 125, attackIntervalMs: 8000, damage: 18, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 25", number: 25, level: 25, monster: "./assets/torento.png", monsterName: "トレント", monsterHp: 135, attackIntervalMs: 7500, damage: 19, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 26", number: 26, level: 26, monster: "./assets/BOSS3.png", monsterName: "ポイズンマッシュキング", monsterHp: 170, attackIntervalMs: 7000, damage: 22, isBoss: true, questionFilter: { difficulty: 2 } }
   ];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
