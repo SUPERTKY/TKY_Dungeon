@@ -1,0 +1,10838 @@
+[
+  {
+    "id": "science-jhs-0001",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "カエルの幼生（オタマジャクシ）が主に使う呼吸器官は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "肺だけ"
+      },
+      {
+        "id": "b",
+        "text": "えら"
+      },
+      {
+        "id": "c",
+        "text": "羽"
+      },
+      {
+        "id": "d",
+        "text": "気門"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "オタマジャクシは主にえらで呼吸します。",
+    "tags": [
+      "生物の観察と分類",
+      "両生類"
+    ]
+  },
+  {
+    "id": "science-jhs-0002",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "エネルギーの形が変わっても全体の量が保存される法則は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "フックの法則"
+      },
+      {
+        "id": "b",
+        "text": "メンデルの法則"
+      },
+      {
+        "id": "c",
+        "text": "オームの法則"
+      },
+      {
+        "id": "d",
+        "text": "エネルギー保存の法則"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "エネルギーは形を変えても全体として保存されます。",
+    "tags": [
+      "運動とエネルギー",
+      "エネルギー"
+    ]
+  },
+  {
+    "id": "science-jhs-0003",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "自然界で物質が形を変えながら巡ることは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "物質の循環"
+      },
+      {
+        "id": "b",
+        "text": "反射"
+      },
+      {
+        "id": "c",
+        "text": "エネルギーの消滅"
+      },
+      {
+        "id": "d",
+        "text": "受精"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "水や炭素などの物質は生物と環境の間を循環します。",
+    "tags": [
+      "地球と宇宙・環境",
+      "物質の循環"
+    ]
+  },
+  {
+    "id": "science-jhs-0004",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地表付近でマグマが比較的急に冷えてできた岩石はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "火山岩"
+      },
+      {
+        "id": "b",
+        "text": "砂岩"
+      },
+      {
+        "id": "c",
+        "text": "深成岩"
+      },
+      {
+        "id": "d",
+        "text": "石灰岩"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "火山岩は地表付近で比較的急に冷えてできます。",
+    "tags": [
+      "大地の変化",
+      "火成岩"
+    ]
+  },
+  {
+    "id": "science-jhs-0005",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "電圧12Vで電流3Aが流れる電気器具の電力は何Wですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "36"
+      },
+      {
+        "id": "b",
+        "text": "72"
+      },
+      {
+        "id": "c",
+        "text": "38"
+      },
+      {
+        "id": "d",
+        "text": "34"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "電力＝電圧×電流＝12×3＝36Wです。",
+    "tags": [
+      "電流と磁界",
+      "電力"
+    ],
+    "unit": "W"
+  },
+  {
+    "id": "science-jhs-0006",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電力量の単位として使われるものはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "A（アンペア）"
+      },
+      {
+        "id": "b",
+        "text": "J（ジュール）"
+      },
+      {
+        "id": "c",
+        "text": "V（ボルト）"
+      },
+      {
+        "id": "d",
+        "text": "Ω（オーム）"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "電力量（エネルギー）はJで表せます。",
+    "tags": [
+      "電流と磁界",
+      "電力量"
+    ]
+  },
+  {
+    "id": "science-jhs-0007",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "位置によって物体がもつエネルギーは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "化学エネルギーだけ"
+      },
+      {
+        "id": "b",
+        "text": "位置エネルギー"
+      },
+      {
+        "id": "c",
+        "text": "電気エネルギーだけ"
+      },
+      {
+        "id": "d",
+        "text": "運動エネルギー"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "高い位置にある物体は位置エネルギーをもっています。",
+    "tags": [
+      "運動とエネルギー",
+      "力学的エネルギー"
+    ]
+  },
+  {
+    "id": "science-jhs-0008",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "古生物の生存した時代を知るのに役立つ化石を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "鉱物"
+      },
+      {
+        "id": "b",
+        "text": "火成岩"
+      },
+      {
+        "id": "c",
+        "text": "示相化石"
+      },
+      {
+        "id": "d",
+        "text": "示準化石"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "地層の年代を判断する手がかりになるのが示準化石です。",
+    "tags": [
+      "大地の変化",
+      "化石"
+    ]
+  },
+  {
+    "id": "science-jhs-0009",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "気圧の単位として使われるものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "hPa（ヘクトパスカル）"
+      },
+      {
+        "id": "b",
+        "text": "N"
+      },
+      {
+        "id": "c",
+        "text": "℃"
+      },
+      {
+        "id": "d",
+        "text": "A"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "気圧は通常hPaで表します。",
+    "tags": [
+      "気象とその変化",
+      "気圧"
+    ]
+  },
+  {
+    "id": "science-jhs-0010",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "鉄と硫黄を加熱してできる物質はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "二酸化炭素"
+      },
+      {
+        "id": "b",
+        "text": "硫化鉄"
+      },
+      {
+        "id": "c",
+        "text": "酸化鉄"
+      },
+      {
+        "id": "d",
+        "text": "食塩"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "鉄と硫黄の化合によって硫化鉄ができます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "化合"
+    ]
+  },
+  {
+    "id": "science-jhs-0011",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "ギターの同じ弦を短くして弾くと音は一般にどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "高くなる"
+      },
+      {
+        "id": "b",
+        "text": "変わらない"
+      },
+      {
+        "id": "c",
+        "text": "低くなる"
+      },
+      {
+        "id": "d",
+        "text": "出なくなる"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "振動する弦が短いほど振動数が大きくなり、音は高くなります。",
+    "tags": [
+      "光・音・力",
+      "音の高さ"
+    ]
+  },
+  {
+    "id": "science-jhs-0012",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水に溶かした食塩をろ過だけで取り出せない理由は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "食塩が水に溶けているから"
+      },
+      {
+        "id": "b",
+        "text": "ろ紙が水を通さないから"
+      },
+      {
+        "id": "c",
+        "text": "食塩が磁石につくから"
+      },
+      {
+        "id": "d",
+        "text": "食塩が気体だから"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "溶けた食塩はろ紙を通り抜けるため、ろ過だけでは分離できません。",
+    "tags": [
+      "身のまわりの物質",
+      "ろ過"
+    ]
+  },
+  {
+    "id": "science-jhs-0013",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "ある空気1m³に水蒸気が9g含まれ、その温度での飽和水蒸気量は15g/m³でした。湿度は何％ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "62"
+      },
+      {
+        "id": "b",
+        "text": "120"
+      },
+      {
+        "id": "c",
+        "text": "58"
+      },
+      {
+        "id": "d",
+        "text": "60"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "湿度＝9÷15×100＝60％です。",
+    "tags": [
+      "気象とその変化",
+      "湿度"
+    ],
+    "unit": "％"
+  },
+  {
+    "id": "science-jhs-0014",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "アサガオの葉脈のように、網目状になった葉脈を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "側脈がない葉脈"
+      },
+      {
+        "id": "b",
+        "text": "環状脈"
+      },
+      {
+        "id": "c",
+        "text": "網状脈"
+      },
+      {
+        "id": "d",
+        "text": "平行脈"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "アサガオなどの双子葉類は網状脈をもつものが多いです。",
+    "tags": [
+      "生物の観察と分類",
+      "葉脈"
+    ]
+  },
+  {
+    "id": "science-jhs-0015",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "マグネシウムが燃えてできる白色の物質は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸化マグネシウム"
+      },
+      {
+        "id": "b",
+        "text": "硫化鉄"
+      },
+      {
+        "id": "c",
+        "text": "酸化銅"
+      },
+      {
+        "id": "d",
+        "text": "水素"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "マグネシウムは酸素と結合して酸化マグネシウムになります。",
+    "tags": [
+      "化学変化と原子・分子",
+      "酸化"
+    ]
+  },
+  {
+    "id": "science-jhs-0016",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "塩化物イオンの化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cl⁺"
+      },
+      {
+        "id": "b",
+        "text": "Cl⁻"
+      },
+      {
+        "id": "c",
+        "text": "Na⁺"
+      },
+      {
+        "id": "d",
+        "text": "Cl₂"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "塩素原子が電子を1個受け取りCl⁻になります。",
+    "tags": [
+      "化学変化とイオン",
+      "イオン式"
+    ]
+  },
+  {
+    "id": "science-jhs-0017",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電流の大きさを表す単位は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "W（ワット）"
+      },
+      {
+        "id": "b",
+        "text": "Ω（オーム）"
+      },
+      {
+        "id": "c",
+        "text": "V（ボルト）"
+      },
+      {
+        "id": "d",
+        "text": "A（アンペア）"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "電流の単位はAです。",
+    "tags": [
+      "電流と磁界",
+      "電流"
+    ]
+  },
+  {
+    "id": "science-jhs-0018",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "接眼レンズが5倍、対物レンズが12倍の顕微鏡の倍率は何倍ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "58"
+      },
+      {
+        "id": "b",
+        "text": "120"
+      },
+      {
+        "id": "c",
+        "text": "60"
+      },
+      {
+        "id": "d",
+        "text": "62"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "5×12＝60倍です。",
+    "tags": [
+      "生物の観察と分類",
+      "顕微鏡の倍率"
+    ],
+    "unit": "倍"
+  },
+  {
+    "id": "science-jhs-0019",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "エビや昆虫に共通する特徴はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "背骨がある"
+      },
+      {
+        "id": "b",
+        "text": "内骨格だけをもつ"
+      },
+      {
+        "id": "c",
+        "text": "肺をもつ"
+      },
+      {
+        "id": "d",
+        "text": "外骨格をもつ"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "節足動物は体の外側に外骨格をもちます。",
+    "tags": [
+      "生物の観察と分類",
+      "節足動物"
+    ]
+  },
+  {
+    "id": "science-jhs-0020",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "マグマが冷えて固まった岩石をまとめて何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "火成岩"
+      },
+      {
+        "id": "b",
+        "text": "砂礫"
+      },
+      {
+        "id": "c",
+        "text": "化石"
+      },
+      {
+        "id": "d",
+        "text": "堆積岩"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "マグマが冷えて固まった岩石は火成岩です。",
+    "tags": [
+      "大地の変化",
+      "火成岩"
+    ]
+  },
+  {
+    "id": "science-jhs-0021",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電磁石の極を逆にする方法はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "コイルの電流の向きを逆にする"
+      },
+      {
+        "id": "b",
+        "text": "鉄心を長くするだけ"
+      },
+      {
+        "id": "c",
+        "text": "導線を太くするだけ"
+      },
+      {
+        "id": "d",
+        "text": "周囲を明るくする"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "コイルに流す電流の向きを逆にすると磁極も逆になります。",
+    "tags": [
+      "電流と磁界",
+      "電磁石"
+    ]
+  },
+  {
+    "id": "science-jhs-0022",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "食塩水から食塩の結晶を取り出す方法として適切なのはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "光を当てる"
+      },
+      {
+        "id": "b",
+        "text": "ろ紙だけでこし取る"
+      },
+      {
+        "id": "c",
+        "text": "水を蒸発させる"
+      },
+      {
+        "id": "d",
+        "text": "磁石を近づける"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "水を蒸発させると溶けていた食塩が残ります。",
+    "tags": [
+      "身のまわりの物質",
+      "結晶"
+    ]
+  },
+  {
+    "id": "science-jhs-0023",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水に溶けにくい気体を集めるのに適する方法はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "上方置換法だけ"
+      },
+      {
+        "id": "b",
+        "text": "水上置換法"
+      },
+      {
+        "id": "c",
+        "text": "ろ過"
+      },
+      {
+        "id": "d",
+        "text": "下方置換法だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "水に溶けにくい気体は水上置換法で集められます。",
+    "tags": [
+      "身のまわりの物質",
+      "気体の集め方"
+    ]
+  },
+  {
+    "id": "science-jhs-0024",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "物体が80mを20秒で進みました。平均の速さは何m/sですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "3"
+      },
+      {
+        "id": "b",
+        "text": "5"
+      },
+      {
+        "id": "c",
+        "text": "4"
+      },
+      {
+        "id": "d",
+        "text": "8"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "平均の速さは80÷20＝4m/sです。",
+    "tags": [
+      "運動とエネルギー",
+      "平均の速さ"
+    ],
+    "unit": "m/s"
+  },
+  {
+    "id": "science-jhs-0025",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "光合成でつくられた糖から植物がつくって蓄える物質はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸素"
+      },
+      {
+        "id": "b",
+        "text": "鉄"
+      },
+      {
+        "id": "c",
+        "text": "食塩"
+      },
+      {
+        "id": "d",
+        "text": "デンプン"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "光合成でつくられた糖はデンプンなどとして蓄えられます。",
+    "tags": [
+      "生物の体のつくり",
+      "光合成"
+    ]
+  },
+  {
+    "id": "science-jhs-0026",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電圧計は測りたい部分にどのようにつなぎますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "回路の外"
+      },
+      {
+        "id": "b",
+        "text": "直列"
+      },
+      {
+        "id": "c",
+        "text": "並列"
+      },
+      {
+        "id": "d",
+        "text": "電源を短絡させて"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "電圧計は測る部分の両端に並列につなぎます。",
+    "tags": [
+      "電流と磁界",
+      "測定器"
+    ]
+  },
+  {
+    "id": "science-jhs-0027",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "鏡に光が当たってはね返る現象を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "反射"
+      },
+      {
+        "id": "b",
+        "text": "分散"
+      },
+      {
+        "id": "c",
+        "text": "吸収だけ"
+      },
+      {
+        "id": "d",
+        "text": "屈折"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "鏡で光がはね返る現象は反射です。",
+    "tags": [
+      "光・音・力",
+      "光の反射"
+    ]
+  },
+  {
+    "id": "science-jhs-0028",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "金星が真夜中に見えない主な理由は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "空気がないから"
+      },
+      {
+        "id": "b",
+        "text": "月より小さいから"
+      },
+      {
+        "id": "c",
+        "text": "地球より内側を公転する内惑星だから"
+      },
+      {
+        "id": "d",
+        "text": "自ら光らないから"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "金星は内惑星のため太陽から大きく離れた方向には見えません。",
+    "tags": [
+      "地球と宇宙・環境",
+      "金星"
+    ]
+  },
+  {
+    "id": "science-jhs-0029",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "植物の葉の表面にあり、気体の出入りを行うすき間を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "根毛"
+      },
+      {
+        "id": "b",
+        "text": "葉緑体"
+      },
+      {
+        "id": "c",
+        "text": "気孔"
+      },
+      {
+        "id": "d",
+        "text": "維管束"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "気孔から二酸化炭素や酸素、水蒸気が出入りします。",
+    "tags": [
+      "生物の体のつくり",
+      "気孔"
+    ]
+  },
+  {
+    "id": "science-jhs-0030",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物質が別の物質に変わる変化を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "凝固だけ"
+      },
+      {
+        "id": "b",
+        "text": "蒸発だけ"
+      },
+      {
+        "id": "c",
+        "text": "化学変化"
+      },
+      {
+        "id": "d",
+        "text": "状態変化"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "原子の結びつきが変わって別の物質ができるのが化学変化です。",
+    "tags": [
+      "化学変化と原子・分子",
+      "化学変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0031",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が24時間で360°自転すると考えると、6時間で約何度自転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "88"
+      },
+      {
+        "id": "b",
+        "text": "180"
+      },
+      {
+        "id": "c",
+        "text": "90"
+      },
+      {
+        "id": "d",
+        "text": "92"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "360÷24＝15°/時なので、15×6＝90°です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ],
+    "unit": "°"
+  },
+  {
+    "id": "science-jhs-0032",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が24時間で360°自転すると考えると、9時間で約何度自転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "270"
+      },
+      {
+        "id": "b",
+        "text": "130"
+      },
+      {
+        "id": "c",
+        "text": "140"
+      },
+      {
+        "id": "d",
+        "text": "135"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "360÷24＝15°/時なので、15×9＝135°です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ],
+    "unit": "°"
+  },
+  {
+    "id": "science-jhs-0033",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "発電機で行われる主なエネルギー変換はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "核エネルギー→光だけ"
+      },
+      {
+        "id": "b",
+        "text": "運動エネルギー→電気エネルギー"
+      },
+      {
+        "id": "c",
+        "text": "光エネルギー→音エネルギー"
+      },
+      {
+        "id": "d",
+        "text": "電気→化学エネルギー"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "発電機は回転などの運動を電気に変えます。",
+    "tags": [
+      "運動とエネルギー",
+      "エネルギー変換"
+    ]
+  },
+  {
+    "id": "science-jhs-0034",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "海陸風で、一般に晴れた昼間に海から陸へ吹く風はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "陸風"
+      },
+      {
+        "id": "b",
+        "text": "海風"
+      },
+      {
+        "id": "c",
+        "text": "偏西風"
+      },
+      {
+        "id": "d",
+        "text": "季節風だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "昼間は陸が暖まり、海から陸へ海風が吹きます。",
+    "tags": [
+      "気象とその変化",
+      "局地風"
+    ]
+  },
+  {
+    "id": "science-jhs-0035",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "根で吸収した水や無機養分が主に通る管は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "道管"
+      },
+      {
+        "id": "b",
+        "text": "食道"
+      },
+      {
+        "id": "c",
+        "text": "師管"
+      },
+      {
+        "id": "d",
+        "text": "気管"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "道管を通って根から茎や葉へ水などが運ばれます。",
+    "tags": [
+      "生物の体のつくり",
+      "道管"
+    ]
+  },
+  {
+    "id": "science-jhs-0036",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "磁石のN極どうしを近づけるとどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず回転する"
+      },
+      {
+        "id": "b",
+        "text": "しりぞけ合う"
+      },
+      {
+        "id": "c",
+        "text": "磁力が消える"
+      },
+      {
+        "id": "d",
+        "text": "引き合う"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "同じ極どうしは反発します。",
+    "tags": [
+      "電流と磁界",
+      "磁石"
+    ]
+  },
+  {
+    "id": "science-jhs-0037",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "岩石が気温の変化や水の作用などでくだける現象を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "蒸留"
+      },
+      {
+        "id": "b",
+        "text": "堆積"
+      },
+      {
+        "id": "c",
+        "text": "凝縮"
+      },
+      {
+        "id": "d",
+        "text": "風化"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "岩石がその場でくずれる現象を風化といいます。",
+    "tags": [
+      "大地の変化",
+      "地形の変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0038",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "イカやアサリが属する動物の仲間はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "刺胞動物"
+      },
+      {
+        "id": "b",
+        "text": "節足動物"
+      },
+      {
+        "id": "c",
+        "text": "軟体動物"
+      },
+      {
+        "id": "d",
+        "text": "脊椎動物"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "イカやアサリは軟体動物に分類されます。",
+    "tags": [
+      "生物の観察と分類",
+      "無脊椎動物"
+    ]
+  },
+  {
+    "id": "science-jhs-0039",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水酸化物イオンの化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "H⁺"
+      },
+      {
+        "id": "b",
+        "text": "O₂"
+      },
+      {
+        "id": "c",
+        "text": "OH⁺"
+      },
+      {
+        "id": "d",
+        "text": "OH⁻"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "水酸化物イオンはOH⁻です。",
+    "tags": [
+      "化学変化とイオン",
+      "イオン式"
+    ]
+  },
+  {
+    "id": "science-jhs-0040",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "メンデルが遺伝の研究に用いた植物は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "マツ"
+      },
+      {
+        "id": "b",
+        "text": "エンドウ"
+      },
+      {
+        "id": "c",
+        "text": "イネだけ"
+      },
+      {
+        "id": "d",
+        "text": "タンポポ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "メンデルはエンドウの形質を調べて遺伝の規則性を示しました。",
+    "tags": [
+      "生命の連続性",
+      "遺伝"
+    ]
+  },
+  {
+    "id": "science-jhs-0041",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "親の体の一部などから新しい個体ができ、生殖細胞の受精を伴わない生殖はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "有性生殖"
+      },
+      {
+        "id": "b",
+        "text": "受精"
+      },
+      {
+        "id": "c",
+        "text": "無性生殖"
+      },
+      {
+        "id": "d",
+        "text": "受粉"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "無性生殖では受精を必要としません。",
+    "tags": [
+      "生命の連続性",
+      "生殖"
+    ]
+  },
+  {
+    "id": "science-jhs-0042",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が24時間で360°自転すると考えると、4時間で約何度自転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "62"
+      },
+      {
+        "id": "b",
+        "text": "60"
+      },
+      {
+        "id": "c",
+        "text": "120"
+      },
+      {
+        "id": "d",
+        "text": "58"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "360÷24＝15°/時なので、15×4＝60°です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ],
+    "unit": "°"
+  },
+  {
+    "id": "science-jhs-0043",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "BTB溶液が青色を示す水溶液は何性ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "中性"
+      },
+      {
+        "id": "b",
+        "text": "アルカリ性"
+      },
+      {
+        "id": "c",
+        "text": "酸性"
+      },
+      {
+        "id": "d",
+        "text": "どの水溶液でも同じ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "BTB溶液はアルカリ性で青色になります。",
+    "tags": [
+      "化学変化とイオン",
+      "指示薬"
+    ]
+  },
+  {
+    "id": "science-jhs-0044",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "同じような形やはたらきをもつ細胞が集まったものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "器官"
+      },
+      {
+        "id": "b",
+        "text": "種子"
+      },
+      {
+        "id": "c",
+        "text": "組織"
+      },
+      {
+        "id": "d",
+        "text": "個体"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "同じような細胞の集まりが組織です。",
+    "tags": [
+      "生物の体のつくり",
+      "組織"
+    ]
+  },
+  {
+    "id": "science-jhs-0045",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "生物の死がいや排出物などを分解して無機物にもどす生物はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "鳥類だけ"
+      },
+      {
+        "id": "b",
+        "text": "菌類・細菌類など"
+      },
+      {
+        "id": "c",
+        "text": "草食動物だけ"
+      },
+      {
+        "id": "d",
+        "text": "植物だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "菌類や細菌類などは分解者としてはたらきます。",
+    "tags": [
+      "生命の連続性",
+      "生態系"
+    ]
+  },
+  {
+    "id": "science-jhs-0046",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "凸レンズで、光軸に平行に入った光が集まる点を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "焦点"
+      },
+      {
+        "id": "b",
+        "text": "震源"
+      },
+      {
+        "id": "c",
+        "text": "重心"
+      },
+      {
+        "id": "d",
+        "text": "支点"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "凸レンズで平行光線が集まる点を焦点といいます。",
+    "tags": [
+      "光・音・力",
+      "凸レンズ"
+    ]
+  },
+  {
+    "id": "science-jhs-0047",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "地球が約1年で太陽のまわりを1周することで生じる星座の見え方の変化は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "日周運動"
+      },
+      {
+        "id": "b",
+        "text": "自転"
+      },
+      {
+        "id": "c",
+        "text": "潮汐だけ"
+      },
+      {
+        "id": "d",
+        "text": "年周運動"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "地球の公転によって星座の見える方向が季節で変わります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "年周運動"
+    ]
+  },
+  {
+    "id": "science-jhs-0048",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "酸性とアルカリ性の水溶液を混ぜ、互いの性質を打ち消す反応は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "再結晶"
+      },
+      {
+        "id": "b",
+        "text": "中和"
+      },
+      {
+        "id": "c",
+        "text": "酸化だけ"
+      },
+      {
+        "id": "d",
+        "text": "電離だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "水素イオンと水酸化物イオンが結びつく反応を中和といいます。",
+    "tags": [
+      "化学変化とイオン",
+      "中和"
+    ]
+  },
+  {
+    "id": "science-jhs-0049",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "100gの物体にはたらく重力を約1Nとすると、質量400gの物体にはたらく重力は約何Nですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "4"
+      },
+      {
+        "id": "b",
+        "text": "8"
+      },
+      {
+        "id": "c",
+        "text": "5"
+      },
+      {
+        "id": "d",
+        "text": "3"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "400÷100＝4Nです。",
+    "tags": [
+      "光・音・力",
+      "重力"
+    ],
+    "unit": "N"
+  },
+  {
+    "id": "science-jhs-0050",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "原子が電子を受け取ってできるイオンは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "陽子"
+      },
+      {
+        "id": "b",
+        "text": "中性原子だけ"
+      },
+      {
+        "id": "c",
+        "text": "陽イオン"
+      },
+      {
+        "id": "d",
+        "text": "陰イオン"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "電子を受け取ると負の電荷をもつ陰イオンになります。",
+    "tags": [
+      "化学変化とイオン",
+      "イオン"
+    ]
+  },
+  {
+    "id": "science-jhs-0051",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "ツツジの花弁のつき方はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "裸子植物の花"
+      },
+      {
+        "id": "b",
+        "text": "合弁花"
+      },
+      {
+        "id": "c",
+        "text": "花弁がない花"
+      },
+      {
+        "id": "d",
+        "text": "離弁花"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "ツツジは花弁が合着した合弁花です。",
+    "tags": [
+      "生物の観察と分類",
+      "花"
+    ]
+  },
+  {
+    "id": "science-jhs-0052",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "化学反応式で左辺と右辺の原子の数をそろえる理由は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "原子が途中で生まれるから"
+      },
+      {
+        "id": "b",
+        "text": "質量が常に倍になるから"
+      },
+      {
+        "id": "c",
+        "text": "原子の種類と数が保存されるから"
+      },
+      {
+        "id": "d",
+        "text": "温度が一定になるから"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "化学変化では原子の組み替えが起こり、各元素の原子数は保存されます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "化学反応式"
+    ]
+  },
+  {
+    "id": "science-jhs-0053",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "空気中から水中へ斜めに入る光が境界で進む方向を変える現象を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "反射だけ"
+      },
+      {
+        "id": "b",
+        "text": "屈折"
+      },
+      {
+        "id": "c",
+        "text": "蒸発"
+      },
+      {
+        "id": "d",
+        "text": "回折だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "異なる物質の境界で光の進行方向が変わる現象を屈折といいます。",
+    "tags": [
+      "光・音・力",
+      "光の屈折"
+    ]
+  },
+  {
+    "id": "science-jhs-0054",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "は虫類が成長後に主に使う呼吸器官は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "気門"
+      },
+      {
+        "id": "b",
+        "text": "肺"
+      },
+      {
+        "id": "c",
+        "text": "体表だけ"
+      },
+      {
+        "id": "d",
+        "text": "えら"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "は虫類は肺で呼吸します。",
+    "tags": [
+      "生物の観察と分類",
+      "は虫類"
+    ]
+  },
+  {
+    "id": "science-jhs-0055",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電解質が水に溶けて陽イオンと陰イオンに分かれることは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電離"
+      },
+      {
+        "id": "b",
+        "text": "受精"
+      },
+      {
+        "id": "c",
+        "text": "中和"
+      },
+      {
+        "id": "d",
+        "text": "蒸留"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "水中でイオンに分かれる現象を電離といいます。",
+    "tags": [
+      "化学変化とイオン",
+      "電離"
+    ]
+  },
+  {
+    "id": "science-jhs-0056",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "動物で、精子と卵が合体することを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "受粉"
+      },
+      {
+        "id": "b",
+        "text": "発芽"
+      },
+      {
+        "id": "c",
+        "text": "分裂"
+      },
+      {
+        "id": "d",
+        "text": "受精"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "精子と卵が合体して受精卵ができます。",
+    "tags": [
+      "生命の連続性",
+      "受精"
+    ]
+  },
+  {
+    "id": "science-jhs-0057",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "物体が240mを40秒で進みました。平均の速さは何m/sですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "7"
+      },
+      {
+        "id": "b",
+        "text": "6"
+      },
+      {
+        "id": "c",
+        "text": "5"
+      },
+      {
+        "id": "d",
+        "text": "12"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "平均の速さは240÷40＝6m/sです。",
+    "tags": [
+      "運動とエネルギー",
+      "平均の速さ"
+    ],
+    "unit": "m/s"
+  },
+  {
+    "id": "science-jhs-0058",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "生物が呼吸するときに大気中へ主に放出する炭素を含む気体はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "水素"
+      },
+      {
+        "id": "b",
+        "text": "二酸化炭素"
+      },
+      {
+        "id": "c",
+        "text": "酸素"
+      },
+      {
+        "id": "d",
+        "text": "ヘリウム"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "呼吸では有機物が分解され二酸化炭素が放出されます。",
+    "tags": [
+      "生命の連続性",
+      "炭素の循環"
+    ]
+  },
+  {
+    "id": "science-jhs-0059",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "花粉管が胚珠に向かって伸びる主な役割は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "果実を運ぶこと"
+      },
+      {
+        "id": "b",
+        "text": "花弁を広げること"
+      },
+      {
+        "id": "c",
+        "text": "精細胞を卵細胞へ届けること"
+      },
+      {
+        "id": "d",
+        "text": "水を吸収すること"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "花粉管は精細胞が卵細胞へ到達する経路になります。",
+    "tags": [
+      "生命の連続性",
+      "受精"
+    ]
+  },
+  {
+    "id": "science-jhs-0060",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水溶液で、水などに溶けている物質を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "溶質"
+      },
+      {
+        "id": "b",
+        "text": "ろ紙"
+      },
+      {
+        "id": "c",
+        "text": "溶媒"
+      },
+      {
+        "id": "d",
+        "text": "水蒸気"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "溶けている物質を溶質といいます。",
+    "tags": [
+      "身のまわりの物質",
+      "水溶液"
+    ]
+  },
+  {
+    "id": "science-jhs-0061",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "生物の体をつくる基本的な単位は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "器官"
+      },
+      {
+        "id": "b",
+        "text": "組織"
+      },
+      {
+        "id": "c",
+        "text": "細胞"
+      },
+      {
+        "id": "d",
+        "text": "個体"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "生物の体は細胞を基本単位としてできています。",
+    "tags": [
+      "生物の体のつくり",
+      "細胞"
+    ]
+  },
+  {
+    "id": "science-jhs-0062",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が24時間で360°自転すると考えると、2時間で約何度自転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "60"
+      },
+      {
+        "id": "b",
+        "text": "28"
+      },
+      {
+        "id": "c",
+        "text": "30"
+      },
+      {
+        "id": "d",
+        "text": "32"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "360÷24＝15°/時なので、15×2＝30°です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ],
+    "unit": "°"
+  },
+  {
+    "id": "science-jhs-0063",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "鉄の元素記号はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cu"
+      },
+      {
+        "id": "b",
+        "text": "Fe"
+      },
+      {
+        "id": "c",
+        "text": "Au"
+      },
+      {
+        "id": "d",
+        "text": "Ag"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "鉄は元素記号Feで表します。",
+    "tags": [
+      "化学変化と原子・分子",
+      "元素記号"
+    ]
+  },
+  {
+    "id": "science-jhs-0064",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "月が自ら光って見えるのではなく明るく見える主な理由は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "地球の光だけを出すから"
+      },
+      {
+        "id": "b",
+        "text": "内部で核融合しているから"
+      },
+      {
+        "id": "c",
+        "text": "電気を発生させるから"
+      },
+      {
+        "id": "d",
+        "text": "太陽の光を反射しているから"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "月は太陽光を反射して光って見えます。",
+    "tags": [
+      "地球と宇宙・環境",
+      "月"
+    ]
+  },
+  {
+    "id": "science-jhs-0065",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "一定の速さで伝わる音が9秒間に45m進んだとします。このとき音の速さは何m/sですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "4"
+      },
+      {
+        "id": "b",
+        "text": "6"
+      },
+      {
+        "id": "c",
+        "text": "5"
+      },
+      {
+        "id": "d",
+        "text": "10"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "速さ＝距離÷時間＝45÷9＝5m/sです。",
+    "tags": [
+      "光・音・力",
+      "音の速さ"
+    ],
+    "unit": "m/s"
+  },
+  {
+    "id": "science-jhs-0066",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "塩酸と水酸化ナトリウム水溶液を中和するとできる塩は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "塩化ナトリウム"
+      },
+      {
+        "id": "b",
+        "text": "硝酸カリウム"
+      },
+      {
+        "id": "c",
+        "text": "炭酸カルシウム"
+      },
+      {
+        "id": "d",
+        "text": "硫酸銅"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "塩酸と水酸化ナトリウムの中和で水と塩化ナトリウムができます。",
+    "tags": [
+      "化学変化とイオン",
+      "中和"
+    ]
+  },
+  {
+    "id": "science-jhs-0067",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "密閉容器内の化学変化で、反応前後の物質全体の質量はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "変わらない"
+      },
+      {
+        "id": "b",
+        "text": "0になる"
+      },
+      {
+        "id": "c",
+        "text": "必ず減る"
+      },
+      {
+        "id": "d",
+        "text": "必ず増える"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "原子の種類と数は変わらず、全体の質量は保存されます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "質量保存"
+    ]
+  },
+  {
+    "id": "science-jhs-0068",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "静止した物体がそのまま静止し続けようとする性質を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "誘導"
+      },
+      {
+        "id": "b",
+        "text": "慣性"
+      },
+      {
+        "id": "c",
+        "text": "凝縮"
+      },
+      {
+        "id": "d",
+        "text": "反射"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "運動状態を保とうとする性質を慣性といいます。",
+    "tags": [
+      "運動とエネルギー",
+      "慣性"
+    ]
+  },
+  {
+    "id": "science-jhs-0069",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "化石の記録から生物の進化を考えることができるのはなぜですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "すべての化石が現生種だから"
+      },
+      {
+        "id": "b",
+        "text": "化石はすべて同じ年代だから"
+      },
+      {
+        "id": "c",
+        "text": "過去の生物の特徴や変化が残るから"
+      },
+      {
+        "id": "d",
+        "text": "化石が未来を示すから"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "化石は過去の生物の形や年代を調べる手がかりです。",
+    "tags": [
+      "生命の連続性",
+      "進化"
+    ]
+  },
+  {
+    "id": "science-jhs-0070",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "異なる種類の原子が化学的に結びついた純物質を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "混合物"
+      },
+      {
+        "id": "b",
+        "text": "元素"
+      },
+      {
+        "id": "c",
+        "text": "単体"
+      },
+      {
+        "id": "d",
+        "text": "化合物"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "2種類以上の元素からなる純物質は化合物です。",
+    "tags": [
+      "化学変化と原子・分子",
+      "物質の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0071",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "電磁誘導で生じる電流を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "誘導電流"
+      },
+      {
+        "id": "b",
+        "text": "光電流だけ"
+      },
+      {
+        "id": "c",
+        "text": "静電気"
+      },
+      {
+        "id": "d",
+        "text": "直流だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "磁界の変化によって流れる電流を誘導電流といいます。",
+    "tags": [
+      "電流と磁界",
+      "電磁誘導"
+    ]
+  },
+  {
+    "id": "science-jhs-0072",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "質量72g、体積8cm³の物質の密度は何g/cm³ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "8"
+      },
+      {
+        "id": "b",
+        "text": "9"
+      },
+      {
+        "id": "c",
+        "text": "18"
+      },
+      {
+        "id": "d",
+        "text": "10"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "密度＝質量÷体積＝72÷8＝9g/cm³です。",
+    "tags": [
+      "身のまわりの物質",
+      "密度"
+    ],
+    "unit": "g/cm³"
+  },
+  {
+    "id": "science-jhs-0073",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "心臓から出ていく血液が通る血管はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "毛細血管だけ"
+      },
+      {
+        "id": "b",
+        "text": "動脈"
+      },
+      {
+        "id": "c",
+        "text": "静脈"
+      },
+      {
+        "id": "d",
+        "text": "リンパ管"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "動脈は心臓から送り出された血液が流れる血管です。",
+    "tags": [
+      "生物の体のつくり",
+      "血液循環"
+    ]
+  },
+  {
+    "id": "science-jhs-0074",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "温暖前線の近くで広い範囲に降りやすい雨はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ずひょうだけ"
+      },
+      {
+        "id": "b",
+        "text": "雨は一切降らない"
+      },
+      {
+        "id": "c",
+        "text": "比較的弱い雨が長く続く"
+      },
+      {
+        "id": "d",
+        "text": "短時間の激しい雨だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "温暖前線付近では層状の雲が広がり、弱い雨が続くことがあります。",
+    "tags": [
+      "気象とその変化",
+      "前線と天気"
+    ]
+  },
+  {
+    "id": "science-jhs-0075",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地下深くでマグマがゆっくり冷えてできた岩石を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "れき岩"
+      },
+      {
+        "id": "b",
+        "text": "火山岩"
+      },
+      {
+        "id": "c",
+        "text": "泥岩"
+      },
+      {
+        "id": "d",
+        "text": "深成岩"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "深成岩は地下深くでゆっくり冷えてできます。",
+    "tags": [
+      "大地の変化",
+      "火成岩"
+    ]
+  },
+  {
+    "id": "science-jhs-0076",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "マツのように胚珠が子房に包まれていない植物はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "被子植物"
+      },
+      {
+        "id": "b",
+        "text": "コケ植物"
+      },
+      {
+        "id": "c",
+        "text": "裸子植物"
+      },
+      {
+        "id": "d",
+        "text": "シダ植物"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "裸子植物では胚珠がむき出しになっています。",
+    "tags": [
+      "生物の観察と分類",
+      "植物の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0077",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "純粋な物質が一定の圧力で沸騰する温度を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "融点"
+      },
+      {
+        "id": "b",
+        "text": "露点"
+      },
+      {
+        "id": "c",
+        "text": "沸点"
+      },
+      {
+        "id": "d",
+        "text": "凝固点だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "液体が沸騰する温度が沸点です。",
+    "tags": [
+      "身のまわりの物質",
+      "状態変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0078",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "ある空気1m³に水蒸気が12g含まれ、その温度での飽和水蒸気量は20g/m³でした。湿度は何％ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "60"
+      },
+      {
+        "id": "b",
+        "text": "62"
+      },
+      {
+        "id": "c",
+        "text": "120"
+      },
+      {
+        "id": "d",
+        "text": "58"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "湿度＝12÷20×100＝60％です。",
+    "tags": [
+      "気象とその変化",
+      "湿度"
+    ],
+    "unit": "％"
+  },
+  {
+    "id": "science-jhs-0079",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "砂糖水が電流をほとんど通さないのはなぜですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "砂糖が水中でイオンにならないから"
+      },
+      {
+        "id": "b",
+        "text": "必ず砂糖が沈殿するから"
+      },
+      {
+        "id": "c",
+        "text": "砂糖が金属だから"
+      },
+      {
+        "id": "d",
+        "text": "水が絶縁体だから"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "砂糖は非電解質で、溶けてもイオンをつくりません。",
+    "tags": [
+      "化学変化とイオン",
+      "非電解質"
+    ]
+  },
+  {
+    "id": "science-jhs-0080",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "生態系における生産者の代表はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "菌類だけ"
+      },
+      {
+        "id": "b",
+        "text": "緑色植物"
+      },
+      {
+        "id": "c",
+        "text": "肉食動物"
+      },
+      {
+        "id": "d",
+        "text": "寄生虫だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "緑色植物は光合成で有機物をつくる生産者です。",
+    "tags": [
+      "生命の連続性",
+      "生態系"
+    ]
+  },
+  {
+    "id": "science-jhs-0081",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が24時間で360°自転すると考えると、1時間で約何度自転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "14"
+      },
+      {
+        "id": "b",
+        "text": "30"
+      },
+      {
+        "id": "c",
+        "text": "15"
+      },
+      {
+        "id": "d",
+        "text": "16"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "360÷24＝15°/時なので、15×1＝15°です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ],
+    "unit": "°"
+  },
+  {
+    "id": "science-jhs-0082",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "光が同じ物質中を進むときの基本的な性質はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "直進する"
+      },
+      {
+        "id": "b",
+        "text": "必ず止まる"
+      },
+      {
+        "id": "c",
+        "text": "必ず曲がる"
+      },
+      {
+        "id": "d",
+        "text": "必ず反射する"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "光は一様な物質中では直進します。",
+    "tags": [
+      "光・音・力",
+      "光の直進"
+    ]
+  },
+  {
+    "id": "science-jhs-0083",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "アルカリ性の水溶液のpHとして適切なのはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "7"
+      },
+      {
+        "id": "c",
+        "text": "11"
+      },
+      {
+        "id": "d",
+        "text": "2"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "一般にアルカリ性はpH7より大きい値です。",
+    "tags": [
+      "化学変化とイオン",
+      "pH"
+    ]
+  },
+  {
+    "id": "science-jhs-0084",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地震の主要動を主に伝える地震波はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "S波"
+      },
+      {
+        "id": "b",
+        "text": "光波"
+      },
+      {
+        "id": "c",
+        "text": "P波"
+      },
+      {
+        "id": "d",
+        "text": "電波"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "S波は主に主要動をもたらします。",
+    "tags": [
+      "大地の変化",
+      "地震"
+    ]
+  },
+  {
+    "id": "science-jhs-0085",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "斜面を下る台車が加速しているとき、同じ時間ごとに進む距離は一般にどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "小さくなる"
+      },
+      {
+        "id": "b",
+        "text": "同じ"
+      },
+      {
+        "id": "c",
+        "text": "0になる"
+      },
+      {
+        "id": "d",
+        "text": "大きくなる"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "速さが増すと等時間で進む距離も増えます。",
+    "tags": [
+      "運動とエネルギー",
+      "運動の記録"
+    ]
+  },
+  {
+    "id": "science-jhs-0086",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "音の高さを決める主な要素は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "振幅"
+      },
+      {
+        "id": "b",
+        "text": "空気の色"
+      },
+      {
+        "id": "c",
+        "text": "音源の重さだけ"
+      },
+      {
+        "id": "d",
+        "text": "振動数"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "振動数が大きいほど音は高くなります。",
+    "tags": [
+      "光・音・力",
+      "音の高さ"
+    ]
+  },
+  {
+    "id": "science-jhs-0087",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "コイルの近くで磁石を動かすとコイルに電流が流れる現象は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "蒸留"
+      },
+      {
+        "id": "b",
+        "text": "屈折"
+      },
+      {
+        "id": "c",
+        "text": "電磁誘導"
+      },
+      {
+        "id": "d",
+        "text": "熱伝導"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "磁界の変化によって電圧が生じる現象は電磁誘導です。",
+    "tags": [
+      "電流と磁界",
+      "電磁誘導"
+    ]
+  },
+  {
+    "id": "science-jhs-0088",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "寒冷前線の通過時に起こりやすい天気はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "短時間の強い雨"
+      },
+      {
+        "id": "b",
+        "text": "風が必ずなくなる"
+      },
+      {
+        "id": "c",
+        "text": "雪だけで雨は降らない"
+      },
+      {
+        "id": "d",
+        "text": "長期間続く快晴だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "寒冷前線付近では積乱雲が発達し、強い雨が降りやすいです。",
+    "tags": [
+      "気象とその変化",
+      "前線と天気"
+    ]
+  },
+  {
+    "id": "science-jhs-0089",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "「北西の風」はどの方向から吹いてくる風ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "南西"
+      },
+      {
+        "id": "b",
+        "text": "南東"
+      },
+      {
+        "id": "c",
+        "text": "北東"
+      },
+      {
+        "id": "d",
+        "text": "北西"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "北西の風は北西から南東へ向かって吹きます。",
+    "tags": [
+      "気象とその変化",
+      "風向"
+    ]
+  },
+  {
+    "id": "science-jhs-0090",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "川が土砂を下流へ運ぶはたらきは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "反射"
+      },
+      {
+        "id": "b",
+        "text": "運搬"
+      },
+      {
+        "id": "c",
+        "text": "凝固"
+      },
+      {
+        "id": "d",
+        "text": "風化"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "流水が土砂を運ぶ作用は運搬です。",
+    "tags": [
+      "大地の変化",
+      "流水"
+    ]
+  },
+  {
+    "id": "science-jhs-0091",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "顕微鏡で拡大して見た像の上下左右は、一般に実物に対してどう見えますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "変化しない"
+      },
+      {
+        "id": "b",
+        "text": "上下左右が逆"
+      },
+      {
+        "id": "c",
+        "text": "上下だけ逆"
+      },
+      {
+        "id": "d",
+        "text": "左右だけ逆"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "一般的な光学顕微鏡では上下左右が逆に見えます。",
+    "tags": [
+      "生物の観察と分類",
+      "顕微鏡"
+    ]
+  },
+  {
+    "id": "science-jhs-0092",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "日本で昼の長さが一般に最も短くなるころはいつですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "春分"
+      },
+      {
+        "id": "b",
+        "text": "夏至"
+      },
+      {
+        "id": "c",
+        "text": "秋分"
+      },
+      {
+        "id": "d",
+        "text": "冬至"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "冬至ごろ北半球の昼の長さが最も短くなります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "季節"
+    ]
+  },
+  {
+    "id": "science-jhs-0093",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "心臓にもどる血液が通る血管はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "静脈"
+      },
+      {
+        "id": "b",
+        "text": "気管"
+      },
+      {
+        "id": "c",
+        "text": "食道"
+      },
+      {
+        "id": "d",
+        "text": "動脈"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "静脈は心臓へ戻る血液が流れる血管です。",
+    "tags": [
+      "生物の体のつくり",
+      "血液循環"
+    ]
+  },
+  {
+    "id": "science-jhs-0094",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "空気中の水蒸気が冷やされ、水滴になり始める温度を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "露点"
+      },
+      {
+        "id": "b",
+        "text": "沸点"
+      },
+      {
+        "id": "c",
+        "text": "絶対零度"
+      },
+      {
+        "id": "d",
+        "text": "融点"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "露点まで冷やすと水蒸気が凝結し始めます。",
+    "tags": [
+      "気象とその変化",
+      "露点"
+    ]
+  },
+  {
+    "id": "science-jhs-0095",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "アブラナの花弁のつき方はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "花弁がない花"
+      },
+      {
+        "id": "b",
+        "text": "離弁花"
+      },
+      {
+        "id": "c",
+        "text": "合弁花"
+      },
+      {
+        "id": "d",
+        "text": "単子葉類だけの花"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "アブラナは花弁が1枚ずつ離れた離弁花です。",
+    "tags": [
+      "生物の観察と分類",
+      "花"
+    ]
+  },
+  {
+    "id": "science-jhs-0096",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "磁界中で導線に電流を流したときに受ける力を利用した装置は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "モーター"
+      },
+      {
+        "id": "b",
+        "text": "温度計"
+      },
+      {
+        "id": "c",
+        "text": "顕微鏡"
+      },
+      {
+        "id": "d",
+        "text": "ろ過装置"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "モーターは電流が磁界から受ける力を利用します。",
+    "tags": [
+      "電流と磁界",
+      "モーター"
+    ]
+  },
+  {
+    "id": "science-jhs-0097",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地層が押されて波のように曲がった構造を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "斑状組織"
+      },
+      {
+        "id": "b",
+        "text": "震央"
+      },
+      {
+        "id": "c",
+        "text": "しゅう曲"
+      },
+      {
+        "id": "d",
+        "text": "断層"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "地層が曲がってできた構造はしゅう曲です。",
+    "tags": [
+      "大地の変化",
+      "地層"
+    ]
+  },
+  {
+    "id": "science-jhs-0098",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "亜鉛板と銅板を電解質水溶液に入れて電流を取り出す装置は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "抵抗器"
+      },
+      {
+        "id": "b",
+        "text": "電池"
+      },
+      {
+        "id": "c",
+        "text": "電圧計"
+      },
+      {
+        "id": "d",
+        "text": "電磁石だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "化学変化を利用して電気エネルギーを取り出すのが電池です。",
+    "tags": [
+      "化学変化とイオン",
+      "電池"
+    ]
+  },
+  {
+    "id": "science-jhs-0099",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "2Ωと3Ωの抵抗を直列につないだとき、合成抵抗は何Ωですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "10"
+      },
+      {
+        "id": "c",
+        "text": "6"
+      },
+      {
+        "id": "d",
+        "text": "4"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "直列回路の合成抵抗は足し算で、2＋3＝5Ωです。",
+    "tags": [
+      "電流と磁界",
+      "直列回路"
+    ],
+    "unit": "Ω"
+  },
+  {
+    "id": "science-jhs-0100",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水中の同じ場所で水圧がはたらく向きはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "上向きだけ"
+      },
+      {
+        "id": "b",
+        "text": "あらゆる向き"
+      },
+      {
+        "id": "c",
+        "text": "下向きだけ"
+      },
+      {
+        "id": "d",
+        "text": "横向きだけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "水圧は面に垂直に、あらゆる向きにはたらきます。",
+    "tags": [
+      "光・音・力",
+      "水圧"
+    ]
+  },
+  {
+    "id": "science-jhs-0101",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "力を表すのに必要な3つの要素はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "体積・温度・密度"
+      },
+      {
+        "id": "b",
+        "text": "大きさ・向き・作用点"
+      },
+      {
+        "id": "c",
+        "text": "速さ・時間・距離"
+      },
+      {
+        "id": "d",
+        "text": "質量・色・形"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "力は大きさ、向き、作用点で表します。",
+    "tags": [
+      "光・音・力",
+      "力の表し方"
+    ]
+  },
+  {
+    "id": "science-jhs-0102",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "BTB溶液が緑色を示す水溶液は何性ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "アルカリ性"
+      },
+      {
+        "id": "b",
+        "text": "必ず強い酸性"
+      },
+      {
+        "id": "c",
+        "text": "中性"
+      },
+      {
+        "id": "d",
+        "text": "酸性"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "BTB溶液は中性で緑色になります。",
+    "tags": [
+      "化学変化とイオン",
+      "指示薬"
+    ]
+  },
+  {
+    "id": "science-jhs-0103",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球のまわりを公転する月は何に分類されますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "衛星"
+      },
+      {
+        "id": "b",
+        "text": "彗星"
+      },
+      {
+        "id": "c",
+        "text": "惑星"
+      },
+      {
+        "id": "d",
+        "text": "恒星"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "惑星のまわりを公転する天体は衛星です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "太陽系"
+    ]
+  },
+  {
+    "id": "science-jhs-0104",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "太陽のまわりを公転する天体のうち、地球のようなものを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "星雲"
+      },
+      {
+        "id": "b",
+        "text": "恒星"
+      },
+      {
+        "id": "c",
+        "text": "惑星"
+      },
+      {
+        "id": "d",
+        "text": "衛星だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "惑星は恒星のまわりを公転する天体です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "太陽系"
+    ]
+  },
+  {
+    "id": "science-jhs-0105",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "植物の葉などから水が水蒸気として出るはたらきは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "発芽"
+      },
+      {
+        "id": "b",
+        "text": "凝固"
+      },
+      {
+        "id": "c",
+        "text": "受粉"
+      },
+      {
+        "id": "d",
+        "text": "蒸散"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "植物体から水が水蒸気として放出されることを蒸散といいます。",
+    "tags": [
+      "生物の体のつくり",
+      "蒸散"
+    ]
+  },
+  {
+    "id": "science-jhs-0106",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "仕事率を表す単位はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "J（ジュール）"
+      },
+      {
+        "id": "b",
+        "text": "N（ニュートン）"
+      },
+      {
+        "id": "c",
+        "text": "kg"
+      },
+      {
+        "id": "d",
+        "text": "W（ワット）"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "仕事率は単位時間あたりの仕事を表し、Wで示します。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事率"
+    ]
+  },
+  {
+    "id": "science-jhs-0107",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地層が力を受けてずれたものを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "しゅう曲"
+      },
+      {
+        "id": "b",
+        "text": "地層の逆転"
+      },
+      {
+        "id": "c",
+        "text": "断層"
+      },
+      {
+        "id": "d",
+        "text": "浸食面"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "地層が割れてずれた構造を断層といいます。",
+    "tags": [
+      "大地の変化",
+      "地層"
+    ]
+  },
+  {
+    "id": "science-jhs-0108",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "日本付近の梅雨前線が長く停滞しやすい季節はいつですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "初夏"
+      },
+      {
+        "id": "b",
+        "text": "真冬"
+      },
+      {
+        "id": "c",
+        "text": "晩秋だけ"
+      },
+      {
+        "id": "d",
+        "text": "一年中同じ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "梅雨前線は初夏に日本付近で停滞しやすいです。",
+    "tags": [
+      "気象とその変化",
+      "季節と天気"
+    ]
+  },
+  {
+    "id": "science-jhs-0109",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "植物細胞で光合成が行われる部分はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "液胞だけ"
+      },
+      {
+        "id": "b",
+        "text": "細胞壁"
+      },
+      {
+        "id": "c",
+        "text": "核"
+      },
+      {
+        "id": "d",
+        "text": "葉緑体"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "葉緑体には葉緑素があり光合成が行われます。",
+    "tags": [
+      "生物の体のつくり",
+      "植物細胞"
+    ]
+  },
+  {
+    "id": "science-jhs-0110",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "太陽系の惑星で太陽に最も近いのはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "地球"
+      },
+      {
+        "id": "b",
+        "text": "水星"
+      },
+      {
+        "id": "c",
+        "text": "金星"
+      },
+      {
+        "id": "d",
+        "text": "火星"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "太陽に最も近い惑星は水星です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "太陽系"
+    ]
+  },
+  {
+    "id": "science-jhs-0111",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "接眼レンズが50倍、対物レンズが10倍の顕微鏡の倍率は何倍ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "500"
+      },
+      {
+        "id": "b",
+        "text": "495"
+      },
+      {
+        "id": "c",
+        "text": "505"
+      },
+      {
+        "id": "d",
+        "text": "1000"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "50×10＝500倍です。",
+    "tags": [
+      "生物の観察と分類",
+      "顕微鏡の倍率"
+    ],
+    "unit": "倍"
+  },
+  {
+    "id": "science-jhs-0112",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "抵抗7Ωの電熱線に42Vの電圧をかけたとき、流れる電流は何Aですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "12"
+      },
+      {
+        "id": "b",
+        "text": "6"
+      },
+      {
+        "id": "c",
+        "text": "7"
+      },
+      {
+        "id": "d",
+        "text": "5"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "オームの法則より、I＝V÷R＝42÷7＝6Aです。",
+    "tags": [
+      "電流と磁界",
+      "オームの法則"
+    ],
+    "unit": "A"
+  },
+  {
+    "id": "science-jhs-0113",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "密閉した容器で、ある化学変化が起こる前の物質の合計質量が75gでした。反応後の物質の合計質量は何gですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "73"
+      },
+      {
+        "id": "b",
+        "text": "150"
+      },
+      {
+        "id": "c",
+        "text": "75"
+      },
+      {
+        "id": "d",
+        "text": "77"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "質量保存の法則により、反応後も75gです。",
+    "tags": [
+      "化学変化と原子・分子",
+      "質量保存"
+    ],
+    "unit": "g"
+  },
+  {
+    "id": "science-jhs-0114",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "星が夜空で東から西へ移動するように見える動きを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "地層の運動"
+      },
+      {
+        "id": "b",
+        "text": "日周運動"
+      },
+      {
+        "id": "c",
+        "text": "公転"
+      },
+      {
+        "id": "d",
+        "text": "年周運動だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "地球の自転による星の見かけの動きを日周運動といいます。",
+    "tags": [
+      "地球と宇宙・環境",
+      "日周運動"
+    ]
+  },
+  {
+    "id": "science-jhs-0115",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "青色リトマス紙を赤色に変える水溶液は何性ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "中性"
+      },
+      {
+        "id": "b",
+        "text": "酸性"
+      },
+      {
+        "id": "c",
+        "text": "アルカリ性"
+      },
+      {
+        "id": "d",
+        "text": "すべての水溶液"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "酸性の水溶液は青色リトマス紙を赤色にします。",
+    "tags": [
+      "化学変化とイオン",
+      "指示薬"
+    ]
+  },
+  {
+    "id": "science-jhs-0116",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "摩擦や空気抵抗が無視できるときの力学的エネルギーはどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "一定に保たれる"
+      },
+      {
+        "id": "b",
+        "text": "必ず0になる"
+      },
+      {
+        "id": "c",
+        "text": "必ず増える"
+      },
+      {
+        "id": "d",
+        "text": "必ず減る"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "位置エネルギーと運動エネルギーの和は保存されます。",
+    "tags": [
+      "運動とエネルギー",
+      "力学的エネルギー"
+    ]
+  },
+  {
+    "id": "science-jhs-0117",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "等圧線の間隔が狭い場所では風は一般にどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "完全に止まる"
+      },
+      {
+        "id": "b",
+        "text": "弱くなる"
+      },
+      {
+        "id": "c",
+        "text": "向きが決められなくなる"
+      },
+      {
+        "id": "d",
+        "text": "強くなる"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "等圧線が密な場所ほど気圧差による力が大きく、風が強まりやすいです。",
+    "tags": [
+      "気象とその変化",
+      "天気図"
+    ]
+  },
+  {
+    "id": "science-jhs-0118",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "天気図で風向は何を基準に表しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず北"
+      },
+      {
+        "id": "b",
+        "text": "風速だけ"
+      },
+      {
+        "id": "c",
+        "text": "風が吹いてくる方向"
+      },
+      {
+        "id": "d",
+        "text": "風が吹いていく方向"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "風向は風が吹いてくる方向で表します。",
+    "tags": [
+      "気象とその変化",
+      "風向"
+    ]
+  },
+  {
+    "id": "science-jhs-0119",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "床に置いた物体に地球が及ぼす下向きの力はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "弾性力"
+      },
+      {
+        "id": "b",
+        "text": "重力"
+      },
+      {
+        "id": "c",
+        "text": "摩擦力"
+      },
+      {
+        "id": "d",
+        "text": "浮力"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "地球が物体を引く力は重力です。",
+    "tags": [
+      "運動とエネルギー",
+      "力"
+    ]
+  },
+  {
+    "id": "science-jhs-0120",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "尿をつくり、不要な物質を排出する役割がある器官はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "腎臓"
+      },
+      {
+        "id": "b",
+        "text": "胃"
+      },
+      {
+        "id": "c",
+        "text": "すい臓"
+      },
+      {
+        "id": "d",
+        "text": "肺胞"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "腎臓は血液から不要な物質を取り除いて尿をつくります。",
+    "tags": [
+      "生物の体のつくり",
+      "排出"
+    ]
+  },
+  {
+    "id": "science-jhs-0121",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水の分子を表す化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "CO₂"
+      },
+      {
+        "id": "b",
+        "text": "H₂"
+      },
+      {
+        "id": "c",
+        "text": "O₂"
+      },
+      {
+        "id": "d",
+        "text": "H₂O"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "水分子は水素原子2個と酸素原子1個からなります。",
+    "tags": [
+      "化学変化と原子・分子",
+      "化学式"
+    ]
+  },
+  {
+    "id": "science-jhs-0122",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "顕微鏡で観察を始めるとき、最初に使うのに適した倍率はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "低倍率"
+      },
+      {
+        "id": "b",
+        "text": "倍率は関係ない"
+      },
+      {
+        "id": "c",
+        "text": "最高倍率"
+      },
+      {
+        "id": "d",
+        "text": "高倍率"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "最初は低倍率で広い範囲から探します。",
+    "tags": [
+      "生物の観察と分類",
+      "顕微鏡"
+    ]
+  },
+  {
+    "id": "science-jhs-0123",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "ある空気1m³に水蒸気が7g含まれ、その温度での飽和水蒸気量は14g/m³でした。湿度は何％ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "48"
+      },
+      {
+        "id": "b",
+        "text": "100"
+      },
+      {
+        "id": "c",
+        "text": "52"
+      },
+      {
+        "id": "d",
+        "text": "50"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "湿度＝7÷14×100＝50％です。",
+    "tags": [
+      "気象とその変化",
+      "湿度"
+    ],
+    "unit": "％"
+  },
+  {
+    "id": "science-jhs-0124",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "被子植物で、受精後に果実になる部分はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "柱頭"
+      },
+      {
+        "id": "b",
+        "text": "胚珠"
+      },
+      {
+        "id": "c",
+        "text": "子房"
+      },
+      {
+        "id": "d",
+        "text": "おしべ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "受精後、子房が成長して果実になります。",
+    "tags": [
+      "生物の観察と分類",
+      "果実"
+    ]
+  },
+  {
+    "id": "science-jhs-0125",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "空気中にふくまれる水蒸気の量に関係する気象要素はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "風向だけ"
+      },
+      {
+        "id": "b",
+        "text": "湿度"
+      },
+      {
+        "id": "c",
+        "text": "雲量だけ"
+      },
+      {
+        "id": "d",
+        "text": "震度"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "湿度は空気中の水蒸気の割合に関係します。",
+    "tags": [
+      "気象とその変化",
+      "湿度"
+    ]
+  },
+  {
+    "id": "science-jhs-0126",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "同じ体積の空気がふくむことのできる水蒸気の最大量は、気温が上がると一般にどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず0になる"
+      },
+      {
+        "id": "b",
+        "text": "増える"
+      },
+      {
+        "id": "c",
+        "text": "減る"
+      },
+      {
+        "id": "d",
+        "text": "変わらない"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "飽和水蒸気量は気温が高いほど多くなります。",
+    "tags": [
+      "気象とその変化",
+      "飽和水蒸気量"
+    ]
+  },
+  {
+    "id": "science-jhs-0127",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "磁界の向きを調べるために使うものはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "方位磁針"
+      },
+      {
+        "id": "b",
+        "text": "温度計"
+      },
+      {
+        "id": "c",
+        "text": "電流計だけ"
+      },
+      {
+        "id": "d",
+        "text": "上皿てんびん"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "方位磁針のN極が指す向きから磁界の向きを調べられます。",
+    "tags": [
+      "電流と磁界",
+      "磁界"
+    ]
+  },
+  {
+    "id": "science-jhs-0128",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "小腸の内壁にある多数の突起を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "柔毛"
+      },
+      {
+        "id": "b",
+        "text": "根毛"
+      },
+      {
+        "id": "c",
+        "text": "肺胞"
+      },
+      {
+        "id": "d",
+        "text": "気孔"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "小腸の柔毛が表面積を増やし養分を吸収します。",
+    "tags": [
+      "生物の体のつくり",
+      "吸収"
+    ]
+  },
+  {
+    "id": "science-jhs-0129",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "密閉した容器で、ある化学変化が起こる前の物質の合計質量が18gでした。反応後の物質の合計質量は何gですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "36"
+      },
+      {
+        "id": "b",
+        "text": "19"
+      },
+      {
+        "id": "c",
+        "text": "17"
+      },
+      {
+        "id": "d",
+        "text": "18"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "質量保存の法則により、反応後も18gです。",
+    "tags": [
+      "化学変化と原子・分子",
+      "質量保存"
+    ],
+    "unit": "g"
+  },
+  {
+    "id": "science-jhs-0130",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "粒の直径が2 mm以上のれきを主につなぎ合わせた堆積岩は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "石灰岩"
+      },
+      {
+        "id": "b",
+        "text": "砂岩"
+      },
+      {
+        "id": "c",
+        "text": "れき岩"
+      },
+      {
+        "id": "d",
+        "text": "泥岩"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "れきを主な粒として含む堆積岩はれき岩です。",
+    "tags": [
+      "大地の変化",
+      "堆積岩"
+    ]
+  },
+  {
+    "id": "science-jhs-0131",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "コイルに鉄心を入れて電流を流す装置は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電磁石"
+      },
+      {
+        "id": "b",
+        "text": "電圧計"
+      },
+      {
+        "id": "c",
+        "text": "永久磁石だけ"
+      },
+      {
+        "id": "d",
+        "text": "乾電池"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "コイルに鉄心を入れた電磁石は電流によって磁力を生じます。",
+    "tags": [
+      "電流と磁界",
+      "電磁石"
+    ]
+  },
+  {
+    "id": "science-jhs-0132",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "振り子が最も高い位置にあるとき、運動エネルギーは通常どうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "無限大になる"
+      },
+      {
+        "id": "b",
+        "text": "最大になる"
+      },
+      {
+        "id": "c",
+        "text": "最小になる"
+      },
+      {
+        "id": "d",
+        "text": "必ず一定"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "折り返し点では速さが0になり運動エネルギーは最小です。",
+    "tags": [
+      "運動とエネルギー",
+      "振り子"
+    ]
+  },
+  {
+    "id": "science-jhs-0133",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "同じ電圧で抵抗が大きくなると電流はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "大きくなる"
+      },
+      {
+        "id": "b",
+        "text": "必ず0で一定"
+      },
+      {
+        "id": "c",
+        "text": "小さくなる"
+      },
+      {
+        "id": "d",
+        "text": "変わらない"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "I＝V/Rなので抵抗が増えると電流は小さくなります。",
+    "tags": [
+      "電流と磁界",
+      "オームの法則"
+    ]
+  },
+  {
+    "id": "science-jhs-0134",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水素イオンの化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "H⁻"
+      },
+      {
+        "id": "b",
+        "text": "OH⁻"
+      },
+      {
+        "id": "c",
+        "text": "H₂"
+      },
+      {
+        "id": "d",
+        "text": "H⁺"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "水素イオンはH⁺で表します。",
+    "tags": [
+      "化学変化とイオン",
+      "イオン式"
+    ]
+  },
+  {
+    "id": "science-jhs-0135",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "顕微鏡の倍率を高くすると、見える範囲はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "広くなる"
+      },
+      {
+        "id": "b",
+        "text": "必ず明るくなる"
+      },
+      {
+        "id": "c",
+        "text": "変わらない"
+      },
+      {
+        "id": "d",
+        "text": "せまくなる"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "高倍率になるほど視野がせまくなります。",
+    "tags": [
+      "生物の観察と分類",
+      "顕微鏡"
+    ]
+  },
+  {
+    "id": "science-jhs-0136",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "減数分裂でできた生殖細胞の染色体数は、もとの生殖細胞をつくる細胞と比べてどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "2倍になる"
+      },
+      {
+        "id": "b",
+        "text": "0になる"
+      },
+      {
+        "id": "c",
+        "text": "半分になる"
+      },
+      {
+        "id": "d",
+        "text": "変わらない"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "減数分裂では染色体数が半分になります。",
+    "tags": [
+      "生命の連続性",
+      "減数分裂"
+    ]
+  },
+  {
+    "id": "science-jhs-0137",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "音の振動を受けて振動する耳のうすい膜は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "鼓膜"
+      },
+      {
+        "id": "b",
+        "text": "網膜"
+      },
+      {
+        "id": "c",
+        "text": "角膜"
+      },
+      {
+        "id": "d",
+        "text": "虹彩"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "鼓膜は音によって振動します。",
+    "tags": [
+      "生物の体のつくり",
+      "感覚器官"
+    ]
+  },
+  {
+    "id": "science-jhs-0138",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "真空中では音はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず反射する"
+      },
+      {
+        "id": "b",
+        "text": "伝わらない"
+      },
+      {
+        "id": "c",
+        "text": "いつも大きくなる"
+      },
+      {
+        "id": "d",
+        "text": "空気中より速く伝わる"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "音を伝える物質がないため、真空中では音が伝わりません。",
+    "tags": [
+      "光・音・力",
+      "音"
+    ]
+  },
+  {
+    "id": "science-jhs-0139",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "BTB溶液が黄色を示す水溶液は何性ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸性"
+      },
+      {
+        "id": "b",
+        "text": "中性"
+      },
+      {
+        "id": "c",
+        "text": "アルカリ性"
+      },
+      {
+        "id": "d",
+        "text": "必ず塩基性でない"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "BTB溶液は酸性で黄色になります。",
+    "tags": [
+      "化学変化とイオン",
+      "指示薬"
+    ]
+  },
+  {
+    "id": "science-jhs-0140",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "胃液に含まれ、主にタンパク質を分解する消化酵素は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "アミラーゼ"
+      },
+      {
+        "id": "b",
+        "text": "ヘモグロビン"
+      },
+      {
+        "id": "c",
+        "text": "ペプシン"
+      },
+      {
+        "id": "d",
+        "text": "カタラーゼ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "胃液中のペプシンはタンパク質の消化に関わります。",
+    "tags": [
+      "生物の体のつくり",
+      "消化"
+    ]
+  },
+  {
+    "id": "science-jhs-0141",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "細胞にあり、遺伝情報を含む染色体が存在する部分は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "核"
+      },
+      {
+        "id": "b",
+        "text": "気孔"
+      },
+      {
+        "id": "c",
+        "text": "葉脈"
+      },
+      {
+        "id": "d",
+        "text": "細胞壁"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "真核細胞では核に染色体があります。",
+    "tags": [
+      "生物の体のつくり",
+      "細胞"
+    ]
+  },
+  {
+    "id": "science-jhs-0142",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "植物細胞に見られ、動物細胞にはふつう見られないつくりはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "核"
+      },
+      {
+        "id": "b",
+        "text": "細胞壁"
+      },
+      {
+        "id": "c",
+        "text": "細胞膜"
+      },
+      {
+        "id": "d",
+        "text": "細胞質"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "植物細胞には細胞壁があり、動物細胞にはありません。",
+    "tags": [
+      "生物の体のつくり",
+      "植物細胞"
+    ]
+  },
+  {
+    "id": "science-jhs-0143",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "火のついた線香を入れると燃え方が激しくなる気体は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸素"
+      },
+      {
+        "id": "b",
+        "text": "二酸化炭素"
+      },
+      {
+        "id": "c",
+        "text": "アンモニア"
+      },
+      {
+        "id": "d",
+        "text": "窒素"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "酸素にはものが燃えるのを助ける性質があります。",
+    "tags": [
+      "身のまわりの物質",
+      "気体の性質"
+    ]
+  },
+  {
+    "id": "science-jhs-0144",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "火山岩によく見られる大きな結晶と石基からなるつくりを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "等粒状組織"
+      },
+      {
+        "id": "b",
+        "text": "斑状組織"
+      },
+      {
+        "id": "c",
+        "text": "年輪"
+      },
+      {
+        "id": "d",
+        "text": "網状脈"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "火山岩には斑晶と石基からなる斑状組織が多く見られます。",
+    "tags": [
+      "大地の変化",
+      "岩石の組織"
+    ]
+  },
+  {
+    "id": "science-jhs-0145",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "運動している物体がもつエネルギーは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電気エネルギーだけ"
+      },
+      {
+        "id": "b",
+        "text": "位置エネルギー"
+      },
+      {
+        "id": "c",
+        "text": "核エネルギーだけ"
+      },
+      {
+        "id": "d",
+        "text": "運動エネルギー"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "運動する物体がもつエネルギーを運動エネルギーといいます。",
+    "tags": [
+      "運動とエネルギー",
+      "力学的エネルギー"
+    ]
+  },
+  {
+    "id": "science-jhs-0146",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "刺激を受けてから意識する前に起こる決まった反応を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "発酵"
+      },
+      {
+        "id": "b",
+        "text": "蒸散"
+      },
+      {
+        "id": "c",
+        "text": "受精"
+      },
+      {
+        "id": "d",
+        "text": "反射"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "熱いものから手を引くような反応は反射です。",
+    "tags": [
+      "生物の体のつくり",
+      "神経"
+    ]
+  },
+  {
+    "id": "science-jhs-0147",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水に電流を流して分解すると発生する気体の組合せはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "二酸化炭素と水素"
+      },
+      {
+        "id": "b",
+        "text": "アンモニアと酸素"
+      },
+      {
+        "id": "c",
+        "text": "窒素と酸素"
+      },
+      {
+        "id": "d",
+        "text": "水素と酸素"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "水の電気分解で水素と酸素が発生します。",
+    "tags": [
+      "化学変化と原子・分子",
+      "電気分解"
+    ]
+  },
+  {
+    "id": "science-jhs-0148",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "酸性の水溶液のpHとして適切なのはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "9"
+      },
+      {
+        "id": "b",
+        "text": "7"
+      },
+      {
+        "id": "c",
+        "text": "3"
+      },
+      {
+        "id": "d",
+        "text": "12"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "一般に酸性はpH7より小さい値です。",
+    "tags": [
+      "化学変化とイオン",
+      "pH"
+    ]
+  },
+  {
+    "id": "science-jhs-0149",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "物体を10Nの力で力の向きに12m動かしました。仕事は何Jですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "120"
+      },
+      {
+        "id": "b",
+        "text": "240"
+      },
+      {
+        "id": "c",
+        "text": "115"
+      },
+      {
+        "id": "d",
+        "text": "125"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "仕事＝力×距離＝10×12＝120Jです。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事"
+    ],
+    "unit": "J"
+  },
+  {
+    "id": "science-jhs-0150",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水平ななめらかな面で物体に力がはたらかない場合、運動中の物体はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず回転する"
+      },
+      {
+        "id": "b",
+        "text": "必ずすぐに止まる"
+      },
+      {
+        "id": "c",
+        "text": "必ず加速する"
+      },
+      {
+        "id": "d",
+        "text": "等速直線運動を続ける"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "力がはたらかない物体は静止または等速直線運動を続けます。",
+    "tags": [
+      "運動とエネルギー",
+      "慣性"
+    ]
+  },
+  {
+    "id": "science-jhs-0151",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "雲ができる主なしくみはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "上昇した空気が冷えて水蒸気が凝結する"
+      },
+      {
+        "id": "b",
+        "text": "空気が燃える"
+      },
+      {
+        "id": "c",
+        "text": "太陽光が直接水になる"
+      },
+      {
+        "id": "d",
+        "text": "地面の岩石が溶ける"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "上昇気流で空気が冷え、水滴や氷の粒が生じます。",
+    "tags": [
+      "気象とその変化",
+      "雲のでき方"
+    ]
+  },
+  {
+    "id": "science-jhs-0152",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "原子が電子を失ってできるイオンは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "分子だけ"
+      },
+      {
+        "id": "b",
+        "text": "陰イオン"
+      },
+      {
+        "id": "c",
+        "text": "陽イオン"
+      },
+      {
+        "id": "d",
+        "text": "中性子"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "電子を失うと正の電荷をもつ陽イオンになります。",
+    "tags": [
+      "化学変化とイオン",
+      "イオン"
+    ]
+  },
+  {
+    "id": "science-jhs-0153",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地震の初期微動を主に伝える地震波はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電波"
+      },
+      {
+        "id": "b",
+        "text": "S波"
+      },
+      {
+        "id": "c",
+        "text": "P波"
+      },
+      {
+        "id": "d",
+        "text": "音波だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "P波はS波より速く伝わり、初期微動をもたらします。",
+    "tags": [
+      "大地の変化",
+      "地震"
+    ]
+  },
+  {
+    "id": "science-jhs-0154",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "物体を3Nの力で力の向きに4m動かしました。仕事は何Jですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "24"
+      },
+      {
+        "id": "b",
+        "text": "12"
+      },
+      {
+        "id": "c",
+        "text": "11"
+      },
+      {
+        "id": "d",
+        "text": "13"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "仕事＝力×距離＝3×4＝12Jです。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事"
+    ],
+    "unit": "J"
+  },
+  {
+    "id": "science-jhs-0155",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電気抵抗の単位は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "V（ボルト）"
+      },
+      {
+        "id": "b",
+        "text": "Ω（オーム）"
+      },
+      {
+        "id": "c",
+        "text": "A（アンペア）"
+      },
+      {
+        "id": "d",
+        "text": "s（秒）"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "電気抵抗はΩで表します。",
+    "tags": [
+      "電流と磁界",
+      "抵抗"
+    ]
+  },
+  {
+    "id": "science-jhs-0156",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "森林の伐採が生態系に与え得る影響として適切なのはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "すべての生物が必ず増える"
+      },
+      {
+        "id": "b",
+        "text": "生物の生息場所が失われる"
+      },
+      {
+        "id": "c",
+        "text": "気候にまったく影響しない"
+      },
+      {
+        "id": "d",
+        "text": "食物連鎖がなくならないと断言できる"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "森林の減少は生息地や食物網に影響を与えることがあります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "環境保全"
+    ]
+  },
+  {
+    "id": "science-jhs-0157",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "ドライアイスが固体から直接気体になる変化は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "融解"
+      },
+      {
+        "id": "b",
+        "text": "昇華"
+      },
+      {
+        "id": "c",
+        "text": "凝縮"
+      },
+      {
+        "id": "d",
+        "text": "凝固"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "固体から液体を経ずに気体になる変化を昇華といいます。",
+    "tags": [
+      "身のまわりの物質",
+      "状態変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0158",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "銅と亜鉛を用いる電池で、溶け出して電子を放出する金属は一般にどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "白金"
+      },
+      {
+        "id": "b",
+        "text": "亜鉛"
+      },
+      {
+        "id": "c",
+        "text": "銀"
+      },
+      {
+        "id": "d",
+        "text": "銅"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "亜鉛は銅よりイオンになりやすく、電子を放出しやすいです。",
+    "tags": [
+      "化学変化とイオン",
+      "電池"
+    ]
+  },
+  {
+    "id": "science-jhs-0159",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "太陽が南中したときの高さを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "仰角0°"
+      },
+      {
+        "id": "b",
+        "text": "黄道面"
+      },
+      {
+        "id": "c",
+        "text": "露点"
+      },
+      {
+        "id": "d",
+        "text": "南中高度"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "南中した太陽の地平線からの角度が南中高度です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "太陽の動き"
+    ]
+  },
+  {
+    "id": "science-jhs-0160",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が24時間で360°自転すると考えると、8時間で約何度自転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "125"
+      },
+      {
+        "id": "b",
+        "text": "115"
+      },
+      {
+        "id": "c",
+        "text": "240"
+      },
+      {
+        "id": "d",
+        "text": "120"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "360÷24＝15°/時なので、15×8＝120°です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ],
+    "unit": "°"
+  },
+  {
+    "id": "science-jhs-0161",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地震が地下で発生した場所を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "火口"
+      },
+      {
+        "id": "b",
+        "text": "震源"
+      },
+      {
+        "id": "c",
+        "text": "断層崖"
+      },
+      {
+        "id": "d",
+        "text": "震央"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "地震が地下で発生した場所を震源といいます。",
+    "tags": [
+      "大地の変化",
+      "地震"
+    ]
+  },
+  {
+    "id": "science-jhs-0162",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "酸化とは一般にどのような化学変化ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "物質が酸素と結びつくこと"
+      },
+      {
+        "id": "b",
+        "text": "分子が消えること"
+      },
+      {
+        "id": "c",
+        "text": "液体が固まること"
+      },
+      {
+        "id": "d",
+        "text": "酸素が出ていくことだけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "中学校では物質が酸素と結びつく変化を酸化と学びます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "酸化"
+    ]
+  },
+  {
+    "id": "science-jhs-0163",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "ある地点の地震による揺れの強さを表すものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "露点"
+      },
+      {
+        "id": "b",
+        "text": "標高"
+      },
+      {
+        "id": "c",
+        "text": "マグニチュード"
+      },
+      {
+        "id": "d",
+        "text": "震度"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "地点ごとの揺れの強さは震度で表します。",
+    "tags": [
+      "大地の変化",
+      "地震"
+    ]
+  },
+  {
+    "id": "science-jhs-0164",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "流水が土地をけずり取るはたらきを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "受粉"
+      },
+      {
+        "id": "b",
+        "text": "凝固"
+      },
+      {
+        "id": "c",
+        "text": "堆積"
+      },
+      {
+        "id": "d",
+        "text": "侵食"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "水が地面をけずるはたらきは侵食です。",
+    "tags": [
+      "大地の変化",
+      "流水"
+    ]
+  },
+  {
+    "id": "science-jhs-0165",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "食塩10gを水90gにすべて溶かした食塩水の質量パーセント濃度は何％ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "11"
+      },
+      {
+        "id": "b",
+        "text": "10"
+      },
+      {
+        "id": "c",
+        "text": "20"
+      },
+      {
+        "id": "d",
+        "text": "9"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "食塩の質量÷食塩水全体の質量×100＝10÷100×100＝10％です。",
+    "tags": [
+      "身のまわりの物質",
+      "質量パーセント濃度"
+    ],
+    "unit": "％"
+  },
+  {
+    "id": "science-jhs-0166",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "金属に共通する性質として正しいものはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "すべて透明である"
+      },
+      {
+        "id": "b",
+        "text": "必ず水に溶ける"
+      },
+      {
+        "id": "c",
+        "text": "必ず磁石につく"
+      },
+      {
+        "id": "d",
+        "text": "電気を通しやすい"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "金属は一般に電気と熱を通しやすいです。",
+    "tags": [
+      "身のまわりの物質",
+      "金属"
+    ]
+  },
+  {
+    "id": "science-jhs-0167",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "化学変化で周囲から熱を吸収して温度が下がる反応は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "発熱反応"
+      },
+      {
+        "id": "b",
+        "text": "光合成以外の反応はすべて発熱"
+      },
+      {
+        "id": "c",
+        "text": "質量保存の法則"
+      },
+      {
+        "id": "d",
+        "text": "吸熱反応"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "周囲から熱を吸収する化学変化を吸熱反応といいます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "熱の出入り"
+    ]
+  },
+  {
+    "id": "science-jhs-0168",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "暖気が寒気の上にはい上がりながら進む前線は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "温暖前線"
+      },
+      {
+        "id": "b",
+        "text": "閉塞前線だけ"
+      },
+      {
+        "id": "c",
+        "text": "寒冷前線"
+      },
+      {
+        "id": "d",
+        "text": "停滞前線だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "温暖前線では暖気がゆるやかに寒気の上へ上がります。",
+    "tags": [
+      "気象とその変化",
+      "前線"
+    ]
+  },
+  {
+    "id": "science-jhs-0169",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が太陽のまわりをまわる運動は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "公転"
+      },
+      {
+        "id": "b",
+        "text": "日周運動"
+      },
+      {
+        "id": "c",
+        "text": "自転"
+      },
+      {
+        "id": "d",
+        "text": "月の満ち欠けだけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "地球が太陽のまわりをまわるのが公転です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の公転"
+    ]
+  },
+  {
+    "id": "science-jhs-0170",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "100gの物体にはたらく重力を約1Nとすると、質量700gの物体にはたらく重力は約何Nですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "14"
+      },
+      {
+        "id": "b",
+        "text": "6"
+      },
+      {
+        "id": "c",
+        "text": "8"
+      },
+      {
+        "id": "d",
+        "text": "7"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "700÷100＝7Nです。",
+    "tags": [
+      "光・音・力",
+      "重力"
+    ],
+    "unit": "N"
+  },
+  {
+    "id": "science-jhs-0171",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球の大気中で温室効果に関係する気体はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸素だけ"
+      },
+      {
+        "id": "b",
+        "text": "窒素だけ"
+      },
+      {
+        "id": "c",
+        "text": "アルゴンだけ"
+      },
+      {
+        "id": "d",
+        "text": "二酸化炭素"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "二酸化炭素や水蒸気などは温室効果に関わります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球環境"
+    ]
+  },
+  {
+    "id": "science-jhs-0172",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "中和で水素イオンと水酸化物イオンが反応してできるものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "塩素"
+      },
+      {
+        "id": "b",
+        "text": "酸素"
+      },
+      {
+        "id": "c",
+        "text": "水"
+      },
+      {
+        "id": "d",
+        "text": "水素"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "H⁺とOH⁻が反応して水H₂Oになります。",
+    "tags": [
+      "化学変化とイオン",
+      "中和"
+    ]
+  },
+  {
+    "id": "science-jhs-0173",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "光合成によってできた有機物が運ばれる管はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "道管"
+      },
+      {
+        "id": "b",
+        "text": "神経"
+      },
+      {
+        "id": "c",
+        "text": "師管"
+      },
+      {
+        "id": "d",
+        "text": "気管"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "師管は光合成でつくられた養分を運びます。",
+    "tags": [
+      "生物の体のつくり",
+      "師管"
+    ]
+  },
+  {
+    "id": "science-jhs-0174",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "接眼レンズが25倍、対物レンズが10倍の顕微鏡の倍率は何倍ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "250"
+      },
+      {
+        "id": "b",
+        "text": "245"
+      },
+      {
+        "id": "c",
+        "text": "255"
+      },
+      {
+        "id": "d",
+        "text": "500"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "25×10＝250倍です。",
+    "tags": [
+      "生物の観察と分類",
+      "顕微鏡の倍率"
+    ],
+    "unit": "倍"
+  },
+  {
+    "id": "science-jhs-0175",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "日本で太陽の南中高度が一般に最も高くなるころはいつですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "夏至"
+      },
+      {
+        "id": "b",
+        "text": "秋分"
+      },
+      {
+        "id": "c",
+        "text": "春分"
+      },
+      {
+        "id": "d",
+        "text": "冬至"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "北半球では夏至ごろ太陽の南中高度が最も高くなります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "季節"
+    ]
+  },
+  {
+    "id": "science-jhs-0176",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "寒気が暖気を押し上げながら進む前線は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "停滞前線だけ"
+      },
+      {
+        "id": "b",
+        "text": "寒冷前線"
+      },
+      {
+        "id": "c",
+        "text": "閉塞前線だけ"
+      },
+      {
+        "id": "d",
+        "text": "温暖前線"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "寒冷前線では寒気が暖気の下にもぐり込みます。",
+    "tags": [
+      "気象とその変化",
+      "前線"
+    ]
+  },
+  {
+    "id": "science-jhs-0177",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が24時間で360°自転すると考えると、5時間で約何度自転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "73"
+      },
+      {
+        "id": "b",
+        "text": "75"
+      },
+      {
+        "id": "c",
+        "text": "150"
+      },
+      {
+        "id": "d",
+        "text": "77"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "360÷24＝15°/時なので、15×5＝75°です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ],
+    "unit": "°"
+  },
+  {
+    "id": "science-jhs-0178",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "酸化銀を加熱して分解すると発生する気体はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸素"
+      },
+      {
+        "id": "b",
+        "text": "アンモニア"
+      },
+      {
+        "id": "c",
+        "text": "水素"
+      },
+      {
+        "id": "d",
+        "text": "二酸化炭素"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "酸化銀は熱分解して銀と酸素を生じます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "熱分解"
+    ]
+  },
+  {
+    "id": "science-jhs-0179",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "受粉とは何が起こることですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "花粉がめしべの柱頭につくこと"
+      },
+      {
+        "id": "b",
+        "text": "子房が果実になること"
+      },
+      {
+        "id": "c",
+        "text": "種子が芽を出すこと"
+      },
+      {
+        "id": "d",
+        "text": "葉が光を受けること"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "花粉が柱頭につくことを受粉といいます。",
+    "tags": [
+      "生物の観察と分類",
+      "受粉"
+    ]
+  },
+  {
+    "id": "science-jhs-0180",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "発熱反応の例として適切なのはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "水の温度を下げる操作"
+      },
+      {
+        "id": "b",
+        "text": "水が蒸発する変化だけ"
+      },
+      {
+        "id": "c",
+        "text": "鉄が酸素と結びつき熱が出る反応"
+      },
+      {
+        "id": "d",
+        "text": "氷がとける変化だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "酸化などには熱を放出する発熱反応があります。",
+    "tags": [
+      "化学変化と原子・分子",
+      "熱の出入り"
+    ]
+  },
+  {
+    "id": "science-jhs-0181",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "根の表面にあり、水や無機養分を吸収しやすくする細い毛状のつくりは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "葉脈"
+      },
+      {
+        "id": "b",
+        "text": "気孔"
+      },
+      {
+        "id": "c",
+        "text": "根毛"
+      },
+      {
+        "id": "d",
+        "text": "道管"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "根毛によって根の表面積が大きくなります。",
+    "tags": [
+      "生物の観察と分類",
+      "根"
+    ]
+  },
+  {
+    "id": "science-jhs-0182",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水溶液に水素イオンを生じる性質を示すのは何性ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸性"
+      },
+      {
+        "id": "b",
+        "text": "金属性"
+      },
+      {
+        "id": "c",
+        "text": "アルカリ性"
+      },
+      {
+        "id": "d",
+        "text": "中性"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "酸性の水溶液には水素イオンが存在します。",
+    "tags": [
+      "化学変化とイオン",
+      "酸とアルカリ"
+    ]
+  },
+  {
+    "id": "science-jhs-0183",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "海陸風で、一般に夜間に陸から海へ吹く風はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "海風"
+      },
+      {
+        "id": "b",
+        "text": "貿易風"
+      },
+      {
+        "id": "c",
+        "text": "南西季節風"
+      },
+      {
+        "id": "d",
+        "text": "陸風"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "夜は陸が海より冷えやすく、陸から海へ陸風が吹きます。",
+    "tags": [
+      "気象とその変化",
+      "局地風"
+    ]
+  },
+  {
+    "id": "science-jhs-0184",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "川の流れが弱くなったところなどに土砂が積もることは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "屈折"
+      },
+      {
+        "id": "b",
+        "text": "侵食"
+      },
+      {
+        "id": "c",
+        "text": "堆積"
+      },
+      {
+        "id": "d",
+        "text": "気化"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "運ばれた土砂が積もることを堆積といいます。",
+    "tags": [
+      "大地の変化",
+      "流水"
+    ]
+  },
+  {
+    "id": "science-jhs-0185",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "火を近づけると小さな音を立てて燃える気体は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "窒素"
+      },
+      {
+        "id": "b",
+        "text": "水素"
+      },
+      {
+        "id": "c",
+        "text": "酸素"
+      },
+      {
+        "id": "d",
+        "text": "二酸化炭素"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "水素は点火すると燃えて水を生じます。",
+    "tags": [
+      "身のまわりの物質",
+      "気体の性質"
+    ]
+  },
+  {
+    "id": "science-jhs-0186",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水とエタノールの混合物を沸点の違いを利用して分ける操作は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "再結晶"
+      },
+      {
+        "id": "b",
+        "text": "ろ過"
+      },
+      {
+        "id": "c",
+        "text": "電気分解"
+      },
+      {
+        "id": "d",
+        "text": "蒸留"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "蒸留は液体の沸点の違いを利用します。",
+    "tags": [
+      "身のまわりの物質",
+      "蒸留"
+    ]
+  },
+  {
+    "id": "science-jhs-0187",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "磁石のN極とS極を近づけるとどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "何も起こらない"
+      },
+      {
+        "id": "b",
+        "text": "引き合う"
+      },
+      {
+        "id": "c",
+        "text": "しりぞけ合う"
+      },
+      {
+        "id": "d",
+        "text": "磁力がなくなる"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "異なる磁極どうしは引き合います。",
+    "tags": [
+      "電流と磁界",
+      "磁石"
+    ]
+  },
+  {
+    "id": "science-jhs-0188",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "抵抗4Ωの電熱線に12Vの電圧をかけたとき、流れる電流は何Aですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "2"
+      },
+      {
+        "id": "b",
+        "text": "6"
+      },
+      {
+        "id": "c",
+        "text": "3"
+      },
+      {
+        "id": "d",
+        "text": "4"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "オームの法則より、I＝V÷R＝12÷4＝3Aです。",
+    "tags": [
+      "電流と磁界",
+      "オームの法則"
+    ],
+    "unit": "A"
+  },
+  {
+    "id": "science-jhs-0189",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "単一の種類の原子からできている物質を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "化合物"
+      },
+      {
+        "id": "b",
+        "text": "単体"
+      },
+      {
+        "id": "c",
+        "text": "混合物"
+      },
+      {
+        "id": "d",
+        "text": "水溶液だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "1種類の元素からなる純物質を単体といいます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "物質の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0190",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "太陽自身はどの種類の天体ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "小惑星"
+      },
+      {
+        "id": "b",
+        "text": "惑星"
+      },
+      {
+        "id": "c",
+        "text": "衛星"
+      },
+      {
+        "id": "d",
+        "text": "恒星"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "太陽は自ら光を出す恒星です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "恒星"
+    ]
+  },
+  {
+    "id": "science-jhs-0191",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "銅の元素記号はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "Na"
+      },
+      {
+        "id": "b",
+        "text": "Cu"
+      },
+      {
+        "id": "c",
+        "text": "Cl"
+      },
+      {
+        "id": "d",
+        "text": "Fe"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "銅は元素記号Cuで表します。",
+    "tags": [
+      "化学変化と原子・分子",
+      "元素記号"
+    ]
+  },
+  {
+    "id": "science-jhs-0192",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "シダ植物がふえるときに使うものはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "胞子"
+      },
+      {
+        "id": "b",
+        "text": "花粉"
+      },
+      {
+        "id": "c",
+        "text": "果実"
+      },
+      {
+        "id": "d",
+        "text": "種子"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "シダ植物は種子をつくらず胞子でふえます。",
+    "tags": [
+      "生物の観察と分類",
+      "植物の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0193",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水100 gに食塩10 gを完全に溶かしたとき、水溶液全体の質量は何gですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "10 g"
+      },
+      {
+        "id": "b",
+        "text": "90 g"
+      },
+      {
+        "id": "c",
+        "text": "110 g"
+      },
+      {
+        "id": "d",
+        "text": "100 g"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "水と溶けた食塩の質量を合わせて110 gです。",
+    "tags": [
+      "身のまわりの物質",
+      "水溶液"
+    ]
+  },
+  {
+    "id": "science-jhs-0194",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "植物が光合成するとき、空気中から取り込む気体はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "水素"
+      },
+      {
+        "id": "b",
+        "text": "二酸化炭素"
+      },
+      {
+        "id": "c",
+        "text": "酸素"
+      },
+      {
+        "id": "d",
+        "text": "窒素"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "光合成では二酸化炭素と水から有機物をつくります。",
+    "tags": [
+      "生物の体のつくり",
+      "光合成"
+    ]
+  },
+  {
+    "id": "science-jhs-0195",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "2つの力がつり合うとき、2つの力の向きはどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "反対向き"
+      },
+      {
+        "id": "b",
+        "text": "必ず斜め45°"
+      },
+      {
+        "id": "c",
+        "text": "同じ向き"
+      },
+      {
+        "id": "d",
+        "text": "直角"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "つり合う2力は同一直線上で大きさが等しく、向きが反対です。",
+    "tags": [
+      "光・音・力",
+      "力のつり合い"
+    ]
+  },
+  {
+    "id": "science-jhs-0196",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "物体を2Nの力で力の向きに3m動かしました。仕事は何Jですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "7"
+      },
+      {
+        "id": "c",
+        "text": "12"
+      },
+      {
+        "id": "d",
+        "text": "6"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "仕事＝力×距離＝2×3＝6Jです。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事"
+    ],
+    "unit": "J"
+  },
+  {
+    "id": "science-jhs-0197",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "赤血球に含まれ酸素を運ぶのに役立つ物質は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "アミラーゼ"
+      },
+      {
+        "id": "b",
+        "text": "ヘモグロビン"
+      },
+      {
+        "id": "c",
+        "text": "デンプン"
+      },
+      {
+        "id": "d",
+        "text": "葉緑素"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "ヘモグロビンは酸素と結びついて運搬を助けます。",
+    "tags": [
+      "生物の体のつくり",
+      "血液"
+    ]
+  },
+  {
+    "id": "science-jhs-0198",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "北半球の地上付近で高気圧から吹き出す風は、おおむねどう回転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "反時計回り"
+      },
+      {
+        "id": "b",
+        "text": "常に北向き"
+      },
+      {
+        "id": "c",
+        "text": "時計回り"
+      },
+      {
+        "id": "d",
+        "text": "上下だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "北半球の高気圧からは時計回りに風が吹き出します。",
+    "tags": [
+      "気象とその変化",
+      "高気圧"
+    ]
+  },
+  {
+    "id": "science-jhs-0199",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "同じ体積の物質について、密度が大きいほど質量はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "変わらない"
+      },
+      {
+        "id": "b",
+        "text": "小さくなる"
+      },
+      {
+        "id": "c",
+        "text": "必ず0になる"
+      },
+      {
+        "id": "d",
+        "text": "大きくなる"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "密度＝質量÷体積なので、同じ体積なら密度が大きいほど質量も大きくなります。",
+    "tags": [
+      "身のまわりの物質",
+      "密度"
+    ]
+  },
+  {
+    "id": "science-jhs-0200",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "酸素の分子を表す化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "O₂"
+      },
+      {
+        "id": "b",
+        "text": "O"
+      },
+      {
+        "id": "c",
+        "text": "CO₂"
+      },
+      {
+        "id": "d",
+        "text": "H₂O"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "通常の酸素分子は酸素原子2個からなります。",
+    "tags": [
+      "化学変化と原子・分子",
+      "化学式"
+    ]
+  },
+  {
+    "id": "science-jhs-0201",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "雄と雌の生殖細胞が合体して新しい個体ができる生殖はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "栄養生殖だけ"
+      },
+      {
+        "id": "b",
+        "text": "有性生殖"
+      },
+      {
+        "id": "c",
+        "text": "無性生殖"
+      },
+      {
+        "id": "d",
+        "text": "分裂による無性生殖"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "生殖細胞の合体を伴うのは有性生殖です。",
+    "tags": [
+      "生命の連続性",
+      "生殖"
+    ]
+  },
+  {
+    "id": "science-jhs-0202",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "太陽系で最も大きい惑星は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "木星"
+      },
+      {
+        "id": "b",
+        "text": "地球"
+      },
+      {
+        "id": "c",
+        "text": "金星"
+      },
+      {
+        "id": "d",
+        "text": "火星"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "木星は太陽系で直径も質量も最大の惑星です。",
+    "tags": [
+      "地球と宇宙・環境",
+      "太陽系"
+    ]
+  },
+  {
+    "id": "science-jhs-0203",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水を電気分解したとき、水素と酸素の体積比はおよそ何対何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "1:1"
+      },
+      {
+        "id": "b",
+        "text": "1:2"
+      },
+      {
+        "id": "c",
+        "text": "3:2"
+      },
+      {
+        "id": "d",
+        "text": "2:1"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "水素と酸素は体積比がおよそ2対1で発生します。",
+    "tags": [
+      "化学変化と原子・分子",
+      "電気分解"
+    ]
+  },
+  {
+    "id": "science-jhs-0204",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "一定時間に進んだ距離から求める速さは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "加速度"
+      },
+      {
+        "id": "b",
+        "text": "瞬間の速さだけ"
+      },
+      {
+        "id": "c",
+        "text": "平均の速さ"
+      },
+      {
+        "id": "d",
+        "text": "音速"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "移動距離をかかった時間で割った値は平均の速さです。",
+    "tags": [
+      "運動とエネルギー",
+      "速さ"
+    ]
+  },
+  {
+    "id": "science-jhs-0205",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電流計は回路にどのようにつなぎますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電源と接続しない"
+      },
+      {
+        "id": "b",
+        "text": "直列"
+      },
+      {
+        "id": "c",
+        "text": "並列"
+      },
+      {
+        "id": "d",
+        "text": "回路の外"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "電流計は測りたい部分に直列につなぎます。",
+    "tags": [
+      "電流と磁界",
+      "測定器"
+    ]
+  },
+  {
+    "id": "science-jhs-0206",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "哺乳類の特徴として正しいものはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "えらで呼吸する"
+      },
+      {
+        "id": "b",
+        "text": "背骨がない"
+      },
+      {
+        "id": "c",
+        "text": "必ず卵を産む"
+      },
+      {
+        "id": "d",
+        "text": "子を乳で育てる"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "哺乳類は子を乳で育てます。",
+    "tags": [
+      "生物の観察と分類",
+      "動物の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0207",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "氷が水になるとき、物質の質量はどうなりますか（こぼれたり蒸発したりしないものとする）。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず2倍になる"
+      },
+      {
+        "id": "b",
+        "text": "0になる"
+      },
+      {
+        "id": "c",
+        "text": "必ず半分になる"
+      },
+      {
+        "id": "d",
+        "text": "変わらない"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "状態変化だけでは物質の質量は変わりません。",
+    "tags": [
+      "身のまわりの物質",
+      "状態変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0208",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "銅を空気中で加熱してできる黒色の物質は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "硫化鉄"
+      },
+      {
+        "id": "b",
+        "text": "炭酸カルシウム"
+      },
+      {
+        "id": "c",
+        "text": "酸化銅"
+      },
+      {
+        "id": "d",
+        "text": "水"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "銅は酸素と結びついて黒色の酸化銅になります。",
+    "tags": [
+      "化学変化と原子・分子",
+      "酸化"
+    ]
+  },
+  {
+    "id": "science-jhs-0209",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "消化液に含まれ、食物を分解するはたらきをもつものを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "消化酵素"
+      },
+      {
+        "id": "b",
+        "text": "血小板"
+      },
+      {
+        "id": "c",
+        "text": "赤血球"
+      },
+      {
+        "id": "d",
+        "text": "抗体だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "消化酵素がデンプンやタンパク質などを分解します。",
+    "tags": [
+      "生物の体のつくり",
+      "消化"
+    ]
+  },
+  {
+    "id": "science-jhs-0210",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "熱が高温の物体から低温の物体へ伝わるのはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電離"
+      },
+      {
+        "id": "b",
+        "text": "減数分裂"
+      },
+      {
+        "id": "c",
+        "text": "熱伝導などの熱の移動"
+      },
+      {
+        "id": "d",
+        "text": "受粉"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "熱は温度差によって高温側から低温側へ移動します。",
+    "tags": [
+      "運動とエネルギー",
+      "熱"
+    ]
+  },
+  {
+    "id": "science-jhs-0211",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "ばねを引く力と伸びが比例する関係は何の法則ですか（弾性限度内）。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "慣性の法則"
+      },
+      {
+        "id": "b",
+        "text": "反射の法則"
+      },
+      {
+        "id": "c",
+        "text": "質量保存の法則"
+      },
+      {
+        "id": "d",
+        "text": "フックの法則"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "ばねの伸びは力の大きさに比例します。",
+    "tags": [
+      "光・音・力",
+      "ばね"
+    ]
+  },
+  {
+    "id": "science-jhs-0212",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電力の単位はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "J（ジュール）"
+      },
+      {
+        "id": "b",
+        "text": "W（ワット）"
+      },
+      {
+        "id": "c",
+        "text": "Ω（オーム）"
+      },
+      {
+        "id": "d",
+        "text": "A（アンペア）"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "電力は1秒あたりの電気エネルギーを表し、Wで示します。",
+    "tags": [
+      "電流と磁界",
+      "電力"
+    ]
+  },
+  {
+    "id": "science-jhs-0213",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物質が液体から固体に変わるときの変化を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "凝固"
+      },
+      {
+        "id": "b",
+        "text": "昇華"
+      },
+      {
+        "id": "c",
+        "text": "沸騰"
+      },
+      {
+        "id": "d",
+        "text": "融解"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "液体が固体になる変化を凝固といいます。",
+    "tags": [
+      "身のまわりの物質",
+      "状態変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0214",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "直列回路で、どの部分にも共通するものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "各抵抗の発熱量"
+      },
+      {
+        "id": "b",
+        "text": "すべての抵抗値"
+      },
+      {
+        "id": "c",
+        "text": "それぞれの抵抗の電圧"
+      },
+      {
+        "id": "d",
+        "text": "電流の大きさ"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "直列回路を流れる電流はどこでも等しいです。",
+    "tags": [
+      "電流と磁界",
+      "直列回路"
+    ]
+  },
+  {
+    "id": "science-jhs-0215",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "食物連鎖の矢印「草→バッタ→カエル」が表すものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "速さの順"
+      },
+      {
+        "id": "b",
+        "text": "体の大きさの順"
+      },
+      {
+        "id": "c",
+        "text": "成長する順番"
+      },
+      {
+        "id": "d",
+        "text": "食べられるものから食べるものへのつながり"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "矢印は物質やエネルギーが移る向きを表します。",
+    "tags": [
+      "生命の連続性",
+      "食物連鎖"
+    ]
+  },
+  {
+    "id": "science-jhs-0216",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "砂糖やデンプンのように、燃えると一般に二酸化炭素が生じる物質はどれに分類されますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "ガラス"
+      },
+      {
+        "id": "b",
+        "text": "単体の金属"
+      },
+      {
+        "id": "c",
+        "text": "金属"
+      },
+      {
+        "id": "d",
+        "text": "有機物"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "砂糖やデンプンは有機物です。",
+    "tags": [
+      "身のまわりの物質",
+      "有機物"
+    ]
+  },
+  {
+    "id": "science-jhs-0217",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "魚類の多くは主に何で呼吸しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "皮膚だけ"
+      },
+      {
+        "id": "b",
+        "text": "気門"
+      },
+      {
+        "id": "c",
+        "text": "肺"
+      },
+      {
+        "id": "d",
+        "text": "えら"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "魚類は主にえらを使って水中の酸素を取り込みます。",
+    "tags": [
+      "生物の観察と分類",
+      "動物の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0218",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水に入れた物体が受ける上向きの力を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "浮力"
+      },
+      {
+        "id": "b",
+        "text": "摩擦力"
+      },
+      {
+        "id": "c",
+        "text": "磁力"
+      },
+      {
+        "id": "d",
+        "text": "弾性力だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "水などの流体が物体を押し上げる力を浮力といいます。",
+    "tags": [
+      "光・音・力",
+      "浮力"
+    ]
+  },
+  {
+    "id": "science-jhs-0219",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "酸化物から酸素を取り除く化学変化は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸化"
+      },
+      {
+        "id": "b",
+        "text": "還元"
+      },
+      {
+        "id": "c",
+        "text": "蒸留"
+      },
+      {
+        "id": "d",
+        "text": "凝固"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "酸化物から酸素を取り除く反応を還元といいます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "還元"
+    ]
+  },
+  {
+    "id": "science-jhs-0220",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "だ液に含まれ、デンプンを分解する消化酵素は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "ペプシン"
+      },
+      {
+        "id": "b",
+        "text": "ヘモグロビン"
+      },
+      {
+        "id": "c",
+        "text": "アミラーゼ"
+      },
+      {
+        "id": "d",
+        "text": "リパーゼ"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "アミラーゼはデンプンを分解する消化酵素です。",
+    "tags": [
+      "生物の体のつくり",
+      "消化"
+    ]
+  },
+  {
+    "id": "science-jhs-0221",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "赤色リトマス紙を青色に変える水溶液は何性ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "アルカリ性"
+      },
+      {
+        "id": "b",
+        "text": "中性"
+      },
+      {
+        "id": "c",
+        "text": "すべての水溶液"
+      },
+      {
+        "id": "d",
+        "text": "酸性"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "アルカリ性の水溶液は赤色リトマス紙を青色にします。",
+    "tags": [
+      "化学変化とイオン",
+      "指示薬"
+    ]
+  },
+  {
+    "id": "science-jhs-0222",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "光合成で大気中から取り込まれる炭素を含む気体は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "水素"
+      },
+      {
+        "id": "b",
+        "text": "酸素"
+      },
+      {
+        "id": "c",
+        "text": "窒素"
+      },
+      {
+        "id": "d",
+        "text": "二酸化炭素"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "光合成で二酸化炭素中の炭素が有機物に取り込まれます。",
+    "tags": [
+      "生命の連続性",
+      "炭素の循環"
+    ]
+  },
+  {
+    "id": "science-jhs-0223",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "100gの物体にはたらく重力を約1Nとすると、質量600gの物体にはたらく重力は約何Nですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "12"
+      },
+      {
+        "id": "c",
+        "text": "7"
+      },
+      {
+        "id": "d",
+        "text": "6"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "600÷100＝6Nです。",
+    "tags": [
+      "光・音・力",
+      "重力"
+    ],
+    "unit": "N"
+  },
+  {
+    "id": "science-jhs-0224",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "泥のような細かい粒が堆積してできた岩石はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "安山岩"
+      },
+      {
+        "id": "b",
+        "text": "れき岩"
+      },
+      {
+        "id": "c",
+        "text": "泥岩"
+      },
+      {
+        "id": "d",
+        "text": "花こう岩"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "泥の粒が固まると泥岩になります。",
+    "tags": [
+      "大地の変化",
+      "堆積岩"
+    ]
+  },
+  {
+    "id": "science-jhs-0225",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "接眼レンズが15倍、対物レンズが6倍の顕微鏡の倍率は何倍ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "180"
+      },
+      {
+        "id": "b",
+        "text": "92"
+      },
+      {
+        "id": "c",
+        "text": "88"
+      },
+      {
+        "id": "d",
+        "text": "90"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "15×6＝90倍です。",
+    "tags": [
+      "生物の観察と分類",
+      "顕微鏡の倍率"
+    ],
+    "unit": "倍"
+  },
+  {
+    "id": "science-jhs-0226",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水溶液で、ものを溶かしている液体を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "結晶"
+      },
+      {
+        "id": "b",
+        "text": "溶質"
+      },
+      {
+        "id": "c",
+        "text": "溶媒"
+      },
+      {
+        "id": "d",
+        "text": "沈殿"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "ものを溶かす側の液体が溶媒です。",
+    "tags": [
+      "身のまわりの物質",
+      "水溶液"
+    ]
+  },
+  {
+    "id": "science-jhs-0227",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "温度を下げて溶けきれなくなった物質を結晶として取り出す方法は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "蒸留"
+      },
+      {
+        "id": "b",
+        "text": "ろ過だけ"
+      },
+      {
+        "id": "c",
+        "text": "分解"
+      },
+      {
+        "id": "d",
+        "text": "再結晶"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "溶解度の温度による変化を利用するのが再結晶です。",
+    "tags": [
+      "身のまわりの物質",
+      "再結晶"
+    ]
+  },
+  {
+    "id": "science-jhs-0228",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "花粉をつくる、花のつくりはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "めしべの柱頭"
+      },
+      {
+        "id": "b",
+        "text": "花弁"
+      },
+      {
+        "id": "c",
+        "text": "がく"
+      },
+      {
+        "id": "d",
+        "text": "おしべのやく"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "おしべのやくで花粉がつくられます。",
+    "tags": [
+      "生物の観察と分類",
+      "花のつくり"
+    ]
+  },
+  {
+    "id": "science-jhs-0229",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "音の大きさを決める主な要素は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "振動数"
+      },
+      {
+        "id": "b",
+        "text": "光の波長"
+      },
+      {
+        "id": "c",
+        "text": "気温だけ"
+      },
+      {
+        "id": "d",
+        "text": "振幅"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "振幅が大きいほど大きな音になります。",
+    "tags": [
+      "光・音・力",
+      "音の大きさ"
+    ]
+  },
+  {
+    "id": "science-jhs-0230",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "密閉した容器で、ある化学変化が起こる前の物質の合計質量が20gでした。反応後の物質の合計質量は何gですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "18"
+      },
+      {
+        "id": "b",
+        "text": "20"
+      },
+      {
+        "id": "c",
+        "text": "40"
+      },
+      {
+        "id": "d",
+        "text": "22"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "質量保存の法則により、反応後も20gです。",
+    "tags": [
+      "化学変化と原子・分子",
+      "質量保存"
+    ],
+    "unit": "g"
+  },
+  {
+    "id": "science-jhs-0231",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地球が地軸のまわりを1回転する運動は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "公転"
+      },
+      {
+        "id": "b",
+        "text": "振動"
+      },
+      {
+        "id": "c",
+        "text": "歳差だけ"
+      },
+      {
+        "id": "d",
+        "text": "自転"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "地球の自転は昼夜の交代などを生じます。",
+    "tags": [
+      "地球と宇宙・環境",
+      "地球の自転"
+    ]
+  },
+  {
+    "id": "science-jhs-0232",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "深成岩によく見られる結晶のつくりはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "葉脈状組織"
+      },
+      {
+        "id": "b",
+        "text": "等粒状組織"
+      },
+      {
+        "id": "c",
+        "text": "層状構造"
+      },
+      {
+        "id": "d",
+        "text": "斑状組織"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "深成岩は結晶が比較的そろった大きさの等粒状組織をもちます。",
+    "tags": [
+      "大地の変化",
+      "岩石の組織"
+    ]
+  },
+  {
+    "id": "science-jhs-0233",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "草を食べるバッタは食物連鎖の中で何にあたりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "分解者だけ"
+      },
+      {
+        "id": "b",
+        "text": "一次消費者"
+      },
+      {
+        "id": "c",
+        "text": "生産者"
+      },
+      {
+        "id": "d",
+        "text": "二次消費者"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "植物を食べる動物は一次消費者です。",
+    "tags": [
+      "生命の連続性",
+      "食物連鎖"
+    ]
+  },
+  {
+    "id": "science-jhs-0234",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "サンゴの化石のように当時の環境を考える手がかりになる化石は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "結晶"
+      },
+      {
+        "id": "b",
+        "text": "示準化石"
+      },
+      {
+        "id": "c",
+        "text": "示相化石"
+      },
+      {
+        "id": "d",
+        "text": "火山岩"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "生きていた環境を推定するのに役立つのが示相化石です。",
+    "tags": [
+      "大地の変化",
+      "化石"
+    ]
+  },
+  {
+    "id": "science-jhs-0235",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "ナトリウムイオンの化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "Na₂"
+      },
+      {
+        "id": "b",
+        "text": "Na⁺"
+      },
+      {
+        "id": "c",
+        "text": "Cl⁻"
+      },
+      {
+        "id": "d",
+        "text": "Na⁻"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "ナトリウム原子が電子を1個失うとNa⁺になります。",
+    "tags": [
+      "化学変化とイオン",
+      "イオン式"
+    ]
+  },
+  {
+    "id": "science-jhs-0236",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "受精卵が分裂をくり返して成長する過程を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "中和"
+      },
+      {
+        "id": "b",
+        "text": "光合成"
+      },
+      {
+        "id": "c",
+        "text": "発生"
+      },
+      {
+        "id": "d",
+        "text": "蒸散"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "受精卵が細胞分裂を重ねて個体になる過程が発生です。",
+    "tags": [
+      "生命の連続性",
+      "発生"
+    ]
+  },
+  {
+    "id": "science-jhs-0237",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物体が等しい時間ごとに等しい距離を進む運動は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "往復運動"
+      },
+      {
+        "id": "b",
+        "text": "等速直線運動"
+      },
+      {
+        "id": "c",
+        "text": "円運動"
+      },
+      {
+        "id": "d",
+        "text": "自由落下だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "一直線上を一定の速さで進む運動が等速直線運動です。",
+    "tags": [
+      "運動とエネルギー",
+      "運動"
+    ]
+  },
+  {
+    "id": "science-jhs-0238",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "太陽が東から西へ動くように見える主な原因は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "月の自転"
+      },
+      {
+        "id": "b",
+        "text": "地球の公転だけ"
+      },
+      {
+        "id": "c",
+        "text": "地球の自転"
+      },
+      {
+        "id": "d",
+        "text": "太陽が地球を1日で1周すること"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "地球が西から東へ自転するため、太陽は東から西へ動いて見えます。",
+    "tags": [
+      "地球と宇宙・環境",
+      "日周運動"
+    ]
+  },
+  {
+    "id": "science-jhs-0239",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "満月に近い月が見える方向は、太陽の方向と比べてどうなっていますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "常に90°右"
+      },
+      {
+        "id": "b",
+        "text": "ほぼ同じ方向"
+      },
+      {
+        "id": "c",
+        "text": "常に90°左"
+      },
+      {
+        "id": "d",
+        "text": "ほぼ反対方向"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "満月のころ月は地球から見て太陽とほぼ反対方向にあります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "月の満ち欠け"
+    ]
+  },
+  {
+    "id": "science-jhs-0240",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "音が伝わるために必要なものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず光"
+      },
+      {
+        "id": "b",
+        "text": "必ず磁石"
+      },
+      {
+        "id": "c",
+        "text": "振動を伝える物質"
+      },
+      {
+        "id": "d",
+        "text": "必ず真空"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "音は空気や水などの物質の振動として伝わります。",
+    "tags": [
+      "光・音・力",
+      "音"
+    ]
+  },
+  {
+    "id": "science-jhs-0241",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "平面鏡で、入射角が30°のとき反射角は何度ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "90°"
+      },
+      {
+        "id": "b",
+        "text": "30°"
+      },
+      {
+        "id": "c",
+        "text": "60°"
+      },
+      {
+        "id": "d",
+        "text": "15°"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "反射の法則により入射角と反射角は等しくなります。",
+    "tags": [
+      "光・音・力",
+      "光の反射"
+    ]
+  },
+  {
+    "id": "science-jhs-0242",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "太陽光を利用して電気を得る装置で起こる主な変換はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電気→位置エネルギー"
+      },
+      {
+        "id": "b",
+        "text": "音→化学エネルギー"
+      },
+      {
+        "id": "c",
+        "text": "熱→核エネルギー"
+      },
+      {
+        "id": "d",
+        "text": "光エネルギー→電気エネルギー"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "太陽電池は光エネルギーを電気エネルギーに変えます。",
+    "tags": [
+      "運動とエネルギー",
+      "エネルギー変換"
+    ]
+  },
+  {
+    "id": "science-jhs-0243",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "仕事の大きさを表す単位はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "m/s"
+      },
+      {
+        "id": "b",
+        "text": "W（ワット）"
+      },
+      {
+        "id": "c",
+        "text": "N（ニュートン）"
+      },
+      {
+        "id": "d",
+        "text": "J（ジュール）"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "仕事の単位はJです。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事"
+    ]
+  },
+  {
+    "id": "science-jhs-0244",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "体細胞分裂の結果できる2個の細胞の染色体数は、もとの体細胞と比べてどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "半分"
+      },
+      {
+        "id": "b",
+        "text": "0"
+      },
+      {
+        "id": "c",
+        "text": "2倍"
+      },
+      {
+        "id": "d",
+        "text": "同じ"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "体細胞分裂では染色体数が保たれます。",
+    "tags": [
+      "生命の連続性",
+      "体細胞分裂"
+    ]
+  },
+  {
+    "id": "science-jhs-0245",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "DNAが主に存在する細胞内の構造はどれですか（真核細胞）。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "細胞壁だけ"
+      },
+      {
+        "id": "b",
+        "text": "気孔"
+      },
+      {
+        "id": "c",
+        "text": "液胞だけ"
+      },
+      {
+        "id": "d",
+        "text": "染色体"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "DNAは主に核の染色体を構成しています。",
+    "tags": [
+      "生命の連続性",
+      "DNA"
+    ]
+  },
+  {
+    "id": "science-jhs-0246",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "80Jの仕事を8秒で行いました。仕事率は何Wですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "9"
+      },
+      {
+        "id": "b",
+        "text": "11"
+      },
+      {
+        "id": "c",
+        "text": "10"
+      },
+      {
+        "id": "d",
+        "text": "20"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "仕事率＝仕事÷時間＝80÷8＝10Wです。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事率"
+    ],
+    "unit": "W"
+  },
+  {
+    "id": "science-jhs-0247",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物体を持ち上げるのに動滑車を使うと、理想的には引く力はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "大きくなり距離も長くなる"
+      },
+      {
+        "id": "b",
+        "text": "力も距離も小さくなる"
+      },
+      {
+        "id": "c",
+        "text": "力も距離も変わらない"
+      },
+      {
+        "id": "d",
+        "text": "小さくなるが引く距離が長くなる"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "動滑車は小さい力で引けますが、その分長くひもを引きます。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事の原理"
+    ]
+  },
+  {
+    "id": "science-jhs-0248",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "単子葉類に多く見られる根の形はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "直根だけ"
+      },
+      {
+        "id": "b",
+        "text": "ひげ根"
+      },
+      {
+        "id": "c",
+        "text": "主根と側根"
+      },
+      {
+        "id": "d",
+        "text": "根毛をもたない根"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "単子葉類ではひげ根が発達します。",
+    "tags": [
+      "生物の観察と分類",
+      "根"
+    ]
+  },
+  {
+    "id": "science-jhs-0249",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "次のうち脊椎動物はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "バッタ"
+      },
+      {
+        "id": "b",
+        "text": "ミミズ"
+      },
+      {
+        "id": "c",
+        "text": "クラゲ"
+      },
+      {
+        "id": "d",
+        "text": "カエル"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "カエルは背骨をもつ脊椎動物です。",
+    "tags": [
+      "生物の観察と分類",
+      "動物の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0250",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物質が固体から液体に変わるときの変化を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "凝固"
+      },
+      {
+        "id": "b",
+        "text": "凝縮"
+      },
+      {
+        "id": "c",
+        "text": "融解"
+      },
+      {
+        "id": "d",
+        "text": "蒸発"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "固体が液体になる変化を融解といいます。",
+    "tags": [
+      "身のまわりの物質",
+      "状態変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0251",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "並列回路で、各枝に加わるものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず同じ電流"
+      },
+      {
+        "id": "b",
+        "text": "同じ電圧"
+      },
+      {
+        "id": "c",
+        "text": "同じ電力"
+      },
+      {
+        "id": "d",
+        "text": "同じ抵抗"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "並列につないだ各枝の両端の電圧は等しいです。",
+    "tags": [
+      "電流と磁界",
+      "並列回路"
+    ]
+  },
+  {
+    "id": "science-jhs-0252",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "電熱線を流れる電流が大きいほど、同じ抵抗では発生する熱はどうなりますか（時間は一定）。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず0になる"
+      },
+      {
+        "id": "b",
+        "text": "小さくなる"
+      },
+      {
+        "id": "c",
+        "text": "大きくなる"
+      },
+      {
+        "id": "d",
+        "text": "変わらない"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "発熱量はI²Rtに比例します。",
+    "tags": [
+      "電流と磁界",
+      "発熱"
+    ]
+  },
+  {
+    "id": "science-jhs-0253",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "地震の規模（放出されたエネルギーの大きさ）を表す指標は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "風速"
+      },
+      {
+        "id": "b",
+        "text": "マグニチュード"
+      },
+      {
+        "id": "c",
+        "text": "震度"
+      },
+      {
+        "id": "d",
+        "text": "気圧"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "地震そのものの規模をマグニチュードで表します。",
+    "tags": [
+      "大地の変化",
+      "地震"
+    ]
+  },
+  {
+    "id": "science-jhs-0254",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "食塩12gを水88gにすべて溶かした食塩水の質量パーセント濃度は何％ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "11"
+      },
+      {
+        "id": "b",
+        "text": "12"
+      },
+      {
+        "id": "c",
+        "text": "24"
+      },
+      {
+        "id": "d",
+        "text": "13"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "食塩の質量÷食塩水全体の質量×100＝12÷100×100＝12％です。",
+    "tags": [
+      "身のまわりの物質",
+      "質量パーセント濃度"
+    ],
+    "unit": "％"
+  },
+  {
+    "id": "science-jhs-0255",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "120Jの仕事を10秒で行いました。仕事率は何Wですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "13"
+      },
+      {
+        "id": "b",
+        "text": "11"
+      },
+      {
+        "id": "c",
+        "text": "24"
+      },
+      {
+        "id": "d",
+        "text": "12"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "仕事率＝仕事÷時間＝120÷10＝12Wです。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事率"
+    ],
+    "unit": "W"
+  },
+  {
+    "id": "science-jhs-0256",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "病原体などに対する体の防御に関わる血液の成分はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "赤血球"
+      },
+      {
+        "id": "b",
+        "text": "白血球"
+      },
+      {
+        "id": "c",
+        "text": "血しょうだけ"
+      },
+      {
+        "id": "d",
+        "text": "血小板"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "白血球は異物を取り込むなど体を守るはたらきをします。",
+    "tags": [
+      "生物の体のつくり",
+      "血液"
+    ]
+  },
+  {
+    "id": "science-jhs-0257",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "電圧の大きさを表す単位は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "V（ボルト）"
+      },
+      {
+        "id": "b",
+        "text": "J（ジュール）"
+      },
+      {
+        "id": "c",
+        "text": "Ω（オーム）"
+      },
+      {
+        "id": "d",
+        "text": "A（アンペア）"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "電圧の単位はVです。",
+    "tags": [
+      "電流と磁界",
+      "電圧"
+    ]
+  },
+  {
+    "id": "science-jhs-0258",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物体に力がはたらくときの作用と反作用について正しいものはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "大きさが等しく向きが逆"
+      },
+      {
+        "id": "b",
+        "text": "同じ物体にはたらく"
+      },
+      {
+        "id": "c",
+        "text": "必ず一方だけが存在する"
+      },
+      {
+        "id": "d",
+        "text": "同じ向きではたらく"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "作用・反作用は別々の物体に大きさが等しく反対向きにはたらきます。",
+    "tags": [
+      "運動とエネルギー",
+      "作用・反作用"
+    ]
+  },
+  {
+    "id": "science-jhs-0259",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "震源の真上にあたる地表の点は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "震度"
+      },
+      {
+        "id": "b",
+        "text": "震源"
+      },
+      {
+        "id": "c",
+        "text": "マグニチュード"
+      },
+      {
+        "id": "d",
+        "text": "震央"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "震源の真上の地表の点を震央といいます。",
+    "tags": [
+      "大地の変化",
+      "地震"
+    ]
+  },
+  {
+    "id": "science-jhs-0260",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "呼吸で酸素と二酸化炭素を交換する肺の小さな袋は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "心室"
+      },
+      {
+        "id": "b",
+        "text": "気孔"
+      },
+      {
+        "id": "c",
+        "text": "肺胞"
+      },
+      {
+        "id": "d",
+        "text": "柔毛"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "肺胞の表面で血液と空気の間のガス交換が起こります。",
+    "tags": [
+      "生物の体のつくり",
+      "呼吸"
+    ]
+  },
+  {
+    "id": "science-jhs-0261",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "日本の夏に影響を与える暖かく湿った気団はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "シベリア気団"
+      },
+      {
+        "id": "b",
+        "text": "オホーツク海気団"
+      },
+      {
+        "id": "c",
+        "text": "揚子江気団"
+      },
+      {
+        "id": "d",
+        "text": "小笠原気団"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "小笠原気団は暖かく湿った空気をもたらします。",
+    "tags": [
+      "気象とその変化",
+      "気団"
+    ]
+  },
+  {
+    "id": "science-jhs-0262",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "強い刺激臭があり、水によく溶け、空気より軽い気体はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "水素"
+      },
+      {
+        "id": "b",
+        "text": "酸素"
+      },
+      {
+        "id": "c",
+        "text": "アンモニア"
+      },
+      {
+        "id": "d",
+        "text": "二酸化炭素"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "アンモニアは刺激臭があり、水に非常によく溶けます。",
+    "tags": [
+      "身のまわりの物質",
+      "気体の性質"
+    ]
+  },
+  {
+    "id": "science-jhs-0263",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "同じ地域で南中する星座が季節で変わる主な原因は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "地球の公転"
+      },
+      {
+        "id": "b",
+        "text": "月の自転"
+      },
+      {
+        "id": "c",
+        "text": "風向の変化"
+      },
+      {
+        "id": "d",
+        "text": "地球の自転だけ"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "地球の公転によって夜に向く宇宙の方向が変わります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "星座"
+    ]
+  },
+  {
+    "id": "science-jhs-0264",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "トウモロコシの葉に見られる葉脈は一般にどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "放射状脈"
+      },
+      {
+        "id": "b",
+        "text": "葉脈がない"
+      },
+      {
+        "id": "c",
+        "text": "平行脈"
+      },
+      {
+        "id": "d",
+        "text": "網状脈"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "トウモロコシなどの単子葉類は平行脈をもちます。",
+    "tags": [
+      "生物の観察と分類",
+      "葉脈"
+    ]
+  },
+  {
+    "id": "science-jhs-0265",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "コケ植物の特徴として正しいものはどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "果実ができる"
+      },
+      {
+        "id": "b",
+        "text": "種子ができる"
+      },
+      {
+        "id": "c",
+        "text": "花が咲く"
+      },
+      {
+        "id": "d",
+        "text": "根・茎・葉の明確な区別がない"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "コケ植物は根・茎・葉のはっきりした区別がありません。",
+    "tags": [
+      "生物の観察と分類",
+      "植物の分類"
+    ]
+  },
+  {
+    "id": "science-jhs-0266",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "日本の冬に影響を与える寒く乾いた大陸の気団はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "シベリア気団"
+      },
+      {
+        "id": "b",
+        "text": "小笠原気団"
+      },
+      {
+        "id": "c",
+        "text": "赤道気団"
+      },
+      {
+        "id": "d",
+        "text": "揚子江気団"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "シベリア気団は寒く乾燥した性質をもちます。",
+    "tags": [
+      "気象とその変化",
+      "気団"
+    ]
+  },
+  {
+    "id": "science-jhs-0267",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "直線導線に電流を流すと、導線のまわりに何が生じますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "重力だけ"
+      },
+      {
+        "id": "b",
+        "text": "磁界"
+      },
+      {
+        "id": "c",
+        "text": "酸素"
+      },
+      {
+        "id": "d",
+        "text": "新しい原子"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "電流のまわりには磁界が生じます。",
+    "tags": [
+      "電流と磁界",
+      "電流と磁界"
+    ]
+  },
+  {
+    "id": "science-jhs-0268",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "石灰水を白くにごらせる気体は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "酸素"
+      },
+      {
+        "id": "b",
+        "text": "窒素"
+      },
+      {
+        "id": "c",
+        "text": "水素"
+      },
+      {
+        "id": "d",
+        "text": "二酸化炭素"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "二酸化炭素を通すと炭酸カルシウムの白い沈殿ができます。",
+    "tags": [
+      "身のまわりの物質",
+      "気体の性質"
+    ]
+  },
+  {
+    "id": "science-jhs-0269",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "月の満ち欠けが起こる主な理由は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "地球が自転しないから"
+      },
+      {
+        "id": "b",
+        "text": "月の形そのものが変わるから"
+      },
+      {
+        "id": "c",
+        "text": "太陽・地球・月の位置関係が変わるから"
+      },
+      {
+        "id": "d",
+        "text": "月が毎日消えるから"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "月の太陽に照らされた部分の見える割合が変わります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "月の満ち欠け"
+    ]
+  },
+  {
+    "id": "science-jhs-0270",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "被子植物で、受精後に種子になる部分はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "胚珠"
+      },
+      {
+        "id": "b",
+        "text": "子房"
+      },
+      {
+        "id": "c",
+        "text": "がく"
+      },
+      {
+        "id": "d",
+        "text": "花弁"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "被子植物では胚珠が種子に変化します。",
+    "tags": [
+      "生物の観察と分類",
+      "種子"
+    ]
+  },
+  {
+    "id": "science-jhs-0271",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "凸レンズでできた虚像の特徴はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず倒立している"
+      },
+      {
+        "id": "b",
+        "text": "スクリーンに必ず映る"
+      },
+      {
+        "id": "c",
+        "text": "スクリーンに映せない"
+      },
+      {
+        "id": "d",
+        "text": "どんな場所からも見えない"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "虚像はスクリーンに直接映せません。",
+    "tags": [
+      "光・音・力",
+      "凸レンズ"
+    ]
+  },
+  {
+    "id": "science-jhs-0272",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水に溶けたとき電流が流れる物質を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電解質"
+      },
+      {
+        "id": "b",
+        "text": "非電解質"
+      },
+      {
+        "id": "c",
+        "text": "有機物だけ"
+      },
+      {
+        "id": "d",
+        "text": "単体"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "水溶液中でイオンを生じる電解質は電気を通します。",
+    "tags": [
+      "化学変化とイオン",
+      "電解質"
+    ]
+  },
+  {
+    "id": "science-jhs-0273",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "周りより気圧が低いところを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "低気圧"
+      },
+      {
+        "id": "b",
+        "text": "高気圧"
+      },
+      {
+        "id": "c",
+        "text": "前線"
+      },
+      {
+        "id": "d",
+        "text": "等温線"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "周囲より気圧が低い地域を低気圧といいます。",
+    "tags": [
+      "気象とその変化",
+      "気圧配置"
+    ]
+  },
+  {
+    "id": "science-jhs-0274",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "二酸化炭素の化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "CO"
+      },
+      {
+        "id": "b",
+        "text": "CO₂"
+      },
+      {
+        "id": "c",
+        "text": "O₂"
+      },
+      {
+        "id": "d",
+        "text": "H₂O"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "二酸化炭素は炭素原子1個と酸素原子2個からなります。",
+    "tags": [
+      "化学変化と原子・分子",
+      "化学式"
+    ]
+  },
+  {
+    "id": "science-jhs-0275",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "空気中から水中へ斜めに入る光は、一般に法線に対してどう曲がりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "境界に平行になる"
+      },
+      {
+        "id": "b",
+        "text": "必ず反射だけする"
+      },
+      {
+        "id": "c",
+        "text": "法線から遠ざかる"
+      },
+      {
+        "id": "d",
+        "text": "法線に近づく"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "空気から水へ進むとき、屈折した光は法線に近づきます。",
+    "tags": [
+      "光・音・力",
+      "光の屈折"
+    ]
+  },
+  {
+    "id": "science-jhs-0276",
+    "subject": "science",
+    "grade": 7,
+    "category": "大地の変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "砂の粒が堆積してできた岩石はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "花こう岩"
+      },
+      {
+        "id": "b",
+        "text": "泥岩"
+      },
+      {
+        "id": "c",
+        "text": "砂岩"
+      },
+      {
+        "id": "d",
+        "text": "玄武岩"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "砂の粒が固まると砂岩になります。",
+    "tags": [
+      "大地の変化",
+      "堆積岩"
+    ]
+  },
+  {
+    "id": "science-jhs-0277",
+    "subject": "science",
+    "grade": 8,
+    "category": "気象とその変化",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "北半球の地上付近で低気圧の中心へ向かう風は、おおむねどう回転しますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "上下だけ"
+      },
+      {
+        "id": "b",
+        "text": "常に東向き"
+      },
+      {
+        "id": "c",
+        "text": "時計回り"
+      },
+      {
+        "id": "d",
+        "text": "反時計回り"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "北半球の低気圧には反時計回りに風が吹き込みます。",
+    "tags": [
+      "気象とその変化",
+      "低気圧"
+    ]
+  },
+  {
+    "id": "science-jhs-0278",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "運動をさまたげる向きにはたらく接触面の力はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "重力だけ"
+      },
+      {
+        "id": "b",
+        "text": "電磁力だけ"
+      },
+      {
+        "id": "c",
+        "text": "浮力だけ"
+      },
+      {
+        "id": "d",
+        "text": "摩擦力"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "摩擦力は接触している物体間で相対運動を妨げる向きにはたらきます。",
+    "tags": [
+      "運動とエネルギー",
+      "摩擦力"
+    ]
+  },
+  {
+    "id": "science-jhs-0279",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "目に入る光の量を調節する部分はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "視神経"
+      },
+      {
+        "id": "b",
+        "text": "虹彩"
+      },
+      {
+        "id": "c",
+        "text": "水晶体だけ"
+      },
+      {
+        "id": "d",
+        "text": "網膜"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "虹彩は瞳孔の大きさを変えて入る光の量を調節します。",
+    "tags": [
+      "生物の体のつくり",
+      "感覚器官"
+    ]
+  },
+  {
+    "id": "science-jhs-0280",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "ルーペで観察する際、動かせない物体を見るときはどのようにピントを合わせますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "ルーペを大きく振る"
+      },
+      {
+        "id": "b",
+        "text": "目を閉じる"
+      },
+      {
+        "id": "c",
+        "text": "ルーペを目に近づけたまま顔を動かす"
+      },
+      {
+        "id": "d",
+        "text": "物体を暗くする"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "ルーペを目の近くに置き、顔を前後させてピントを合わせます。",
+    "tags": [
+      "生物の観察と分類",
+      "観察器具"
+    ]
+  },
+  {
+    "id": "science-jhs-0281",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "対立する形質のうち、雑種第一代に現れる形質を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "潜性の形質"
+      },
+      {
+        "id": "b",
+        "text": "栄養生殖"
+      },
+      {
+        "id": "c",
+        "text": "顕性の形質"
+      },
+      {
+        "id": "d",
+        "text": "突然変異"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "ヘテロ接合体で現れる形質を顕性の形質といいます。",
+    "tags": [
+      "生命の連続性",
+      "遺伝"
+    ]
+  },
+  {
+    "id": "science-jhs-0282",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "砂と水を分けるのに適した操作はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "ろ過"
+      },
+      {
+        "id": "b",
+        "text": "再結晶"
+      },
+      {
+        "id": "c",
+        "text": "中和"
+      },
+      {
+        "id": "d",
+        "text": "蒸留"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "水に溶けていない砂はろ過で分けられます。",
+    "tags": [
+      "身のまわりの物質",
+      "ろ過"
+    ]
+  },
+  {
+    "id": "science-jhs-0283",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "生物が長い時間をかけて環境に適した特徴をもつ集団へ変化していくことを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "反射"
+      },
+      {
+        "id": "b",
+        "text": "中和"
+      },
+      {
+        "id": "c",
+        "text": "蒸留"
+      },
+      {
+        "id": "d",
+        "text": "進化"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "生物の集団が世代を重ねて変化することを進化といいます。",
+    "tags": [
+      "生命の連続性",
+      "進化"
+    ]
+  },
+  {
+    "id": "science-jhs-0284",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物質をつくる非常に小さな粒子のうち、化学変化でそれ以上分けられない基本の粒子は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "イオン結晶だけ"
+      },
+      {
+        "id": "b",
+        "text": "細胞"
+      },
+      {
+        "id": "c",
+        "text": "原子"
+      },
+      {
+        "id": "d",
+        "text": "分子"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "原子は化学変化でそれ以上分けられない基本的な粒子です。",
+    "tags": [
+      "化学変化と原子・分子",
+      "原子"
+    ]
+  },
+  {
+    "id": "science-jhs-0285",
+    "subject": "science",
+    "grade": 8,
+    "category": "生物の体のつくり",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "出血したとき血液が固まるはたらきに関係する成分は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "脂肪"
+      },
+      {
+        "id": "b",
+        "text": "赤血球"
+      },
+      {
+        "id": "c",
+        "text": "デンプン"
+      },
+      {
+        "id": "d",
+        "text": "血小板"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "血小板は血液の凝固に関わります。",
+    "tags": [
+      "生物の体のつくり",
+      "血液"
+    ]
+  },
+  {
+    "id": "science-jhs-0286",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水溶液に水酸化物イオンを生じる性質を示すのは何性ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "金属性"
+      },
+      {
+        "id": "b",
+        "text": "中性"
+      },
+      {
+        "id": "c",
+        "text": "アルカリ性"
+      },
+      {
+        "id": "d",
+        "text": "酸性"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "アルカリ性の水溶液には水酸化物イオンが存在します。",
+    "tags": [
+      "化学変化とイオン",
+      "酸とアルカリ"
+    ]
+  },
+  {
+    "id": "science-jhs-0287",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "細胞が分かれて数が増えることを何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "受粉"
+      },
+      {
+        "id": "b",
+        "text": "光合成"
+      },
+      {
+        "id": "c",
+        "text": "細胞分裂"
+      },
+      {
+        "id": "d",
+        "text": "蒸散"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "1個の細胞が分かれて増えることを細胞分裂といいます。",
+    "tags": [
+      "生命の連続性",
+      "細胞分裂"
+    ]
+  },
+  {
+    "id": "science-jhs-0288",
+    "subject": "science",
+    "grade": 9,
+    "category": "運動とエネルギー",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "物体を力の向きに動かしたときの仕事の計算式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電圧÷抵抗"
+      },
+      {
+        "id": "b",
+        "text": "速さ×時間"
+      },
+      {
+        "id": "c",
+        "text": "力×力の向きに動いた距離"
+      },
+      {
+        "id": "d",
+        "text": "質量÷体積"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "力とその向きに進んだ距離を掛けると仕事が求められます。",
+    "tags": [
+      "運動とエネルギー",
+      "仕事"
+    ]
+  },
+  {
+    "id": "science-jhs-0289",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "いくつかの原子が結びついてできた粒子を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "原子核だけ"
+      },
+      {
+        "id": "b",
+        "text": "細胞"
+      },
+      {
+        "id": "c",
+        "text": "電子だけ"
+      },
+      {
+        "id": "d",
+        "text": "分子"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "原子が結合してできた粒子を分子といいます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "分子"
+    ]
+  },
+  {
+    "id": "science-jhs-0290",
+    "subject": "science",
+    "grade": 9,
+    "category": "地球と宇宙・環境",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "日本の夏に昼の長さが長くなる主な理由は何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "地球が太陽に最も近いためだけ"
+      },
+      {
+        "id": "b",
+        "text": "月が明るいため"
+      },
+      {
+        "id": "c",
+        "text": "地球の自転が止まるため"
+      },
+      {
+        "id": "d",
+        "text": "地軸が公転面に垂直な方向から傾いているため"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "地軸の傾きと地球の公転により、季節で昼夜の長さが変わります。",
+    "tags": [
+      "地球と宇宙・環境",
+      "季節"
+    ]
+  },
+  {
+    "id": "science-jhs-0291",
+    "subject": "science",
+    "grade": 8,
+    "category": "電流と磁界",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "オームの法則を表す式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "電流＝電圧×抵抗"
+      },
+      {
+        "id": "b",
+        "text": "抵抗＝電圧×電流"
+      },
+      {
+        "id": "c",
+        "text": "電圧＝電流×抵抗"
+      },
+      {
+        "id": "d",
+        "text": "電圧＝電流÷抵抗"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "オームの法則はV＝IRです。",
+    "tags": [
+      "電流と磁界",
+      "オームの法則"
+    ]
+  },
+  {
+    "id": "science-jhs-0292",
+    "subject": "science",
+    "grade": 7,
+    "category": "生物の観察と分類",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "昆虫の成虫のあしの本数は何本ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "6本"
+      },
+      {
+        "id": "b",
+        "text": "10本"
+      },
+      {
+        "id": "c",
+        "text": "4本"
+      },
+      {
+        "id": "d",
+        "text": "8本"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "昆虫の胸部には3対、合計6本のあしがあります。",
+    "tags": [
+      "生物の観察と分類",
+      "昆虫"
+    ]
+  },
+  {
+    "id": "science-jhs-0293",
+    "subject": "science",
+    "grade": 9,
+    "category": "化学変化とイオン",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "銅イオン（銅(II)イオン）の化学式はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "Cu²⁺"
+      },
+      {
+        "id": "b",
+        "text": "Cu₂"
+      },
+      {
+        "id": "c",
+        "text": "Cu²⁻"
+      },
+      {
+        "id": "d",
+        "text": "Cu⁺"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "銅(II)イオンは2価の陽イオンです。",
+    "tags": [
+      "化学変化とイオン",
+      "イオン式"
+    ]
+  },
+  {
+    "id": "science-jhs-0294",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 2,
+    "type": "choice",
+    "prompt": "質量84g、体積7cm³の物質の密度は何g/cm³ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "24"
+      },
+      {
+        "id": "b",
+        "text": "12"
+      },
+      {
+        "id": "c",
+        "text": "13"
+      },
+      {
+        "id": "d",
+        "text": "11"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "密度＝質量÷体積＝84÷7＝12g/cm³です。",
+    "tags": [
+      "身のまわりの物質",
+      "密度"
+    ],
+    "unit": "g/cm³"
+  },
+  {
+    "id": "science-jhs-0295",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "炭酸水素ナトリウムを加熱したときに発生する気体はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "二酸化炭素"
+      },
+      {
+        "id": "b",
+        "text": "窒素"
+      },
+      {
+        "id": "c",
+        "text": "酸素"
+      },
+      {
+        "id": "d",
+        "text": "水素"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "熱分解により二酸化炭素と水などが生じます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "熱分解"
+    ]
+  },
+  {
+    "id": "science-jhs-0296",
+    "subject": "science",
+    "grade": 7,
+    "category": "身のまわりの物質",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水蒸気が水滴に変わる変化を何といいますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "融解"
+      },
+      {
+        "id": "b",
+        "text": "溶解"
+      },
+      {
+        "id": "c",
+        "text": "凝縮"
+      },
+      {
+        "id": "d",
+        "text": "凝固"
+      }
+    ],
+    "answer": {
+      "choiceId": "c"
+    },
+    "explanation": "気体が液体に変わることを凝縮といいます。",
+    "tags": [
+      "身のまわりの物質",
+      "状態変化"
+    ]
+  },
+  {
+    "id": "science-jhs-0297",
+    "subject": "science",
+    "grade": 9,
+    "category": "生命の連続性",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "生物の形質を決める情報を担うものは何ですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "葉脈"
+      },
+      {
+        "id": "b",
+        "text": "消化酵素"
+      },
+      {
+        "id": "c",
+        "text": "気孔"
+      },
+      {
+        "id": "d",
+        "text": "遺伝子"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "遺伝子は親から子へ伝わる形質の情報を担います。",
+    "tags": [
+      "生命の連続性",
+      "遺伝"
+    ]
+  },
+  {
+    "id": "science-jhs-0298",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "凸レンズでできた実像の特徴はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "物体と常に同じ大きさ"
+      },
+      {
+        "id": "b",
+        "text": "スクリーンに映らない"
+      },
+      {
+        "id": "c",
+        "text": "必ず正立している"
+      },
+      {
+        "id": "d",
+        "text": "スクリーンに映せる"
+      }
+    ],
+    "answer": {
+      "choiceId": "d"
+    },
+    "explanation": "実像はスクリーンに映すことができます。",
+    "tags": [
+      "光・音・力",
+      "凸レンズ"
+    ]
+  },
+  {
+    "id": "science-jhs-0299",
+    "subject": "science",
+    "grade": 7,
+    "category": "光・音・力",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "水の中で深くなるほど水圧はどうなりますか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "必ず0になる"
+      },
+      {
+        "id": "b",
+        "text": "大きくなる"
+      },
+      {
+        "id": "c",
+        "text": "小さくなる"
+      },
+      {
+        "id": "d",
+        "text": "変化しない"
+      }
+    ],
+    "answer": {
+      "choiceId": "b"
+    },
+    "explanation": "水圧は水面からの深さが増すほど大きくなります。",
+    "tags": [
+      "光・音・力",
+      "水圧"
+    ]
+  },
+  {
+    "id": "science-jhs-0300",
+    "subject": "science",
+    "grade": 8,
+    "category": "化学変化と原子・分子",
+    "difficulty": 1,
+    "type": "choice",
+    "prompt": "化学反応式 2H₂ + O₂ → 2H₂O の生成物はどれですか。",
+    "assets": [],
+    "choices": [
+      {
+        "id": "a",
+        "text": "水"
+      },
+      {
+        "id": "b",
+        "text": "二酸化炭素"
+      },
+      {
+        "id": "c",
+        "text": "酸素"
+      },
+      {
+        "id": "d",
+        "text": "水素"
+      }
+    ],
+    "answer": {
+      "choiceId": "a"
+    },
+    "explanation": "矢印の右側が生成物で、この反応では水ができます。",
+    "tags": [
+      "化学変化と原子・分子",
+      "化学反応式"
+    ]
+  }
+]

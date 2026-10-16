@@ -1,41 +1,56 @@
 (() => {
   "use strict";
-  const questionsUrl = "./math.json";
+  const subjectFiles = { math: "./math.json", social: "./social.json", japanese: "./japanese.json", english: "./english.json", science: "./science.json" };
+  const subjectNames = { math: "数学", social: "社会", japanese: "国語", english: "英語", science: "理科" };
+  let currentSubject = "math";
   let questions = [];
   let questionsLoadError = null;
-  const questionsReady = fetch(questionsUrl)
-    .then(response => {
+  async function loadQuestions(subject) {
+    const questionsUrl = subjectFiles[subject];
+    if (!questionsUrl) throw new Error("教科が見つかりません");
+    questionsLoadError = null;
+    try {
+      const response = await fetch(questionsUrl);
       if (!response.ok) throw new Error(`問題データの読み込みに失敗しました (${response.status})`);
-      return response.json();
-    })
-    .then(data => {
+      const data = await response.json();
       if (!Array.isArray(data) || data.length === 0) throw new Error("問題データが空です");
       questions = data;
+      currentSubject = subject;
       return data;
-    })
-    .catch(error => {
+    } catch (error) {
       questionsLoadError = error;
       console.error(error);
-      return [];
-    });
+      questions = [];
+      throw error;
+    }
+  }
   const frameAssets = {
     horizontal: "./assets/frame_horizontal.png",
     vertical: "./assets/frame_vertical.png",
     square: "./assets/frame.png"
   };
   const defaultFrameType = "horizontal";
-  const stageDefaults = { background: "./assets/background.png", playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, wrongAnswerDamage: 5, frameType: "horizontal" };
+  const stageDefaults = { background: "./assets/background.png", music: "./assets/battle1.mp3", playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, wrongAnswerDamage: 5, frameType: "horizontal" };
+  const floor2Defaults = { ...stageDefaults, background: "./assets/backgorund2.png", music: "./assets/battle2.mp3", attackIntervalMs: 12000, damage: 12, wrongAnswerDamage: 8 };
   const stages = [
-    { ...stageDefaults, name: "ステージ 1", number: 1, level: 1, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, questionFilter: { subject: "math", grade: 7, difficulty: 1 } },
-    { ...stageDefaults, name: "ステージ 2", number: 2, level: 2, monster: "./assets/kinoko.png", monsterName: "キノコ", monsterHp: 25, questionFilter: { subject: "math", grade: 7, difficulty: 1 } },
-    { ...stageDefaults, name: "ステージ 3", number: 3, level: 3, monster: "./assets/ko-mori.png", monsterName: "コウモリ", monsterHp: 30, questionFilter: { subject: "math", grade: 8, difficulty: 1 } },
-    { ...stageDefaults, name: "ステージ 4", number: 4, level: 4, monster: "./assets/inosisi.png", monsterName: "イノシシ", monsterHp: 35, damage: 7, questionFilter: { subject: "math", grade: 8, difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 5", number: 5, level: 5, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 40, damage: 7, questionFilter: { subject: "math", grade: 9, difficulty: 1 } },
-    { ...stageDefaults, name: "ステージ 6", number: 6, level: 6, monster: "./assets/sukeruton.png", monsterName: "スケルトン", monsterHp: 45, attackIntervalMs: 18000, damage: 8, questionFilter: { subject: "math", grade: 9, difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 7", number: 7, level: 7, monster: "./assets/go-suto.png", monsterName: "ゴースト", monsterHp: 50, attackIntervalMs: 16000, damage: 10, questionFilter: { subject: "math", difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 8", number: 8, level: 8, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 55, attackIntervalMs: 15000, damage: 10, questionFilter: { subject: "math", difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 9", number: 9, level: 9, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 60, attackIntervalMs: 14000, damage: 12, questionFilter: { subject: "math", difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 10", number: 10, level: 10, monster: "./assets/BOSS1.png", monsterName: "ゴブリンキング", monsterHp: 80, attackIntervalMs: 12000, damage: 15, answerDamage: 5, isBoss: true, questionFilter: { subject: "math", difficulty: 2 } }
+    { ...stageDefaults, name: "ステージ 1", number: 1, level: 1, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, questionFilter: { grade: 7, difficulty: 1 } },
+    { ...stageDefaults, name: "ステージ 2", number: 2, level: 2, monster: "./assets/kinoko.png", monsterName: "キノコ", monsterHp: 25, questionFilter: { grade: 7, difficulty: 1 } },
+    { ...stageDefaults, name: "ステージ 3", number: 3, level: 3, monster: "./assets/ko-mori.png", monsterName: "コウモリ", monsterHp: 30, questionFilter: { grade: 8, difficulty: 1 } },
+    { ...stageDefaults, name: "ステージ 4", number: 4, level: 4, monster: "./assets/inosisi.png", monsterName: "イノシシ", monsterHp: 35, damage: 7, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 5", number: 5, level: 5, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 40, damage: 7, questionFilter: { grade: 9, difficulty: 1 } },
+    { ...stageDefaults, name: "ステージ 6", number: 6, level: 6, monster: "./assets/sukeruton.png", monsterName: "スケルトン", monsterHp: 45, attackIntervalMs: 18000, damage: 8, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 7", number: 7, level: 7, monster: "./assets/go-suto.png", monsterName: "ゴースト", monsterHp: 50, attackIntervalMs: 16000, damage: 10, questionFilter: { difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 8", number: 8, level: 8, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 55, attackIntervalMs: 15000, damage: 10, questionFilter: { difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 9", number: 9, level: 9, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 60, attackIntervalMs: 14000, damage: 12, questionFilter: { difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 10", number: 10, level: 10, monster: "./assets/BOSS1.png", monsterName: "ゴブリンキング", monsterHp: 80, attackIntervalMs: 12000, damage: 15, answerDamage: 5, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 11", number: 11, level: 11, monster: "./assets/faia-go-suto.png", monsterName: "ファイアゴースト", monsterHp: 60, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 12", number: 12, level: 12, monster: "./assets/faiasaramanda-.png", monsterName: "ファイアサラマンダー", monsterHp: 65, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 13", number: 13, level: 13, monster: "./assets/fureimubatto.png", monsterName: "フレイムバット", monsterHp: 70, attackIntervalMs: 11000, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 14", number: 14, level: 14, monster: "./assets/fureimumeizi.png", monsterName: "フレイムメイジ", monsterHp: 75, attackIntervalMs: 11000, damage: 13, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 15", number: 15, level: 15, monster: "./assets/heruhaundo.png", monsterName: "ヘルハウンド", monsterHp: 80, attackIntervalMs: 10000, damage: 14, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 16", number: 16, level: 16, monster: "./assets/magumago-remu.png", monsterName: "マグマゴーレム", monsterHp: 90, attackIntervalMs: 10000, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 17", number: 17, level: 17, monster: "./assets/magumasuraimu.png", monsterName: "マグマスライム", monsterHp: 95, attackIntervalMs: 9000, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 18", number: 18, level: 18, monster: "./assets/BOSS2.png", monsterName: "ヘルボアキング", monsterHp: 130, attackIntervalMs: 8500, damage: 18, answerDamage: 5, wrongAnswerDamage: 10, isBoss: true, questionFilter: { difficulty: 2 } }
   ];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
@@ -92,7 +107,7 @@
     const filter = currentStage.questionFilter || {};
     return questions.filter(question =>
       question.type === "choice" &&
-      (!filter.subject || question.subject === filter.subject) &&
+      question.subject === currentSubject &&
       (!filter.grade || question.grade === filter.grade) &&
       (!filter.difficulty || question.difficulty === filter.difficulty)
     );
@@ -302,7 +317,7 @@
     const submitButton = form.querySelector("button");
     submitButton.disabled = true;
     try {
-      await questionsReady;
+      if (questions.length === 0) await loadQuestions(currentSubject);
       if (questionsLoadError) throw questionsLoadError;
     } catch (error) {
       feedback.textContent = "問題データを読み込めませんでした。ページをWebサーバーから開いてください。";
@@ -329,6 +344,12 @@
     const titleMusic = document.getElementById("titleMusic");
     titleMusic.pause();
     screen.hidden = false; screen.style.backgroundImage = `url("${stage.background}")`;
+    if (battleMusic.dataset.track !== stage.music) {
+      battleMusic.pause();
+      battleMusic.src = stage.music;
+      battleMusic.dataset.track = stage.music;
+      battleMusic.load();
+    }
     renderStageNumber(stage.number);
     document.getElementById("monsterName").textContent = `${stage.monsterName} Lv.${stage.level}`;
     monsterImage.src = stage.monster; monsterImage.alt = stage.monsterName;
@@ -348,6 +369,19 @@
     beginCountdown(options.countdownDelayMs ?? 150);
     return true;
   }
+  async function startDungeon(subject, options = {}) {
+    const submitButton = form.querySelector("button");
+    submitButton.disabled = true;
+    feedback.textContent = `${subjectNames[subject] || "教科"}の問題を読み込んでいます…`;
+    try {
+      await loadQuestions(subject);
+    } catch (error) {
+      feedback.textContent = "問題データを読み込めませんでした。ページをWebサーバーから開いてください。";
+      submitButton.disabled = false;
+      return false;
+    }
+    return start(0, options);
+  }
   function returnToTitle() {
     clearInterval(timer); timer = null; countdownRunId += 1; gameOverRunId += 1; if (state) state.running = false;
     startCountdown.hidden = true;
@@ -356,6 +390,7 @@
     enemyArea.classList.remove("monster-defeated");
     screen.classList.remove("low-health", "critical-health", "player-hit");
     screen.hidden = true; title.hidden = false; title.style.display = ""; title.inert = false;
+    document.getElementById("subjectSelect").hidden = true;
     window.titleBackground?.start();
     document.getElementById("titleMusic").play().catch(() => {});
     battleStartSound.pause();
@@ -440,5 +475,5 @@
     loadFrame(requestedAsset, requestedType, requestedType !== "square");
   }
   useFrame();
-  window.dungeonBattle = { start, returnToTitle, useFrame, stages, frameAssets, battleAudioSettings, getState: () => state ? { ...state } : null };
+  window.dungeonBattle = { start, startDungeon, returnToTitle, useFrame, stages, frameAssets, subjectFiles, battleAudioSettings, getState: () => state ? { ...state, subject: currentSubject } : null };
 })();
