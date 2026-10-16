@@ -167,8 +167,17 @@
       cursor: pointer;
       touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
-      transition: transform 160ms ease, filter 160ms ease;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 900ms ease, visibility 0s linear 900ms, transform 160ms ease, filter 160ms ease;
       filter: drop-shadow(0 4px 10px #000a);
+    }
+    .main-screen.play-ready .play-button {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition-delay: 0s;
     }
     .play-button img { display: block; width: 100%; height: auto; pointer-events: none; }
     @media (hover: hover) {
@@ -485,6 +494,7 @@
     setTimeout(() => {
       document.querySelector(".smoke-layer").style.display = "none";
       smoke.stop();
+      mainScreen.classList.add("play-ready");
       mainScreen.inert = false;
     }, 10800);
   </script>
