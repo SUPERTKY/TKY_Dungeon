@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const questionsUrl = "./data/jhs_math_all_questions.json";
+  const questionsUrl = "./math.json";
   let questions = [];
   let questionsLoadError = null;
   const questionsReady = fetch(questionsUrl)
