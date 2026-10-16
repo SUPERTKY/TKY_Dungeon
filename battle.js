@@ -58,6 +58,7 @@
   const countdown = document.getElementById("attackCountdown");
   const startCountdown = document.getElementById("battleStartCountdown");
   const countdownDigit = document.getElementById("battleCountdownDigit");
+  const countdownStartImage = document.getElementById("battleCountdownStart");
   const countdownText = document.getElementById("battleCountdownText");
   const framePanel = document.querySelector(".quiz-panel");
   const hitEffectHandlers = new WeakMap();
@@ -229,11 +230,11 @@
     startCountdown.hidden = false;
     countdownText.textContent = "";
     countdownDigit.hidden = true;
+    countdownStartImage.hidden = true;
     startCountdown.setAttribute("aria-label", "戦闘準備中");
     if (delayMs > 0) await wait(delayMs);
     if (runId !== countdownRunId || !state) return;
     playBattleStartSound();
-    countdownDigit.classList.remove("is-start");
     countdownDigit.hidden = false;
     for (const value of [3, 2, 1]) {
       if (runId !== countdownRunId) return;
@@ -245,19 +246,18 @@
       await wait(700);
     }
     if (runId !== countdownRunId) return;
-    countdownDigit.classList.add("is-start");
-    countdownDigit.src = "./assets/start.png";
-    countdownDigit.hidden = false;
-    countdownDigit.style.animation = "none";
-    void countdownDigit.offsetWidth;
-    countdownDigit.style.animation = "";
+    countdownDigit.hidden = true;
+    countdownStartImage.hidden = false;
+    countdownStartImage.style.animation = "none";
+    void countdownStartImage.offsetWidth;
+    countdownStartImage.style.animation = "";
     countdownText.textContent = "";
     startCountdown.setAttribute("aria-label", "スタート");
     startBattleMusic();
     await wait(550);
     if (runId !== countdownRunId) return;
     startCountdown.hidden = true;
-    countdownDigit.classList.remove("is-start");
+    countdownStartImage.hidden = true;
     countdownText.textContent = "";
     state.running = true;
     choices.disabled = false;
@@ -320,6 +320,8 @@
   function returnToTitle() {
     clearInterval(timer); timer = null; countdownRunId += 1; if (state) state.running = false;
     startCountdown.hidden = true;
+    countdownDigit.hidden = true;
+    countdownStartImage.hidden = true;
     enemyArea.classList.remove("monster-defeated");
     screen.classList.remove("low-health", "critical-health", "player-hit");
     screen.hidden = true; title.hidden = false; title.style.display = ""; title.inert = false;

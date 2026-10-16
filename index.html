@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#000000" />
   <title>TKY Dungeon</title>
 
-  <link rel="stylesheet" href="./battle.css?v=battle9" />
+  <link rel="stylesheet" href="./battle.css?v=battle10" />
   <style>
     :root {
       color-scheme: dark;
@@ -252,6 +252,7 @@
   <section class="battle-screen" id="battleScreen" aria-label="学習バトル" hidden>
     <div class="battle-countdown" id="battleStartCountdown" role="status" aria-live="assertive" hidden>
       <img id="battleCountdownDigit" alt="" draggable="false" />
+      <img class="countdown-start-image" id="battleCountdownStart" src="./assets/start.png" alt="" draggable="false" hidden />
       <span id="battleCountdownText"></span>
     </div>
     <header class="battle-header">
@@ -311,7 +312,7 @@
   <audio id="missSound" src="./assets/MISS.mp3" preload="none"></audio>
   <audio id="battleStartSound" src="./assets/start.mp3" preload="auto"></audio>
   <audio id="battleMusic" src="./assets/battle1.mp3" preload="auto" loop></audio>
-  <script src="./battle.js?v=battle12"></script>
+  <script src="./battle.js?v=battle13"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
   <script>
