@@ -28,7 +28,7 @@
 .stage-display__number img { display: block; width: auto; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 2px #0008); }
 .battle-screen button { font: inherit; cursor: pointer; touch-action: manipulation; }
 .battle-return { border: 1px solid #a4b6c8; border-radius: 6px; padding: 8px 12px; background: #111c2de6; color: #fff; }
-.enemy-area { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 0; }
+.enemy-area { align-self: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 0; z-index: 1; }
 .enemy-image { display: block; width: min(38vh, 340px, 60vw); height: min(38vh, 340px, 60vw); object-fit: contain; filter: drop-shadow(0 12px 12px #0006); }
 .enemy-image.monster-hit { animation: monster-hit 420ms ease-out; }
 .hp-block { width: min(300px, 68vw); }
@@ -38,16 +38,14 @@
 .hp-meter__base { z-index: 1; }
 .hp-meter__gauge { z-index: 2; clip-path: inset(0 calc(100% - var(--hp-percent)) 0 0); transition: clip-path 240ms ease-out; }
 .enemy-hp-block { margin-top: clamp(-22px, -2.2vh, -8px); }
-.battle-bottom { width: min(880px, 100%); margin: 0 auto; }
-.quiz-panel { position: relative; isolation: isolate; margin-bottom: 12px; border: 4px double #b4a078; border-radius: 10px; background: #101c2bf2; box-shadow: 0 8px 30px #0008, inset 0 0 24px #0005; padding: 18px 28px; }
+.battle-bottom { display: grid; grid-template-columns: minmax(220px, 300px) minmax(420px, 760px) minmax(220px, 300px); align-items: end; justify-content: center; gap: 14px; width: 100%; margin: 0 auto; z-index: 2; }
+.quiz-panel { position: relative; isolation: isolate; grid-column: 2; margin: 0; border: 4px double #b4a078; border-radius: 10px; background: #101c2bf2; box-shadow: 0 8px 30px #0008, inset 0 0 24px #0005; padding: 18px 28px; }
 .quiz-panel.has-frame { border-color: transparent; background: transparent; box-shadow: none; }
 .quiz-panel.has-frame .quiz-content { background: #101c2bd9; border-radius: 5px; padding: 10px; }
 .quiz-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: .85rem; color: #c4d4e6; }
 .question-text { margin: 12px 0 16px; font-size: clamp(1.1rem, 3vw, 1.55rem); line-height: 1.55; font-weight: bold; }
 .answer-form { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-.answer-input-row { display: flex; flex: 1 1 250px; align-items: center; gap: 10px; }
 .answer-form label { font-size: .9rem; }
-.answer-input { min-width: 80px; width: 150px; flex: 1; max-width: 260px; font: inherit; font-size: 1.15rem; padding: 9px 12px; border-radius: 6px; border: 2px solid #8099b9; background: #f8f5ea; color: #17243a; }
 .answer-choices { display: grid; flex: 1 1 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; min-width: 0; margin: 0; padding: 0; border: 0; }
 .answer-choices[hidden] { display: none; }
 .answer-choices legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
@@ -58,24 +56,23 @@
 .answer-submit:disabled { opacity: .5; cursor: default; }
 .battle-screen :focus-visible { outline: 3px solid #aeeaff; outline-offset: 3px; }
 .battle-feedback { min-height: 1.6em; margin: 12px 0 0; line-height: 1.5; color: #ffe1a0; }
-.player-status { position: relative; z-index: 3; display: flex; justify-content: space-between; align-items: end; gap: 12px; padding: 0 5px; }
-.player-status .hp-block { width: min(420px, 64vw); }
+.player-status { position: relative; z-index: 3; grid-column: 1; grid-row: 1; display: flex; justify-content: space-between; align-items: end; gap: 12px; min-width: 0; padding: 0 5px; }
+.player-status .hp-block { width: min(100%, 300px); }
 .battle-end[hidden] { display: none; }
 .battle-end { padding: 10px 14px; color: #fff; background: #344c6c; border: 1px solid #b3e8ff; border-radius: 6px; }
-@media (max-width: 540px) {
-  .battle-screen { padding-left: 12px; padding-right: 12px; gap: 10px; }
+@media (max-width: 800px) {
+  .battle-screen { padding-left: 12px; padding-right: 12px; gap: 8px; }
+  .battle-bottom { grid-template-columns: 1fr; gap: 2px; }
+  .quiz-panel { grid-column: 1; grid-row: 2; width: 100%; }
+  .player-status { grid-column: 1; grid-row: 1; justify-self: start; width: min(300px, 68vw); }
   .quiz-panel { padding: 14px 14px; }
   .question-text { font-size: 1.05rem; }
   .answer-submit { padding: 11px 14px; }
-  .answer-choices { grid-template-columns: 1fr; }
-  .player-status .hp-block { width: min(340px, 64vw); }
 }
 @media (max-height: 560px) and (min-width: 650px) {
-  .battle-screen { grid-template-columns: minmax(170px, .8fr) minmax(320px, 1.2fr); grid-template-rows: auto 1fr; gap: 12px 24px; }
-  .battle-header { grid-column: 1 / -1; }
-  .enemy-area { grid-column: 1; }
-  .enemy-image { width: min(43vh, 240px); height: min(43vh, 240px); }
-  .battle-bottom { grid-column: 2; align-self: center; }
+  .battle-screen { gap: 4px; padding-top: 8px; padding-bottom: 8px; }
+  .enemy-image { width: min(30vh, 180px); height: min(30vh, 180px); }
+  .battle-bottom { grid-template-columns: minmax(180px, 240px) minmax(380px, 650px) minmax(0, 80px); }
   .quiz-panel { padding: 10px 14px; }
   .question-text { font-size: 1rem; margin: 8px 0; }
   .hp-block { width: min(220px, 90%); }

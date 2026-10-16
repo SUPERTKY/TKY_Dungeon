@@ -37,8 +37,6 @@
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
   const form = document.getElementById("answerForm");
-  const input = document.getElementById("answerInput");
-  const inputRow = document.getElementById("answerInputRow");
   const choices = document.getElementById("answerChoices");
   const monsterImage = document.getElementById("monsterImage");
   const feedback = document.getElementById("battleFeedback");
@@ -76,6 +74,7 @@
   function questionsForStage(currentStage) {
     const filter = currentStage.questionFilter || {};
     return questions.filter(question =>
+      question.type === "choice" &&
       (!filter.subject || question.subject === filter.subject) &&
       (!filter.grade || question.grade === filter.grade) &&
       (!filter.difficulty || question.difficulty === filter.difficulty)
@@ -100,25 +99,18 @@
     const question = currentQuestion();
     document.getElementById("questionText").textContent = question.prompt;
     document.getElementById("questionCategory").textContent = `中${question.grade - 6}・${question.category}`;
-    input.value = "";
     choices.replaceChildren();
-    const isChoice = question.type === "choice";
-    inputRow.hidden = isChoice;
-    choices.hidden = !isChoice;
-    input.required = !isChoice;
-    if (isChoice) {
-      question.choices.forEach(option => {
-        const label = document.createElement("label");
-        label.className = "answer-choice";
-        const radio = document.createElement("input");
-        radio.type = "radio";
-        radio.name = "answerChoice";
-        radio.value = option.id;
-        radio.required = true;
-        label.append(radio, document.createTextNode(option.text));
-        choices.append(label);
-      });
-    }
+    question.choices.forEach(option => {
+      const label = document.createElement("label");
+      label.className = "answer-choice";
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = "answerChoice";
+      radio.value = option.id;
+      radio.required = true;
+      label.append(radio, document.createTextNode(option.text));
+      choices.append(label);
+    });
   }
   function playHitEffect(element, className) {
     const previousHandler = hitEffectHandlers.get(element);
@@ -140,7 +132,7 @@
   function finish(won) {
     state.running = false; clearInterval(timer); timer = null;
     state.won = won;
-    input.disabled = true; choices.disabled = true; form.querySelector("button").disabled = true;
+    choices.disabled = true; form.querySelector("button").disabled = true;
     const hasNextStage = stageIndex + 1 < stages.length;
     countdown.textContent = won ? (hasNextStage ? "ステージクリア" : "ダンジョンクリア") : "戦闘終了";
     feedback.textContent = won ? (hasNextStage ? "モンスターを倒した！ 次のステージへ進もう！" : "全ステージクリア！ ダンジョンを制覇しました！") : "体力がなくなりました。もう一度挑戦できます。";
@@ -187,14 +179,13 @@
     startCountdown.hidden = true;
     countdownText.textContent = "";
     state.running = true;
-    input.disabled = false;
     choices.disabled = false;
     form.querySelector("button").disabled = false;
     feedback.textContent = "答えを入力して攻撃しよう。";
     last = performance.now();
     tick(last);
     timer = setInterval(tick, 200);
-    (inputRow.hidden ? choices.querySelector("input") : input)?.focus({ preventScroll: true });
+    choices.querySelector("input")?.focus({ preventScroll: true });
   }
   async function start(index = 0, options = {}) {
     const submitButton = form.querySelector("button");
@@ -226,7 +217,7 @@
     renderStageNumber(stage.number);
     document.getElementById("monsterName").textContent = `${stage.monsterName} Lv.${stage.level}`;
     monsterImage.src = stage.monster; monsterImage.alt = stage.monsterName;
-    input.disabled = true; choices.disabled = true; submitButton.disabled = true; retry.hidden = true;
+    choices.disabled = true; submitButton.disabled = true; retry.hidden = true;
     countdown.textContent = "戦闘開始まで…";
     feedback.textContent = "準備して…";
     updateHp(); showQuestion();
@@ -248,24 +239,13 @@
     // Account for the exact answer submission time before resolving combat.
     tick(); if (!state.running) return;
     const question = currentQuestion();
-    let isCorrect = false;
-    if (question.type === "choice") {
-      const selected = choices.querySelector('input[name="answerChoice"]:checked');
-      if (!selected) {
-        feedback.textContent = "答えを選んでください。";
-        choices.querySelector("input")?.focus();
-        return;
-      }
-      isCorrect = selected.value === question.answer.choiceId;
-    } else {
-      const normalize = value => String(value).normalize("NFKC").toLowerCase().replace(/[\s°度]/g, "");
-      const value = normalize(input.value);
-      if (!value) {
-        feedback.textContent = "答えを入力してください。"; input.focus(); return;
-      }
-      const acceptedAnswers = question.answer.acceptedAnswers || [question.answer.text];
-      isCorrect = acceptedAnswers.some(answer => normalize(answer) === value);
+    const selected = choices.querySelector('input[name="answerChoice"]:checked');
+    if (!selected) {
+      feedback.textContent = "答えを選んでください。";
+      choices.querySelector("input")?.focus();
+      return;
     }
+    const isCorrect = selected.value === question.answer.choiceId;
     if (isCorrect) {
       state.monsterHp = Math.max(0, state.monsterHp - stage.answerDamage);
       updateHp(); playHitEffect(monsterImage, "monster-hit"); playSound(enemyDamageSound);
@@ -280,7 +260,7 @@
       state.questionIndex = 0;
     }
     showQuestion();
-    (inputRow.hidden ? choices.querySelector("input") : input)?.focus({ preventScroll: true });
+    choices.querySelector("input")?.focus({ preventScroll: true });
   });
   document.addEventListener("game:start", () => start());
   document.getElementById("battleReturn").addEventListener("click", returnToTitle);
