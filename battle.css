@@ -24,6 +24,13 @@
 .battle-screen.critical-health::before { animation-duration: .85s; box-shadow: inset 0 0 78px 30px rgba(225, 0, 0, .78); }
 .battle-screen.low-health .player-status .hp-meter { animation: hp-warning 1.7s ease-in-out infinite; }
 .battle-screen.critical-health .player-status .hp-meter { animation-duration: .85s; }
+.game-over-screen {
+  position: fixed; inset: 0; z-index: 120; display: grid; place-items: center; pointer-events: none;
+  background: radial-gradient(circle, rgba(18, 0, 0, .72), rgba(0, 0, 0, .96));
+  animation: game-over-fade-in 500ms ease-out both;
+}
+.game-over-screen[hidden] { display: none; }
+.game-over-screen img { width: min(78vw, 720px); height: min(72vh, 720px); object-fit: contain; filter: drop-shadow(0 8px 12px #000) drop-shadow(0 0 24px #7b0000aa); animation: game-over-appear 700ms cubic-bezier(.16, .8, .25, 1) both; }
 .battle-countdown {
   position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; pointer-events: none;
   background: radial-gradient(circle, rgba(0, 0, 0, .48), rgba(0, 0, 0, .84));
@@ -114,6 +121,13 @@
   .enemy-area.monster-defeated .enemy-image { animation-name: monster-defeat-reduced; }
   .enemy-image.monster-spawn { animation-name: monster-spawn-reduced; }
   .miss-effect { animation-name: miss-burst-reduced; }
+  .game-over-screen, .game-over-screen img { animation: none; }
+}
+@keyframes game-over-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes game-over-appear {
+  0% { opacity: 0; transform: scale(1.3); filter: blur(5px) drop-shadow(0 8px 12px #000); }
+  58% { opacity: 1; transform: scale(.96); }
+  100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 8px 12px #000) drop-shadow(0 0 24px #7b0000aa); }
 }
 @keyframes monster-hit {
   0%, 100% { transform: translateX(0) scale(1); filter: drop-shadow(0 12px 12px #0006); }

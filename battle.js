@@ -46,12 +46,14 @@
   const monsterImage = document.getElementById("monsterImage");
   const feedback = document.getElementById("battleFeedback");
   const retry = document.getElementById("battleRetry");
+  const gameOverScreen = document.getElementById("gameOverScreen");
   const playerBar = document.getElementById("playerHp");
   const monsterBar = document.getElementById("monsterHp");
   const playerDamageSound = document.getElementById("playerDamageSound");
   const enemyDamageSound = document.getElementById("enemyDamageSound");
   const winSound = document.getElementById("winSound");
   const bossWinSound = document.getElementById("bossWinSound");
+  const gameOverSound = document.getElementById("gameOverSound");
   const missSound = document.getElementById("missSound");
   const battleStartSound = document.getElementById("battleStartSound");
   const battleMusic = document.getElementById("battleMusic");
@@ -63,7 +65,7 @@
   const framePanel = document.querySelector(".quiz-panel");
   const hitEffectHandlers = new WeakMap();
   const battleAudioSettings = { musicVolume: .42, musicPlaybackRate: 1, startPlaybackRate: 1 };
-  let frameRequestId = 0, countdownRunId = 0;
+  let frameRequestId = 0, countdownRunId = 0, gameOverRunId = 0;
   let stage = stages[0], stageIndex = 0, state = null, timer = null, last = null;
   function updateHp() {
     const updateMeter = (meter, value, max) => {
@@ -182,6 +184,10 @@
     }
   }
   function finish(won) {
+    if (!won) {
+      void showGameOver();
+      return;
+    }
     state.running = false; clearInterval(timer); timer = null;
     state.won = won;
     choices.disabled = true; form.querySelector("button").disabled = true;
@@ -190,6 +196,30 @@
     feedback.textContent = won ? (hasNextStage ? "モンスターを倒した！ 次のステージへ進もう！" : "全ステージクリア！ ダンジョンを制覇しました！") : "体力がなくなりました。もう一度挑戦できます。";
     retry.textContent = won ? (hasNextStage ? "次のステージ" : "タイトルへ") : "もう一度";
     retry.hidden = false; retry.focus({ preventScroll: true });
+  }
+  async function showGameOver() {
+    const runId = ++gameOverRunId;
+    state.running = false;
+    state.won = false;
+    clearInterval(timer); timer = null;
+    countdownRunId += 1;
+    startCountdown.hidden = true;
+    choices.disabled = true;
+    form.querySelector("button").disabled = true;
+    retry.hidden = true;
+    missEffects.replaceChildren();
+    battleMusic.pause();
+    gameOverScreen.hidden = false;
+    gameOverSound.currentTime = 0;
+    const ended = new Promise(resolve => {
+      gameOverSound.addEventListener("ended", resolve, { once: true });
+      gameOverSound.addEventListener("error", resolve, { once: true });
+    });
+    const played = gameOverSound.play();
+    if (played) played.catch(() => {});
+    await Promise.race([ended, wait(8000)]);
+    if (runId !== gameOverRunId || screen.hidden) return;
+    returnToTitle();
   }
   async function defeatMonster() {
     const defeatedState = state;
@@ -311,6 +341,7 @@
       monsterImage.addEventListener("animationend", () => monsterImage.classList.remove("monster-spawn"), { once: true });
     }
     choices.disabled = true; submitButton.disabled = true; retry.hidden = true;
+    gameOverScreen.hidden = true;
     countdown.textContent = "戦闘開始まで…";
     feedback.textContent = "準備して…";
     updateHp(); showQuestion();
@@ -318,7 +349,7 @@
     return true;
   }
   function returnToTitle() {
-    clearInterval(timer); timer = null; countdownRunId += 1; if (state) state.running = false;
+    clearInterval(timer); timer = null; countdownRunId += 1; gameOverRunId += 1; if (state) state.running = false;
     startCountdown.hidden = true;
     countdownDigit.hidden = true;
     countdownStartImage.hidden = true;
@@ -331,6 +362,9 @@
     battleStartSound.currentTime = 0;
     battleMusic.pause();
     battleMusic.currentTime = 0;
+    gameOverSound.pause();
+    gameOverSound.currentTime = 0;
+    gameOverScreen.hidden = true;
     const playButton = document.getElementById("playButton");
     playButton.disabled = false;
     playButton.focus({ preventScroll: true });
