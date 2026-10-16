@@ -85,6 +85,15 @@
       (!filter.difficulty || question.difficulty === filter.difficulty)
     );
   }
+  function preloadImage(source) {
+    return new Promise(resolve => {
+      const image = new Image();
+      image.addEventListener("load", resolve, { once: true });
+      image.addEventListener("error", resolve, { once: true });
+      image.src = source;
+      if (image.complete) resolve();
+    });
+  }
   function currentQuestion() {
     return state.questionOrder[state.questionIndex];
   }
@@ -205,7 +214,7 @@
     state.running = true;
     choices.disabled = false;
     form.querySelector("button").disabled = false;
-    feedback.textContent = "答えを入力して攻撃しよう。";
+    feedback.textContent = "答えを選んで攻撃しよう。";
     last = performance.now();
     tick(last);
     timer = setInterval(tick, 200);
@@ -231,6 +240,7 @@
       submitButton.disabled = false;
       return false;
     }
+    await preloadImage(stage.monster);
     useFrame(stage.frameType);
     state = { running: false, won: false, playerHp: stage.playerHp, monsterHp: stage.monsterHp, questionIndex: 0, questionOrder, remainingMs: stage.attackIntervalMs };
     title.hidden = true; title.inert = true; title.style.display = "none";
@@ -241,8 +251,9 @@
     renderStageNumber(stage.number);
     document.getElementById("monsterName").textContent = `${stage.monsterName} Lv.${stage.level}`;
     monsterImage.src = stage.monster; monsterImage.alt = stage.monsterName;
-    enemyArea.classList.remove("monster-defeated");
+    try { await monsterImage.decode(); } catch {}
     monsterImage.classList.remove("monster-hit", "monster-spawn");
+    enemyArea.classList.remove("monster-defeated");
     if (options.spawn) {
       void monsterImage.offsetWidth;
       monsterImage.classList.add("monster-spawn");
