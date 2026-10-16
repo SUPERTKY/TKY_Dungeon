@@ -49,12 +49,15 @@
   const enemyDamageSound = document.getElementById("enemyDamageSound");
   const winSound = document.getElementById("winSound");
   const missSound = document.getElementById("missSound");
+  const battleStartSound = document.getElementById("battleStartSound");
+  const battleMusic = document.getElementById("battleMusic");
   const countdown = document.getElementById("attackCountdown");
   const startCountdown = document.getElementById("battleStartCountdown");
   const countdownDigit = document.getElementById("battleCountdownDigit");
   const countdownText = document.getElementById("battleCountdownText");
   const framePanel = document.querySelector(".quiz-panel");
   const hitEffectHandlers = new WeakMap();
+  const battleAudioSettings = { musicPlaybackRate: 1, startPlaybackRate: 1 };
   let frameRequestId = 0, countdownRunId = 0;
   let stage = stages[0], stageIndex = 0, state = null, timer = null, last = null;
   function updateHp() {
@@ -145,6 +148,12 @@
     sound.currentTime = 0;
     sound.play().catch(() => {});
   }
+  function startBattleAudio() {
+    battleStartSound.playbackRate = battleAudioSettings.startPlaybackRate;
+    playSound(battleStartSound);
+    battleMusic.playbackRate = battleAudioSettings.musicPlaybackRate;
+    if (battleMusic.paused) battleMusic.play().catch(() => {});
+  }
   function showMissEffects() {
     const count = 3;
     for (let index = 0; index < count; index += 1) {
@@ -188,7 +197,7 @@
     await wait(1350);
     if (state !== defeatedState || screen.hidden) return;
     if (stageIndex + 1 < stages.length) {
-      await start(stageIndex + 1, { countdownDelayMs: 500, spawn: true });
+      await start(stageIndex + 1, { countdownDelayMs: 500, spawn: true, preservePlayerHp: true });
     } else {
       finish(true);
     }
@@ -230,6 +239,7 @@
     countdownDigit.hidden = true;
     countdownText.textContent = "START!";
     startCountdown.setAttribute("aria-label", "スタート");
+    startBattleAudio();
     await wait(550);
     if (runId !== countdownRunId) return;
     startCountdown.hidden = true;
@@ -265,7 +275,10 @@
     }
     await preloadImage(stage.monster);
     useFrame(stage.frameType);
-    state = { running: false, won: false, playerHp: stage.playerHp, monsterHp: stage.monsterHp, questionIndex: 0, questionOrder, remainingMs: stage.attackIntervalMs };
+    const playerHp = options.preservePlayerHp && state
+      ? Math.max(0, Math.min(stage.playerHp, state.playerHp))
+      : stage.playerHp;
+    state = { running: false, won: false, playerHp, monsterHp: stage.monsterHp, questionIndex: 0, questionOrder, remainingMs: stage.attackIntervalMs };
     title.hidden = true; title.inert = true; title.style.display = "none";
     window.titleBackground?.stop();
     const titleMusic = document.getElementById("titleMusic");
@@ -297,6 +310,10 @@
     screen.hidden = true; title.hidden = false; title.style.display = ""; title.inert = false;
     window.titleBackground?.start();
     document.getElementById("titleMusic").play().catch(() => {});
+    battleStartSound.pause();
+    battleStartSound.currentTime = 0;
+    battleMusic.pause();
+    battleMusic.currentTime = 0;
     const playButton = document.getElementById("playButton");
     playButton.disabled = false;
     playButton.focus({ preventScroll: true });
@@ -336,11 +353,11 @@
   document.getElementById("battleReturn").addEventListener("click", returnToTitle);
   retry.addEventListener("click", () => {
     if (!state?.won) start(stageIndex);
-    else if (stageIndex + 1 < stages.length) start(stageIndex + 1);
+    else if (stageIndex + 1 < stages.length) start(stageIndex + 1, { preservePlayerHp: true });
     else returnToTitle();
   });
   document.addEventListener("visibilitychange", () => { last = document.hidden ? null : performance.now(); });
-  window.addEventListener("pagehide", () => { clearInterval(timer); timer = null; });
+  window.addEventListener("pagehide", () => { clearInterval(timer); timer = null; battleMusic.pause(); });
   window.addEventListener("pageshow", () => { if (state?.running && !timer) { last = performance.now(); timer = setInterval(tick, 200); } });
   function useFrame(type = defaultFrameType) {
     const requestedType = Object.hasOwn(frameAssets, type) ? type : defaultFrameType;
@@ -367,5 +384,5 @@
     loadFrame(requestedAsset, requestedType, requestedType !== "square");
   }
   useFrame();
-  window.dungeonBattle = { start, returnToTitle, useFrame, stages, frameAssets, getState: () => state ? { ...state } : null };
+  window.dungeonBattle = { start, returnToTitle, useFrame, stages, frameAssets, battleAudioSettings, getState: () => state ? { ...state } : null };
 })();
