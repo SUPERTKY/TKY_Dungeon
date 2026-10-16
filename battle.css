@@ -13,6 +13,13 @@
   mix-blend-mode: screen;
 }
 .battle-screen.player-hit::after { animation: player-hit-flash 520ms ease-out; }
+.battle-countdown {
+  position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; pointer-events: none;
+  background: radial-gradient(circle, rgba(0, 0, 0, .15), rgba(0, 0, 0, .5));
+}
+.battle-countdown[hidden] { display: none; }
+.battle-countdown img { grid-area: 1 / 1; width: auto; height: clamp(120px, 30vh, 250px); filter: drop-shadow(0 0 10px #000) drop-shadow(0 0 18px #ffd87988); animation: countdown-pop 700ms ease-out; }
+.battle-countdown span { grid-area: 1 / 1; color: #fff4c8; font-size: clamp(3rem, 12vw, 8rem); font-weight: 900; letter-spacing: .08em; text-shadow: 0 4px 0 #5c3215, 0 0 20px #ffc45e; animation: countdown-pop 600ms ease-out; }
 .battle-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: min(100%, 960px); margin: 0 auto; text-shadow: 0 2px 5px #000; }
 .battle-header h1 { margin: 0; }
 .stage-display { display: flex; align-items: center; gap: clamp(5px, 1vw, 10px); min-width: 0; }
@@ -76,6 +83,7 @@
 @media (prefers-reduced-motion: reduce) {
   .hp-meter__gauge { transition: none; }
   .enemy-image.monster-hit { animation-name: monster-hit-reduced; }
+  .battle-countdown img, .battle-countdown span { animation: none; }
 }
 @keyframes monster-hit {
   0%, 100% { transform: translateX(0) scale(1); filter: drop-shadow(0 12px 12px #0006); }
@@ -94,6 +102,12 @@
   18% { opacity: 1; }
   45% { opacity: .72; }
   100% { opacity: 0; }
+}
+@keyframes countdown-pop {
+  0% { opacity: 0; transform: scale(1.65); }
+  35% { opacity: 1; transform: scale(.92); }
+  55% { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
 }
 /* Use the selected frame as a nine-slice border. */
 .quiz-panel.has-frame {

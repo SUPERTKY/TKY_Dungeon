@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#000000" />
   <title>TKY Dungeon</title>
 
-  <link rel="stylesheet" href="./battle.css?v=battle1" />
+  <link rel="stylesheet" href="./battle.css?v=battle2" />
   <style>
     :root {
       color-scheme: dark;
@@ -186,6 +186,22 @@
     .play-button:active { transform: translateY(2px) scale(0.96); }
     .play-button:focus-visible { outline: 3px solid #b7edff; outline-offset: 5px; }
 
+    .game-transition {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+      background: #000;
+      transition: opacity 700ms ease-in-out, visibility 0s linear 700ms;
+    }
+    .game-transition.active {
+      visibility: visible;
+      transition-delay: 0s;
+    }
+    .game-transition.is-dark { opacity: 1; }
+
     @media (max-aspect-ratio: 3/4) {
       .main-screen { background-position: 72% center; }
     }
@@ -199,6 +215,7 @@
       .smoke-layer { display: none; }
       .title-effects { visibility: hidden !important; }
       .play-button { transition: none; }
+      .game-transition { transition: none; }
     }
   </style>
 </head>
@@ -230,8 +247,13 @@
       </button>
     </div>
   </main>
+  <div class="game-transition" id="gameTransition" aria-hidden="true"></div>
 
   <section class="battle-screen" id="battleScreen" aria-label="学習バトル" hidden>
+    <div class="battle-countdown" id="battleStartCountdown" role="status" aria-live="assertive" hidden>
+      <img id="battleCountdownDigit" alt="" draggable="false" />
+      <span id="battleCountdownText"></span>
+    </div>
     <header class="battle-header">
       <h1 class="stage-display" id="stageName" aria-label="ステージ 1">
         <img class="stage-display__label" src="./assets/Stage.png" alt="" draggable="false" />
@@ -281,10 +303,11 @@
       </div>
     </div>
   </section>
-  <script src="./battle.js?v=battle3"></script>
+  <script src="./battle.js?v=battle4"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
   <audio id="titleMusic" src="./assets/title.mp3" preload="auto"></audio>
+  <audio id="playSound" src="./assets/play.mp3" preload="auto"></audio>
   <script>
     const intro = document.getElementById("intro");
     const mainScreen = document.getElementById("mainScreen");
@@ -303,16 +326,40 @@
     }, 1500);
 
     const playButton = document.getElementById("playButton");
-    playButton.addEventListener("click", () => {
-      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    let gameStarting = false;
+    playButton.addEventListener("click", async () => {
+      if (gameStarting) return;
+      gameStarting = true;
+      playButton.disabled = true;
+      const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reducedMotion) {
         playButton.animate([
           { transform: "scale(0.96)" },
           { transform: "scale(1.04)", offset: 0.65 },
           { transform: "scale(1)" }
         ], { duration: 220, easing: "ease-out" });
       }
-      // Open the learning battle.
-      playButton.dispatchEvent(new CustomEvent("game:start", { bubbles: true }));
+      titleMusic.pause();
+      const playSound = document.getElementById("playSound");
+      playSound.currentTime = 0;
+      playSound.play().catch(() => {});
+
+      const transition = document.getElementById("gameTransition");
+      const fadeDuration = reducedMotion ? 0 : 700;
+      transition.classList.add("active");
+      requestAnimationFrame(() => transition.classList.add("is-dark"));
+      await new Promise(resolve => setTimeout(resolve, fadeDuration));
+
+      const started = await window.dungeonBattle.start(0, { countdownDelayMs: fadeDuration + 120 });
+      if (!started) {
+        transition.classList.remove("is-dark", "active");
+        playButton.disabled = false;
+        gameStarting = false;
+        return;
+      }
+      requestAnimationFrame(() => transition.classList.remove("is-dark"));
+      setTimeout(() => transition.classList.remove("active"), fadeDuration);
+      gameStarting = false;
     });
 
     // 乱流で歪ませた密度場を描き、薄い煙の透過と厚い煙の陰影を表現する。
