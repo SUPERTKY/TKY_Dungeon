@@ -62,7 +62,7 @@
 }
 .enemy-hp-block { margin-top: clamp(-22px, -2.2vh, -8px); }
 .battle-bottom { display: grid; grid-template-columns: minmax(220px, 300px) minmax(420px, 760px) minmax(220px, 300px); align-items: end; justify-content: center; gap: 14px; width: 100%; margin: 0 auto; z-index: 2; }
-.quiz-panel { position: relative; isolation: isolate; grid-column: 2; margin: 0; border: 4px double #b4a078; border-radius: 10px; background: #101c2bf2; box-shadow: 0 8px 30px #0008, inset 0 0 24px #0005; padding: 18px 28px; }
+.quiz-panel { position: relative; isolation: isolate; grid-column: 2; justify-self: center; width: min(94%, 700px); margin: 0; border: 4px double #b4a078; border-radius: 10px; background: #101c2bf2; box-shadow: 0 8px 30px #0008, inset 0 0 24px #0005; padding: 16px 24px; }
 .quiz-panel.has-frame { border-color: transparent; background: transparent; box-shadow: none; }
 .quiz-panel.has-frame .quiz-content { background: #101c2bd9; border-radius: 5px; padding: 10px; }
 .quiz-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: .85rem; color: #c4d4e6; }
@@ -89,7 +89,7 @@
 @media (max-width: 800px) {
   .battle-screen { padding-left: 12px; padding-right: 12px; gap: 8px; }
   .battle-bottom { grid-template-columns: 1fr; gap: 2px; }
-  .quiz-panel { grid-column: 1; grid-row: 2; width: 100%; }
+  .quiz-panel { grid-column: 1; grid-row: 2; width: 96%; }
   .player-status { grid-column: 1; grid-row: 1; justify-self: start; width: min(300px, 68vw); }
   .quiz-panel { padding: 14px 14px; }
   .question-text { font-size: 1.05rem; }
@@ -184,8 +184,8 @@
 }
 /* Use the selected frame as a nine-slice border. */
 .quiz-panel.has-frame {
-  border: 46px solid transparent;
-  border-image: var(--quiz-frame-image, url('./assets/frame.png')) 280 fill / 46px / 0 stretch;
+  border: 42px solid transparent;
+  border-image: var(--quiz-frame-image, url('./assets/frame.png')) 280 fill / 42px / 0 stretch;
   padding: 0;
 }
 .quiz-panel.has-frame .quiz-content { border-radius: 0; padding: 8px 12px; background: #101c2bf2; }
