@@ -6,12 +6,20 @@
   overflow: auto; color: #f5f1df;
   background: #101723 url('./assets/background.png') center / cover no-repeat;
 }
+.battle-screen::after {
+  content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: 0;
+  background: radial-gradient(ellipse at center, transparent 32%, rgba(255, 28, 18, .12) 58%, rgba(190, 0, 0, .78) 100%);
+  box-shadow: inset 0 0 42px 14px rgba(255, 24, 12, .72);
+  mix-blend-mode: screen;
+}
+.battle-screen.player-hit::after { animation: player-hit-flash 520ms ease-out; }
 .battle-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: min(100%, 960px); margin: 0 auto; text-shadow: 0 2px 5px #000; }
 .battle-header h1 { font-size: clamp(1.1rem, 3vw, 1.5rem); margin: 0; }
 .battle-screen button { font: inherit; cursor: pointer; touch-action: manipulation; }
 .battle-return { border: 1px solid #a4b6c8; border-radius: 6px; padding: 8px 12px; background: #111c2de6; color: #fff; }
 .enemy-area { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 0; }
 .enemy-image { display: block; width: min(38vh, 340px, 60vw); height: min(38vh, 340px, 60vw); object-fit: contain; filter: drop-shadow(0 12px 12px #0006); }
+.enemy-image.monster-hit { animation: monster-hit 420ms ease-out; }
 .hp-block { width: min(300px, 68vw); }
 .hp-label { margin-bottom: -3%; text-align: center; font-size: .9rem; font-weight: bold; text-shadow: 0 1px 4px #000; }
 .hp-meter { --hp-percent: 100%; position: relative; width: 100%; aspect-ratio: 3 / 1; filter: drop-shadow(0 4px 5px #0009); }
@@ -63,6 +71,25 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .hp-meter__gauge { transition: none; }
+  .enemy-image.monster-hit { animation-name: monster-hit-reduced; }
+}
+@keyframes monster-hit {
+  0%, 100% { transform: translateX(0) scale(1); filter: drop-shadow(0 12px 12px #0006); }
+  12% { transform: translateX(-8px) scale(1.04); filter: drop-shadow(0 0 14px #ff1e18) sepia(1) saturate(9) hue-rotate(315deg) brightness(1.45); }
+  28% { transform: translateX(8px) scale(1.03); filter: drop-shadow(0 0 18px #ff241c) sepia(1) saturate(10) hue-rotate(315deg) brightness(1.35); }
+  45% { transform: translateX(-6px) scale(1.02); filter: drop-shadow(0 0 12px #ff3028) sepia(.8) saturate(7) hue-rotate(315deg) brightness(1.2); }
+  64% { transform: translateX(4px); }
+  82% { transform: translateX(-2px); }
+}
+@keyframes monster-hit-reduced {
+  0%, 100% { filter: drop-shadow(0 12px 12px #0006); }
+  35% { filter: drop-shadow(0 0 16px #ff241c) sepia(1) saturate(9) hue-rotate(315deg) brightness(1.4); }
+}
+@keyframes player-hit-flash {
+  0% { opacity: 0; }
+  18% { opacity: 1; }
+  45% { opacity: .72; }
+  100% { opacity: 0; }
 }
 /* Use the selected frame as a nine-slice border. */
 .quiz-panel.has-frame {

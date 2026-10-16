@@ -38,9 +38,9 @@
   const monsterBar = document.getElementById("monsterHp");
   const countdown = document.getElementById("attackCountdown");
   const framePanel = document.querySelector(".quiz-panel");
+  const hitEffectHandlers = new WeakMap();
   let frameRequestId = 0;
   let stage = stages[0], state = null, timer = null, last = null;
-  const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   function updateHp() {
     const updateMeter = (meter, value, max) => {
       const percent = Math.max(0, Math.min(100, value / max * 100));
@@ -93,9 +93,18 @@
       });
     }
   }
-  function animateDamage(element) {
-    if (reduced()) return;
-    element.animate([{ transform: "translateX(0)" }, { transform: "translateX(-4px)" }, { transform: "translateX(4px)" }, { transform: "translateX(0)" }], { duration: 200 });
+  function playHitEffect(element, className) {
+    const previousHandler = hitEffectHandlers.get(element);
+    if (previousHandler) element.removeEventListener("animationend", previousHandler);
+    element.classList.remove(className);
+    void element.offsetWidth;
+    element.classList.add(className);
+    const handler = () => {
+      element.classList.remove(className);
+      hitEffectHandlers.delete(element);
+    };
+    hitEffectHandlers.set(element, handler);
+    element.addEventListener("animationend", handler, { once: true });
   }
   function finish(won) {
     state.running = false; clearInterval(timer); timer = null;
@@ -112,7 +121,7 @@
       const attacks = Math.floor(-state.remainingMs / stage.attackIntervalMs) + 1;
       state.playerHp = Math.max(0, state.playerHp - attacks * stage.damage);
       state.remainingMs += attacks * stage.attackIntervalMs;
-      updateHp(); animateDamage(document.querySelector(".player-status"));
+      updateHp(); playHitEffect(screen, "player-hit");
       feedback.textContent = `${attacks * stage.damage} ダメージを受けた！`;
       if (state.playerHp === 0) { finish(false); return; }
     }
@@ -184,7 +193,7 @@
     }
     if (isCorrect) {
       state.monsterHp = Math.max(0, state.monsterHp - stage.answerDamage);
-      updateHp(); animateDamage(monsterImage);
+      updateHp(); playHitEffect(monsterImage, "monster-hit");
       if (state.monsterHp === 0) { finish(true); return; }
       feedback.textContent = `正解！ モンスターに ${stage.answerDamage} ダメージ！`;
     } else {
