@@ -1,9 +1,10 @@
 .battle-screen[hidden] { display: none; }
 .battle-screen {
   position: fixed; inset: 0; z-index: 40;
+  height: 100dvh;
   display: grid; grid-template-rows: auto minmax(120px, 1fr) auto;
   gap: 12px; padding: max(18px, env(safe-area-inset-top)) 20px max(18px, env(safe-area-inset-bottom));
-  overflow: auto; color: #f5f1df;
+  overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; color: #f5f1df;
   background: #101723 url('./assets/background.png') center / cover no-repeat;
 }
 .battle-screen::after {
