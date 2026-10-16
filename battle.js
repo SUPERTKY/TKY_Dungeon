@@ -45,6 +45,8 @@
   const retry = document.getElementById("battleRetry");
   const playerBar = document.getElementById("playerHp");
   const monsterBar = document.getElementById("monsterHp");
+  const playerDamageSound = document.getElementById("playerDamageSound");
+  const enemyDamageSound = document.getElementById("enemyDamageSound");
   const countdown = document.getElementById("attackCountdown");
   const startCountdown = document.getElementById("battleStartCountdown");
   const countdownDigit = document.getElementById("battleCountdownDigit");
@@ -131,6 +133,10 @@
     hitEffectHandlers.set(element, handler);
     element.addEventListener("animationend", handler, { once: true });
   }
+  function playSound(sound) {
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+  }
   function finish(won) {
     state.running = false; clearInterval(timer); timer = null;
     state.won = won;
@@ -149,7 +155,7 @@
       const attacks = Math.floor(-state.remainingMs / stage.attackIntervalMs) + 1;
       state.playerHp = Math.max(0, state.playerHp - attacks * stage.damage);
       state.remainingMs += attacks * stage.attackIntervalMs;
-      updateHp(); playHitEffect(screen, "player-hit");
+      updateHp(); playHitEffect(screen, "player-hit"); playSound(playerDamageSound);
       feedback.textContent = `${attacks * stage.damage} ダメージを受けた！`;
       if (state.playerHp === 0) { finish(false); return; }
     }
@@ -262,7 +268,7 @@
     }
     if (isCorrect) {
       state.monsterHp = Math.max(0, state.monsterHp - stage.answerDamage);
-      updateHp(); playHitEffect(monsterImage, "monster-hit");
+      updateHp(); playHitEffect(monsterImage, "monster-hit"); playSound(enemyDamageSound);
       if (state.monsterHp === 0) { finish(true); return; }
       feedback.textContent = `正解！ モンスターに ${stage.answerDamage} ダメージ！`;
     } else {
