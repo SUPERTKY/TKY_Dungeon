@@ -233,7 +233,12 @@
 
   <section class="battle-screen" id="battleScreen" aria-label="学習バトル" hidden>
     <header class="battle-header">
-      <h1 id="stageName">ステージ 1</h1>
+      <h1 class="stage-display" id="stageName" aria-label="ステージ 1">
+        <img class="stage-display__label" src="./assets/Stage.png" alt="" draggable="false" />
+        <span class="stage-display__number" aria-hidden="true">
+          <img src="./assets/1.png" alt="" draggable="false" />
+        </span>
+      </h1>
       <button class="battle-return" id="battleReturn" type="button">タイトルへ</button>
     </header>
     <div class="enemy-area">

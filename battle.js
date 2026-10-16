@@ -24,7 +24,7 @@
     square: "./assets/frame.png"
   };
   const defaultFrameType = "horizontal";
-  const stages = [{ name: "ステージ 1", level: 1, background: "./assets/background.png", monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, frameType: "horizontal", questionFilter: { subject: "math", difficulty: 1 } }];
+  const stages = [{ name: "ステージ 1", number: 1, level: 1, background: "./assets/background.png", monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, frameType: "horizontal", questionFilter: { subject: "math", difficulty: 1 } }];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
   const form = document.getElementById("answerForm");
@@ -68,6 +68,18 @@
   }
   function currentQuestion() {
     return state.questionOrder[state.questionIndex];
+  }
+  function renderStageNumber(number) {
+    const stageNumber = String(Math.max(0, Math.trunc(Number(number) || 1)));
+    const container = document.querySelector(".stage-display__number");
+    container.replaceChildren(...[...stageNumber].map(digit => {
+      const image = document.createElement("img");
+      image.src = `./assets/${digit}.png`;
+      image.alt = "";
+      image.draggable = false;
+      return image;
+    }));
+    document.getElementById("stageName").setAttribute("aria-label", `ステージ ${stageNumber}`);
   }
   function showQuestion() {
     const question = currentQuestion();
@@ -152,7 +164,7 @@
     const titleMusic = document.getElementById("titleMusic");
     titleMusic.pause();
     screen.hidden = false; screen.style.backgroundImage = `url("${stage.background}")`;
-    document.getElementById("stageName").textContent = stage.name;
+    renderStageNumber(stage.number);
     document.getElementById("monsterName").textContent = `${stage.monsterName} Lv.${stage.level}`;
     monsterImage.src = stage.monster; monsterImage.alt = stage.monsterName;
     input.disabled = false; choices.disabled = false; submitButton.disabled = false; retry.hidden = true;
