@@ -34,7 +34,8 @@
     { ...stageDefaults, name: "ステージ 6", number: 6, level: 6, monster: "./assets/sukeruton.png", monsterName: "スケルトン", monsterHp: 45, attackIntervalMs: 18000, damage: 8, questionFilter: { subject: "math", grade: 9, difficulty: 2 } },
     { ...stageDefaults, name: "ステージ 7", number: 7, level: 7, monster: "./assets/go-suto.png", monsterName: "ゴースト", monsterHp: 50, attackIntervalMs: 16000, damage: 10, questionFilter: { subject: "math", difficulty: 2 } },
     { ...stageDefaults, name: "ステージ 8", number: 8, level: 8, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 55, attackIntervalMs: 15000, damage: 10, questionFilter: { subject: "math", difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 9", number: 9, level: 9, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 60, attackIntervalMs: 14000, damage: 12, questionFilter: { subject: "math", difficulty: 2 } }
+    { ...stageDefaults, name: "ステージ 9", number: 9, level: 9, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 60, attackIntervalMs: 14000, damage: 12, questionFilter: { subject: "math", difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 10", number: 10, level: 10, monster: "./assets/BOSS1.png", monsterName: "ゴブリンキング", monsterHp: 80, attackIntervalMs: 12000, damage: 15, answerDamage: 5, isBoss: true, questionFilter: { subject: "math", difficulty: 2 } }
   ];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
@@ -50,6 +51,7 @@
   const playerDamageSound = document.getElementById("playerDamageSound");
   const enemyDamageSound = document.getElementById("enemyDamageSound");
   const winSound = document.getElementById("winSound");
+  const bossWinSound = document.getElementById("bossWinSound");
   const missSound = document.getElementById("missSound");
   const battleStartSound = document.getElementById("battleStartSound");
   const battleMusic = document.getElementById("battleMusic");
@@ -197,7 +199,7 @@
     form.querySelector("button").disabled = true;
     countdown.textContent = "撃破！";
     feedback.textContent = `${stage.monsterName}を倒した！`;
-    playSound(winSound);
+    playSound(stage.isBoss ? bossWinSound : winSound);
     enemyArea.classList.add("monster-defeated");
     await wait(1350);
     if (state !== defeatedState || screen.hidden) return;
@@ -231,6 +233,7 @@
     if (delayMs > 0) await wait(delayMs);
     if (runId !== countdownRunId || !state) return;
     playBattleStartSound();
+    countdownDigit.classList.remove("is-start");
     countdownDigit.hidden = false;
     for (const value of [3, 2, 1]) {
       if (runId !== countdownRunId) return;
@@ -242,13 +245,19 @@
       await wait(700);
     }
     if (runId !== countdownRunId) return;
-    countdownDigit.hidden = true;
-    countdownText.textContent = "START!";
+    countdownDigit.classList.add("is-start");
+    countdownDigit.src = "./assets/start.png";
+    countdownDigit.hidden = false;
+    countdownDigit.style.animation = "none";
+    void countdownDigit.offsetWidth;
+    countdownDigit.style.animation = "";
+    countdownText.textContent = "";
     startCountdown.setAttribute("aria-label", "スタート");
     startBattleMusic();
     await wait(550);
     if (runId !== countdownRunId) return;
     startCountdown.hidden = true;
+    countdownDigit.classList.remove("is-start");
     countdownText.textContent = "";
     state.running = true;
     choices.disabled = false;

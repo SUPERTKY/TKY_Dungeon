@@ -29,6 +29,7 @@
 }
 .battle-countdown[hidden] { display: none; }
 .battle-countdown img { grid-area: 1 / 1; width: auto; height: clamp(120px, 30vh, 250px); filter: drop-shadow(0 0 10px #000) drop-shadow(0 0 18px #ffd87988); animation: countdown-pop 700ms ease-out; }
+.battle-countdown img.is-start { width: clamp(300px, 58vw, 620px); height: auto; max-height: 82vh; filter: drop-shadow(0 5px 5px #260000cc) drop-shadow(0 0 20px #ff4530aa); }
 .battle-countdown span { grid-area: 1 / 1; color: #fff4c8; font-size: clamp(3rem, 12vw, 8rem); font-weight: 900; letter-spacing: .08em; text-shadow: 0 4px 0 #5c3215, 0 0 20px #ffc45e; animation: countdown-pop 600ms ease-out; }
 .battle-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: min(100%, 960px); margin: 0 auto; text-shadow: 0 2px 5px #000; }
 .battle-header h1 { margin: 0; }
