@@ -32,7 +32,9 @@
     { ...stageDefaults, name: "ステージ 4", number: 4, level: 4, monster: "./assets/inosisi.png", monsterName: "イノシシ", monsterHp: 35, damage: 7, questionFilter: { subject: "math", grade: 8, difficulty: 2 } },
     { ...stageDefaults, name: "ステージ 5", number: 5, level: 5, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 40, damage: 7, questionFilter: { subject: "math", grade: 9, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 6", number: 6, level: 6, monster: "./assets/sukeruton.png", monsterName: "スケルトン", monsterHp: 45, attackIntervalMs: 18000, damage: 8, questionFilter: { subject: "math", grade: 9, difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 7", number: 7, level: 7, monster: "./assets/go-suto.png", monsterName: "ゴースト", monsterHp: 50, attackIntervalMs: 16000, damage: 10, questionFilter: { subject: "math", difficulty: 2 } }
+    { ...stageDefaults, name: "ステージ 7", number: 7, level: 7, monster: "./assets/go-suto.png", monsterName: "ゴースト", monsterHp: 50, attackIntervalMs: 16000, damage: 10, questionFilter: { subject: "math", difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 8", number: 8, level: 8, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 55, attackIntervalMs: 15000, damage: 10, questionFilter: { subject: "math", difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 9", number: 9, level: 9, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 60, attackIntervalMs: 14000, damage: 12, questionFilter: { subject: "math", difficulty: 2 } }
   ];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
@@ -57,7 +59,7 @@
   const countdownText = document.getElementById("battleCountdownText");
   const framePanel = document.querySelector(".quiz-panel");
   const hitEffectHandlers = new WeakMap();
-  const battleAudioSettings = { musicPlaybackRate: 1, startPlaybackRate: 1 };
+  const battleAudioSettings = { musicVolume: .42, musicPlaybackRate: 1, startPlaybackRate: 1 };
   let frameRequestId = 0, countdownRunId = 0;
   let stage = stages[0], stageIndex = 0, state = null, timer = null, last = null;
   function updateHp() {
@@ -148,9 +150,12 @@
     sound.currentTime = 0;
     sound.play().catch(() => {});
   }
-  function startBattleAudio() {
+  function playBattleStartSound() {
     battleStartSound.playbackRate = battleAudioSettings.startPlaybackRate;
     playSound(battleStartSound);
+  }
+  function startBattleMusic() {
+    battleMusic.volume = battleAudioSettings.musicVolume;
     battleMusic.playbackRate = battleAudioSettings.musicPlaybackRate;
     if (battleMusic.paused) battleMusic.play().catch(() => {});
   }
@@ -225,6 +230,7 @@
     startCountdown.setAttribute("aria-label", "戦闘準備中");
     if (delayMs > 0) await wait(delayMs);
     if (runId !== countdownRunId || !state) return;
+    playBattleStartSound();
     countdownDigit.hidden = false;
     for (const value of [3, 2, 1]) {
       if (runId !== countdownRunId) return;
@@ -239,7 +245,7 @@
     countdownDigit.hidden = true;
     countdownText.textContent = "START!";
     startCountdown.setAttribute("aria-label", "スタート");
-    startBattleAudio();
+    startBattleMusic();
     await wait(550);
     if (runId !== countdownRunId) return;
     startCountdown.hidden = true;
