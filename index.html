@@ -279,9 +279,9 @@
     .mistakes-drawer {
       position: absolute;
       inset: 8.6% 0 0;
-      padding: 18% 17% 14%;
       color: #fff3d2;
       pointer-events: auto;
+      container-type: inline-size;
     }
     .mistakes-drawer::before {
       content: "";
@@ -290,12 +290,27 @@
       z-index: -1;
       background: url("./assets/frame3.png") center / 100% 100% no-repeat;
     }
-    .mistakes-drawer__inner { width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column; min-height: 0; }
-    .mistakes-drawer__header { margin-bottom: 12px; text-align: center; }
-    .mistakes-drawer__title { margin: 0; color: #ffe6a0; font: 700 clamp(1.35rem, 4vw, 2rem) serif; text-shadow: 0 3px 3px #170b02; }
-    .mistakes-list { flex: 1; min-height: 0; margin: 0; padding: 0 6px 20px 0; overflow-y: auto; list-style: none; scrollbar-color: #bd8b43 #101a25; }
+    .mistakes-drawer__inner { position: relative; width: 100%; height: 100%; margin: 0; min-height: 0; }
+    .mistakes-drawer__header { position: absolute; top: 5.5%; left: 12%; right: 12%; text-align: center; }
+    .mistakes-drawer__title { margin: 0; color: #ffe6a0; font: 700 clamp(1.35rem, 8cqw, 2.45rem) serif; line-height: 1.1; text-shadow: 0 3px 3px #170b02; white-space: nowrap; }
+    .mistakes-list {
+      position: absolute;
+      top: 21.5%;
+      right: 17%;
+      bottom: 8%;
+      left: 16.5%;
+      min-height: 0;
+      margin: 0;
+      padding: 0 5px 16px 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      list-style: none;
+      scrollbar-color: #bd8b43 #101a25;
+      scrollbar-gutter: stable;
+      overscroll-behavior: contain;
+    }
     .mistake-card { margin-bottom: 12px; padding: 14px 16px; border: 1px solid #8e744d; border-radius: 8px; background: #0c1725e8; box-shadow: inset 0 0 18px #0005; text-align: left; }
-    .mistake-card__meta { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 8px; color: #d5bd89; font-size: .78rem; }
+    .mistake-card__meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px 10px; margin-bottom: 8px; color: #d5bd89; font-size: .78rem; }
     .mistake-card__question { margin: 0 0 10px; line-height: 1.55; font-weight: 700; white-space: pre-wrap; }
     .mistake-card__answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 14px; font-size: .92rem; }
     .mistake-card__wrong { color: #ffaaa2; }
@@ -323,7 +338,6 @@
       .subject-button small { display: none; }
       .mistakes-drawer-shell { left: max(8px, env(safe-area-inset-left)); width: min(460px, calc(100vw - max(16px, env(safe-area-inset-left))), 49.5dvh); }
       .mistakes-toggle { left: 8px; }
-      .mistake-card__answers { grid-template-columns: 1fr; }
     }
 
     .game-transition {
