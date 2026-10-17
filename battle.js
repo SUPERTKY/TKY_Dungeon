@@ -30,54 +30,55 @@
     square: "./assets/frame.png"
   };
   const defaultFrameType = "horizontal";
-  const stageDefaults = { background: "./assets/background.png", music: "./assets/battle1.mp3", playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, wrongAnswerDamage: 5, frameType: "horizontal" };
-  const floor2Defaults = { ...stageDefaults, background: "./assets/backgorund2.png", music: "./assets/battle2.mp3", attackIntervalMs: 12000, damage: 12, wrongAnswerDamage: 8 };
-  const floor3Defaults = { ...stageDefaults, background: "./assets/background3.png", music: "./assets/battle3.mp3", attackIntervalMs: 9000, damage: 16, wrongAnswerDamage: 10 };
-  const floor4Defaults = { ...stageDefaults, background: "./assets/background4.png", music: "./assets/battle4.mp3", attackIntervalMs: 7000, damage: 20, wrongAnswerDamage: 12 };
-  const floor5Defaults = { ...stageDefaults, background: "./assets/background5.png", music: "./assets/battle5.mp3", attackIntervalMs: 6000, damage: 24, wrongAnswerDamage: 14 };
+  const enemyAttackIntervalMs = 20000;
+  const stageDefaults = { background: "./assets/background.png", music: "./assets/battle1.mp3", playerHp: 100, attackIntervalMs: enemyAttackIntervalMs, damage: 5, answerDamage: 5, wrongAnswerDamage: 5, frameType: "horizontal" };
+  const floor2Defaults = { ...stageDefaults, background: "./assets/backgorund2.png", music: "./assets/battle2.mp3", damage: 12, wrongAnswerDamage: 8 };
+  const floor3Defaults = { ...stageDefaults, background: "./assets/background3.png", music: "./assets/battle3.mp3", damage: 16, wrongAnswerDamage: 10 };
+  const floor4Defaults = { ...stageDefaults, background: "./assets/background4.png", music: "./assets/battle4.mp3", damage: 20, wrongAnswerDamage: 12 };
+  const floor5Defaults = { ...stageDefaults, background: "./assets/background5.png", music: "./assets/battle5.mp3", damage: 24, wrongAnswerDamage: 14 };
   const stages = [
     { ...stageDefaults, name: "ステージ 1", number: 1, level: 1, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, questionFilter: { grade: 7, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 2", number: 2, level: 2, monster: "./assets/kinoko.png", monsterName: "キノコ", monsterHp: 25, questionFilter: { grade: 7, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 3", number: 3, level: 3, monster: "./assets/ko-mori.png", monsterName: "コウモリ", monsterHp: 30, questionFilter: { grade: 8, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 4", number: 4, level: 4, monster: "./assets/inosisi.png", monsterName: "イノシシ", monsterHp: 35, damage: 7, questionFilter: { grade: 8, difficulty: 2 } },
     { ...stageDefaults, name: "ステージ 5", number: 5, level: 5, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 40, damage: 7, questionFilter: { grade: 9, difficulty: 1 } },
-    { ...stageDefaults, name: "ステージ 6", number: 6, level: 6, monster: "./assets/sukeruton.png", monsterName: "スケルトン", monsterHp: 45, attackIntervalMs: 18000, damage: 8, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 7", number: 7, level: 7, monster: "./assets/go-suto.png", monsterName: "ゴースト", monsterHp: 50, attackIntervalMs: 16000, damage: 10, questionFilter: { difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 8", number: 8, level: 8, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 55, attackIntervalMs: 15000, damage: 10, questionFilter: { difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 9", number: 9, level: 9, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 60, attackIntervalMs: 14000, damage: 12, questionFilter: { difficulty: 2 } },
-    { ...stageDefaults, name: "ステージ 10", number: 10, level: 10, monster: "./assets/BOSS1.png", monsterName: "ゴブリンキング", monsterHp: 80, attackIntervalMs: 12000, damage: 15, answerDamage: 5, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 6", number: 6, level: 6, monster: "./assets/sukeruton.png", monsterName: "スケルトン", monsterHp: 45, damage: 8, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 7", number: 7, level: 7, monster: "./assets/go-suto.png", monsterName: "ゴースト", monsterHp: 50, damage: 10, questionFilter: { difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 8", number: 8, level: 8, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 55, damage: 10, questionFilter: { difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 9", number: 9, level: 9, monster: "./assets/goburin.png", monsterName: "ゴブリン", monsterHp: 60, damage: 12, questionFilter: { difficulty: 2 } },
+    { ...stageDefaults, name: "ステージ 10", number: 10, level: 10, monster: "./assets/BOSS1.png", monsterName: "ゴブリンキング", monsterHp: 80, damage: 15, answerDamage: 5, isBoss: true, questionFilter: { difficulty: 2 } },
     { ...floor2Defaults, name: "ステージ 11", number: 11, level: 11, monster: "./assets/faia-go-suto.png", monsterName: "ファイアゴースト", monsterHp: 60, questionFilter: { grade: 7, difficulty: 2 } },
     { ...floor2Defaults, name: "ステージ 12", number: 12, level: 12, monster: "./assets/faiasaramanda-.png", monsterName: "ファイアサラマンダー", monsterHp: 65, questionFilter: { grade: 7, difficulty: 2 } },
-    { ...floor2Defaults, name: "ステージ 13", number: 13, level: 13, monster: "./assets/fureimubatto.png", monsterName: "フレイムバット", monsterHp: 70, attackIntervalMs: 11000, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor2Defaults, name: "ステージ 14", number: 14, level: 14, monster: "./assets/fureimumeizi.png", monsterName: "フレイムメイジ", monsterHp: 75, attackIntervalMs: 11000, damage: 13, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor2Defaults, name: "ステージ 15", number: 15, level: 15, monster: "./assets/heruhaundo.png", monsterName: "ヘルハウンド", monsterHp: 80, attackIntervalMs: 10000, damage: 14, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor2Defaults, name: "ステージ 16", number: 16, level: 16, monster: "./assets/magumago-remu.png", monsterName: "マグマゴーレム", monsterHp: 90, attackIntervalMs: 10000, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor2Defaults, name: "ステージ 17", number: 17, level: 17, monster: "./assets/magumasuraimu.png", monsterName: "マグマスライム", monsterHp: 95, attackIntervalMs: 9000, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor2Defaults, name: "ステージ 18", number: 18, level: 18, monster: "./assets/BOSS2.png", monsterName: "ヘルボアキング", monsterHp: 130, attackIntervalMs: 8500, damage: 18, answerDamage: 5, wrongAnswerDamage: 10, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 13", number: 13, level: 13, monster: "./assets/fureimubatto.png", monsterName: "フレイムバット", monsterHp: 70, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 14", number: 14, level: 14, monster: "./assets/fureimumeizi.png", monsterName: "フレイムメイジ", monsterHp: 75, damage: 13, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 15", number: 15, level: 15, monster: "./assets/heruhaundo.png", monsterName: "ヘルハウンド", monsterHp: 80, damage: 14, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 16", number: 16, level: 16, monster: "./assets/magumago-remu.png", monsterName: "マグマゴーレム", monsterHp: 90, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 17", number: 17, level: 17, monster: "./assets/magumasuraimu.png", monsterName: "マグマスライム", monsterHp: 95, damage: 15, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor2Defaults, name: "ステージ 18", number: 18, level: 18, monster: "./assets/BOSS2.png", monsterName: "ヘルボアキング", monsterHp: 130, damage: 18, answerDamage: 5, wrongAnswerDamage: 10, isBoss: true, questionFilter: { difficulty: 2 } },
     { ...floor3Defaults, name: "ステージ 19", number: 19, level: 19, monster: "./assets/dokukinoko.png", monsterName: "毒キノコ", monsterHp: 100, questionFilter: { grade: 7, difficulty: 2 } },
     { ...floor3Defaults, name: "ステージ 20", number: 20, level: 20, monster: "./assets/foresutobi-.png", monsterName: "フォレストビー", monsterHp: 105, questionFilter: { grade: 7, difficulty: 2 } },
-    { ...floor3Defaults, name: "ステージ 21", number: 21, level: 21, monster: "./assets/foresutodeia.png", monsterName: "フォレストディア", monsterHp: 110, attackIntervalMs: 8500, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor3Defaults, name: "ステージ 22", number: 22, level: 22, monster: "./assets/mani-ta-.png", monsterName: "マンイーター", monsterHp: 115, attackIntervalMs: 8500, damage: 17, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor3Defaults, name: "ステージ 23", number: 23, level: 23, monster: "./assets/morinogoburin.png", monsterName: "森のゴブリン", monsterHp: 120, attackIntervalMs: 8000, damage: 18, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor3Defaults, name: "ステージ 24", number: 24, level: 24, monster: "./assets/mosuurufu.png", monsterName: "モスウルフ", monsterHp: 125, attackIntervalMs: 8000, damage: 18, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor3Defaults, name: "ステージ 25", number: 25, level: 25, monster: "./assets/torento.png", monsterName: "トレント", monsterHp: 135, attackIntervalMs: 7500, damage: 19, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor3Defaults, name: "ステージ 26", number: 26, level: 26, monster: "./assets/BOSS3.png", monsterName: "ポイズンマッシュキング", monsterHp: 170, attackIntervalMs: 7000, damage: 22, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 21", number: 21, level: 21, monster: "./assets/foresutodeia.png", monsterName: "フォレストディア", monsterHp: 110, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 22", number: 22, level: 22, monster: "./assets/mani-ta-.png", monsterName: "マンイーター", monsterHp: 115, damage: 17, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 23", number: 23, level: 23, monster: "./assets/morinogoburin.png", monsterName: "森のゴブリン", monsterHp: 120, damage: 18, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 24", number: 24, level: 24, monster: "./assets/mosuurufu.png", monsterName: "モスウルフ", monsterHp: 125, damage: 18, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 25", number: 25, level: 25, monster: "./assets/torento.png", monsterName: "トレント", monsterHp: 135, damage: 19, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor3Defaults, name: "ステージ 26", number: 26, level: 26, monster: "./assets/BOSS3.png", monsterName: "ポイズンマッシュキング", monsterHp: 170, damage: 22, isBoss: true, questionFilter: { difficulty: 2 } },
     { ...floor4Defaults, name: "ステージ 27", number: 27, level: 27, monster: "./assets/suto-mukuraudo.png", monsterName: "ストームクラウド", monsterHp: 140, questionFilter: { grade: 7, difficulty: 2 } },
     { ...floor4Defaults, name: "ステージ 28", number: 28, level: 28, monster: "./assets/borutogo-remu.png", monsterName: "ボルトゴーレム", monsterHp: 145, questionFilter: { grade: 7, difficulty: 2 } },
-    { ...floor4Defaults, name: "ステージ 29", number: 29, level: 29, monster: "./assets/rairyuu.png", monsterName: "雷竜", monsterHp: 150, attackIntervalMs: 6500, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor4Defaults, name: "ステージ 30", number: 30, level: 30, monster: "./assets/raitoningureisu.png", monsterName: "ライトニングレイス", monsterHp: 155, attackIntervalMs: 6500, damage: 21, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor4Defaults, name: "ステージ 31", number: 31, level: 31, monster: "./assets/sanda-goburin.png", monsterName: "サンダーゴブリン", monsterHp: 160, attackIntervalMs: 6000, damage: 22, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor4Defaults, name: "ステージ 32", number: 32, level: 32, monster: "./assets/borutobatto.png", monsterName: "ボルトバット", monsterHp: 165, attackIntervalMs: 6000, damage: 22, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor4Defaults, name: "ステージ 33", number: 33, level: 33, monster: "./assets/sanda-urufu.png", monsterName: "サンダーウルフ", monsterHp: 175, attackIntervalMs: 5500, damage: 24, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor4Defaults, name: "ステージ 34", number: 34, level: 34, monster: "./assets/BOSS4.png", monsterName: "スカルキング", monsterHp: 220, attackIntervalMs: 5000, damage: 28, wrongAnswerDamage: 15, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 29", number: 29, level: 29, monster: "./assets/rairyuu.png", monsterName: "雷竜", monsterHp: 150, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 30", number: 30, level: 30, monster: "./assets/raitoningureisu.png", monsterName: "ライトニングレイス", monsterHp: 155, damage: 21, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 31", number: 31, level: 31, monster: "./assets/sanda-goburin.png", monsterName: "サンダーゴブリン", monsterHp: 160, damage: 22, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 32", number: 32, level: 32, monster: "./assets/borutobatto.png", monsterName: "ボルトバット", monsterHp: 165, damage: 22, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 33", number: 33, level: 33, monster: "./assets/sanda-urufu.png", monsterName: "サンダーウルフ", monsterHp: 175, damage: 24, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 34", number: 34, level: 34, monster: "./assets/BOSS4.png", monsterName: "スカルキング", monsterHp: 220, damage: 28, wrongAnswerDamage: 15, isBoss: true, questionFilter: { difficulty: 2 } },
     { ...floor5Defaults, name: "ステージ 35", number: 35, level: 35, monster: "./assets/yukiryuu.png", monsterName: "雪竜", monsterHp: 180, questionFilter: { grade: 7, difficulty: 2 } },
     { ...floor5Defaults, name: "ステージ 36", number: 36, level: 36, monster: "./assets/yukigo-remu.png", monsterName: "雪ゴーレム", monsterHp: 185, questionFilter: { grade: 7, difficulty: 2 } },
-    { ...floor5Defaults, name: "ステージ 37", number: 37, level: 37, monster: "./assets/yukisuraimu.png", monsterName: "雪スライム", monsterHp: 190, attackIntervalMs: 5500, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor5Defaults, name: "ステージ 38", number: 38, level: 38, monster: "./assets/yukitori.png", monsterName: "雪鳥", monsterHp: 195, attackIntervalMs: 5500, damage: 25, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor5Defaults, name: "ステージ 39", number: 39, level: 39, monster: "./assets/yukisupaida-.png", monsterName: "雪スパイダー", monsterHp: 200, attackIntervalMs: 5000, damage: 26, questionFilter: { grade: 8, difficulty: 2 } },
-    { ...floor5Defaults, name: "ステージ 40", number: 40, level: 40, monster: "./assets/yukiotoko.png", monsterName: "雪男", monsterHp: 210, attackIntervalMs: 5000, damage: 26, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor5Defaults, name: "ステージ 41", number: 41, level: 41, monster: "./assets/yukigo-suto.png", monsterName: "雪ゴースト", monsterHp: 225, attackIntervalMs: 4500, damage: 28, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor5Defaults, name: "ステージ 42", number: 42, level: 42, monster: "./assets/BOSS5.png", monsterName: "フロストリッチキング", monsterHp: 280, attackIntervalMs: 4000, damage: 32, wrongAnswerDamage: 18, isBoss: true, questionFilter: { difficulty: 2 } }
+    { ...floor5Defaults, name: "ステージ 37", number: 37, level: 37, monster: "./assets/yukisuraimu.png", monsterName: "雪スライム", monsterHp: 190, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 38", number: 38, level: 38, monster: "./assets/yukitori.png", monsterName: "雪鳥", monsterHp: 195, damage: 25, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 39", number: 39, level: 39, monster: "./assets/yukisupaida-.png", monsterName: "雪スパイダー", monsterHp: 200, damage: 26, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 40", number: 40, level: 40, monster: "./assets/yukiotoko.png", monsterName: "雪男", monsterHp: 210, damage: 26, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 41", number: 41, level: 41, monster: "./assets/yukigo-suto.png", monsterName: "雪ゴースト", monsterHp: 225, damage: 28, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 42", number: 42, level: 42, monster: "./assets/BOSS5.png", monsterName: "フロストリッチキング", monsterHp: 280, damage: 32, wrongAnswerDamage: 18, isBoss: true, questionFilter: { difficulty: 2 } }
   ];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
