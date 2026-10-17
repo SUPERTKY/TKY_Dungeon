@@ -309,7 +309,7 @@
     if (played) played.catch(() => {});
     await Promise.race([ended, wait(8000)]);
     if (runId !== gameOverRunId || screen.hidden) return;
-    returnToTitle();
+    restartFromBoot();
   }
   async function defeatMonster() {
     const defeatedState = state;

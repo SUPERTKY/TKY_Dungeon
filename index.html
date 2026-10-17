@@ -520,7 +520,7 @@
   <audio id="missSound" src="./assets/MISS.mp3" preload="none"></audio>
   <audio id="battleStartSound" src="./assets/start.mp3" preload="auto"></audio>
   <audio id="battleMusic" src="./assets/battle1.mp3" preload="auto" loop></audio>
-  <script src="./battle.js?v=battle18"></script>
+  <script src="./battle.js?v=battle19"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
   <script>
@@ -529,6 +529,7 @@
     const titleMusic = document.getElementById("titleMusic");
 
     const MISTAKES_STORAGE_KEY = "tky-dungeon-mistakes-v1";
+    const MISTAKES_SEEN_KEY = "tky-dungeon-mistakes-seen-v1";
     const mistakesDrawerShell = document.getElementById("mistakesDrawerShell");
     const mistakesToggle = document.getElementById("mistakesToggle");
     const mistakesDrawer = document.getElementById("mistakesDrawer");
@@ -547,10 +548,29 @@
         return [];
       }
     }
+    function getMistakesSeenAt() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(MISTAKES_SEEN_KEY) || "null");
+        return saved?.date === todayKey() ? saved.timestamp || "" : "";
+      } catch {
+        return "";
+      }
+    }
+    function markTodaysMistakesSeen(entries) {
+      const latestTimestamp = entries.at(-1)?.timestamp;
+      if (!latestTimestamp) return;
+      try {
+        localStorage.setItem(MISTAKES_SEEN_KEY, JSON.stringify({ date: todayKey(), timestamp: latestTimestamp }));
+      } catch {}
+      mistakesCount.textContent = "";
+      mistakesCount.setAttribute("aria-label", "未確認なし");
+    }
     function renderTodaysMistakes() {
       const entries = getTodaysMistakes();
-      mistakesCount.textContent = entries.length ? String(entries.length) : "";
-      mistakesCount.setAttribute("aria-label", `${entries.length}件`);
+      const seenAt = getMistakesSeenAt();
+      const unreadCount = entries.filter(entry => !seenAt || entry.timestamp > seenAt).length;
+      mistakesCount.textContent = unreadCount ? String(unreadCount) : "";
+      mistakesCount.setAttribute("aria-label", unreadCount ? `未確認${unreadCount}件` : "未確認なし");
       mistakesList.replaceChildren();
       if (!entries.length) {
         const empty = document.createElement("li");
@@ -600,12 +620,15 @@
       mistakesToggle.setAttribute("aria-label", open ? "今日の間違いを閉じる" : "今日の間違いを開く");
       if (open) {
         renderTodaysMistakes();
+        markTodaysMistakesSeen(getTodaysMistakes());
       }
     }
     mistakesToggle.addEventListener("click", () => setMistakesOpen(mistakesToggle.getAttribute("aria-expanded") !== "true"));
     mistakesDrawerShell.addEventListener("keydown", event => { if (event.key === "Escape") setMistakesOpen(false); });
     window.addEventListener("tky:mistakes-updated", renderTodaysMistakes);
-    window.addEventListener("storage", event => { if (event.key === MISTAKES_STORAGE_KEY) renderTodaysMistakes(); });
+    window.addEventListener("storage", event => {
+      if (event.key === MISTAKES_STORAGE_KEY || event.key === MISTAKES_SEEN_KEY) renderTodaysMistakes();
+    });
     renderTodaysMistakes();
 
     // アイコンのフェードイン（2秒）より少し前からタイトル曲を開始する。
