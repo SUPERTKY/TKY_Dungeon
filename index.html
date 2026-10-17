@@ -7,7 +7,7 @@
   <title>TKY Dungeon</title>
   <link rel="icon" href="./TKYDUNGEON_Icon.ico" />
 
-  <link rel="stylesheet" href="./battle.css?v=responsive16" />
+  <link rel="stylesheet" href="./battle.css?v=responsive17" />
   <style>
     :root {
       color-scheme: dark;
@@ -605,7 +605,7 @@
         return;
       }
       const subjectNames = { math: "数学", social: "社会", japanese: "国語", english: "英語", science: "理科" };
-      entries.forEach((entry, index) => {
+      [...entries].reverse().forEach((entry, index) => {
         const card = document.createElement("li");
         card.className = "mistake-card";
         const meta = document.createElement("div");

@@ -94,7 +94,7 @@ titleBackground.getState(); // 動作状態・画像の表示座標・水マス�
 - Playを押すと `assets/play.mp3` を再生し、暗転後に `assets/background.png` の戦闘画面へフェードします。3・2・1・STARTのカウントダウン後に入力と敵の攻撃タイマーが始まります。
 - HPは数値ではなく画像ゲージで表示します。`assets/HPbar.png` を土台に、プレイヤーは `assets/HPgage.png`、モンスターは `assets/HPgage-enemy.png` を前面へ重ね、残量に合わせて縮めます。
 - 問題は選択した教科の `math.json`、`social.json`、`japanese.json`、`english.json`、`science.json` から読み込みます。各ステージの学年・難易度に合う4択問題をランダムに出題し、テキスト入力なしで回答できます。
-- モンスターは画面中央、プレイヤーHPは左下、問題フレームは中央下に配置します。問題・選択肢・回答欄は `assets/frame_horizontal.png` の1つのフレームにまとめ、回答ボタンには `assets/Answer.png` を使用します。選択肢を選び、画像ボタンまたはEnterで回答できます。
+- モンスターは画面中央、プレイヤーHPは左下、問題フレームは中央下に配置します。問題欄は `assets/frame_horizontal.png`、各選択肢は `assets/frame2.png`、回答ボタンは `assets/Answer.png` を使用します。外側フレーム内には別の背景パネルを重ねません。選択肢を選び、画像ボタンまたはEnterで回答できます。
 - ステージ1〜7は、スライム、キノコ、コウモリ、イノシシ、ゴブリン、スケルトン、ゴーストの順です。勝利すると「次のステージ」ボタンで進み、後半ほど体力・攻撃力・出題難易度が上がります。
 - ステージ11からは炎の第2階層です。背景を `assets/backgorund2.png`、BGMを `assets/battle2.mp3` に切り替え、ファイアゴースト、ファイアサラマンダー、フレイムバット、フレイムメイジ、ヘルハウンド、マグマゴーレム、マグマスライムが登場します。ステージ18のボスは `assets/BOSS2.png` です。
 - ステージ19からは森の第3階層です。背景を `assets/background3.png`、BGMを `assets/battle3.mp3` に切り替えます。毒キノコ、フォレストビー、フォレストディア、マンイーター、森のゴブリン、モスウルフ、トレントが登場し、ステージ26のボスは `assets/BOSS3.png` のポイズンマッシュキングです。
