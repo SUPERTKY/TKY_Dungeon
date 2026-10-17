@@ -33,6 +33,8 @@
   const stageDefaults = { background: "./assets/background.png", music: "./assets/battle1.mp3", playerHp: 100, attackIntervalMs: 20000, damage: 5, answerDamage: 5, wrongAnswerDamage: 5, frameType: "horizontal" };
   const floor2Defaults = { ...stageDefaults, background: "./assets/backgorund2.png", music: "./assets/battle2.mp3", attackIntervalMs: 12000, damage: 12, wrongAnswerDamage: 8 };
   const floor3Defaults = { ...stageDefaults, background: "./assets/background3.png", music: "./assets/battle3.mp3", attackIntervalMs: 9000, damage: 16, wrongAnswerDamage: 10 };
+  const floor4Defaults = { ...stageDefaults, background: "./assets/background4.png", music: "./assets/battle4.mp3", attackIntervalMs: 7000, damage: 20, wrongAnswerDamage: 12 };
+  const floor5Defaults = { ...stageDefaults, background: "./assets/background5.png", music: "./assets/battle5.mp3", attackIntervalMs: 6000, damage: 24, wrongAnswerDamage: 14 };
   const stages = [
     { ...stageDefaults, name: "ステージ 1", number: 1, level: 1, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, questionFilter: { grade: 7, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 2", number: 2, level: 2, monster: "./assets/kinoko.png", monsterName: "キノコ", monsterHp: 25, questionFilter: { grade: 7, difficulty: 1 } },
@@ -59,7 +61,23 @@
     { ...floor3Defaults, name: "ステージ 23", number: 23, level: 23, monster: "./assets/morinogoburin.png", monsterName: "森のゴブリン", monsterHp: 120, attackIntervalMs: 8000, damage: 18, questionFilter: { grade: 8, difficulty: 2 } },
     { ...floor3Defaults, name: "ステージ 24", number: 24, level: 24, monster: "./assets/mosuurufu.png", monsterName: "モスウルフ", monsterHp: 125, attackIntervalMs: 8000, damage: 18, questionFilter: { grade: 9, difficulty: 2 } },
     { ...floor3Defaults, name: "ステージ 25", number: 25, level: 25, monster: "./assets/torento.png", monsterName: "トレント", monsterHp: 135, attackIntervalMs: 7500, damage: 19, questionFilter: { grade: 9, difficulty: 2 } },
-    { ...floor3Defaults, name: "ステージ 26", number: 26, level: 26, monster: "./assets/BOSS3.png", monsterName: "ポイズンマッシュキング", monsterHp: 170, attackIntervalMs: 7000, damage: 22, isBoss: true, questionFilter: { difficulty: 2 } }
+    { ...floor3Defaults, name: "ステージ 26", number: 26, level: 26, monster: "./assets/BOSS3.png", monsterName: "ポイズンマッシュキング", monsterHp: 170, attackIntervalMs: 7000, damage: 22, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 27", number: 27, level: 27, monster: "./assets/suto-mukuraudo.png", monsterName: "ストームクラウド", monsterHp: 140, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 28", number: 28, level: 28, monster: "./assets/borutogo-remu.png", monsterName: "ボルトゴーレム", monsterHp: 145, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 29", number: 29, level: 29, monster: "./assets/rairyuu.png", monsterName: "雷竜", monsterHp: 150, attackIntervalMs: 6500, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 30", number: 30, level: 30, monster: "./assets/raitoningureisu.png", monsterName: "ライトニングレイス", monsterHp: 155, attackIntervalMs: 6500, damage: 21, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 31", number: 31, level: 31, monster: "./assets/sanda-goburin.png", monsterName: "サンダーゴブリン", monsterHp: 160, attackIntervalMs: 6000, damage: 22, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 32", number: 32, level: 32, monster: "./assets/borutobatto.png", monsterName: "ボルトバット", monsterHp: 165, attackIntervalMs: 6000, damage: 22, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 33", number: 33, level: 33, monster: "./assets/sanda-urufu.png", monsterName: "サンダーウルフ", monsterHp: 175, attackIntervalMs: 5500, damage: 24, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor4Defaults, name: "ステージ 34", number: 34, level: 34, monster: "./assets/BOSS4.png", monsterName: "スカルキング", monsterHp: 220, attackIntervalMs: 5000, damage: 28, wrongAnswerDamage: 15, isBoss: true, questionFilter: { difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 35", number: 35, level: 35, monster: "./assets/yukiryuu.png", monsterName: "雪竜", monsterHp: 180, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 36", number: 36, level: 36, monster: "./assets/yukigo-remu.png", monsterName: "雪ゴーレム", monsterHp: 185, questionFilter: { grade: 7, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 37", number: 37, level: 37, monster: "./assets/yukisuraimu.png", monsterName: "雪スライム", monsterHp: 190, attackIntervalMs: 5500, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 38", number: 38, level: 38, monster: "./assets/yukitori.png", monsterName: "雪鳥", monsterHp: 195, attackIntervalMs: 5500, damage: 25, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 39", number: 39, level: 39, monster: "./assets/yukisupaida-.png", monsterName: "雪スパイダー", monsterHp: 200, attackIntervalMs: 5000, damage: 26, questionFilter: { grade: 8, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 40", number: 40, level: 40, monster: "./assets/yukiotoko.png", monsterName: "雪男", monsterHp: 210, attackIntervalMs: 5000, damage: 26, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 41", number: 41, level: 41, monster: "./assets/yukigo-suto.png", monsterName: "雪ゴースト", monsterHp: 225, attackIntervalMs: 4500, damage: 28, questionFilter: { grade: 9, difficulty: 2 } },
+    { ...floor5Defaults, name: "ステージ 42", number: 42, level: 42, monster: "./assets/BOSS5.png", monsterName: "フロストリッチキング", monsterHp: 280, attackIntervalMs: 4000, damage: 32, wrongAnswerDamage: 18, isBoss: true, questionFilter: { difficulty: 2 } }
   ];
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
@@ -71,6 +89,8 @@
   const feedback = document.getElementById("battleFeedback");
   const retry = document.getElementById("battleRetry");
   const gameOverScreen = document.getElementById("gameOverScreen");
+  const completeScreen = document.getElementById("completeScreen");
+  const completeTitleButton = document.getElementById("completeTitleButton");
   const playerBar = document.getElementById("playerHp");
   const monsterBar = document.getElementById("monsterHp");
   const playerDamageSound = document.getElementById("playerDamageSound");
@@ -78,6 +98,7 @@
   const winSound = document.getElementById("winSound");
   const bossWinSound = document.getElementById("bossWinSound");
   const gameOverSound = document.getElementById("gameOverSound");
+  const completeSound = document.getElementById("completeSound");
   const missSound = document.getElementById("missSound");
   const battleStartSound = document.getElementById("battleStartSound");
   const battleMusic = document.getElementById("battleMusic");
@@ -89,7 +110,7 @@
   const framePanel = document.querySelector(".quiz-panel");
   const hitEffectHandlers = new WeakMap();
   const battleAudioSettings = { musicVolume: .42, musicPlaybackRate: 1, startPlaybackRate: 1 };
-  let frameRequestId = 0, countdownRunId = 0, gameOverRunId = 0;
+  let frameRequestId = 0, countdownRunId = 0, gameOverRunId = 0, completeRunId = 0;
   let stage = stages[0], stageIndex = 0, state = null, timer = null, last = null;
   function updateHp() {
     const updateMeter = (meter, value, max) => {
@@ -212,14 +233,28 @@
       void showGameOver();
       return;
     }
-    state.running = false; clearInterval(timer); timer = null;
-    state.won = won;
-    choices.disabled = true; form.querySelector("button").disabled = true;
-    const hasNextStage = stageIndex + 1 < stages.length;
-    countdown.textContent = won ? (hasNextStage ? "ステージクリア" : "ダンジョンクリア") : "戦闘終了";
-    feedback.textContent = won ? (hasNextStage ? "モンスターを倒した！ 次のステージへ進もう！" : "全ステージクリア！ ダンジョンを制覇しました！") : "体力がなくなりました。もう一度挑戦できます。";
-    retry.textContent = won ? (hasNextStage ? "次のステージ" : "タイトルへ") : "もう一度";
-    retry.hidden = false; retry.focus({ preventScroll: true });
+    void showComplete();
+  }
+  async function showComplete() {
+    const runId = ++completeRunId;
+    state.running = false;
+    state.won = true;
+    clearInterval(timer); timer = null;
+    countdownRunId += 1;
+    choices.disabled = true;
+    form.querySelector("button").disabled = true;
+    retry.hidden = true;
+    battleMusic.pause();
+    bossWinSound.pause();
+    bossWinSound.currentTime = 0;
+    completeTitleButton.hidden = true;
+    completeScreen.hidden = false;
+    completeSound.currentTime = 0;
+    completeSound.play().catch(() => {});
+    await wait(4200);
+    if (runId !== completeRunId || screen.hidden) return;
+    completeTitleButton.hidden = false;
+    completeTitleButton.focus({ preventScroll: true });
   }
   async function showGameOver() {
     const runId = ++gameOverRunId;
@@ -333,7 +368,7 @@
       submitButton.disabled = false;
       return false;
     }
-    clearInterval(timer); timer = null; countdownRunId += 1;
+    clearInterval(timer); timer = null; countdownRunId += 1; completeRunId += 1;
     stageIndex = stages[index] ? index : 0;
     stage = stages[stageIndex];
     const questionOrder = shuffle(questionsForStage(stage));
@@ -372,6 +407,10 @@
     }
     choices.disabled = true; submitButton.disabled = true; retry.hidden = true;
     gameOverScreen.hidden = true;
+    completeScreen.hidden = true;
+    completeTitleButton.hidden = true;
+    completeSound.pause();
+    completeSound.currentTime = 0;
     countdown.textContent = "戦闘開始まで…";
     feedback.textContent = "準備して…";
     updateHp(); showQuestion();
@@ -392,7 +431,7 @@
     return start(0, options);
   }
   function returnToTitle() {
-    clearInterval(timer); timer = null; countdownRunId += 1; gameOverRunId += 1; if (state) state.running = false;
+    clearInterval(timer); timer = null; countdownRunId += 1; gameOverRunId += 1; completeRunId += 1; if (state) state.running = false;
     startCountdown.hidden = true;
     countdownDigit.hidden = true;
     countdownStartImage.hidden = true;
@@ -409,9 +448,16 @@
     gameOverSound.pause();
     gameOverSound.currentTime = 0;
     gameOverScreen.hidden = true;
+    completeScreen.hidden = true;
+    completeTitleButton.hidden = true;
+    completeSound.pause();
+    completeSound.currentTime = 0;
     const playButton = document.getElementById("playButton");
     playButton.disabled = false;
     playButton.focus({ preventScroll: true });
+  }
+  function restartFromBoot() {
+    window.location.reload();
   }
   form.addEventListener("submit", event => {
     event.preventDefault(); if (!state?.running) return;
@@ -450,11 +496,12 @@
     choices.querySelector("input")?.focus({ preventScroll: true });
   });
   document.addEventListener("game:start", () => start());
-  document.getElementById("battleReturn").addEventListener("click", returnToTitle);
+  document.getElementById("battleReturn").addEventListener("click", restartFromBoot);
+  completeTitleButton.addEventListener("click", restartFromBoot);
   retry.addEventListener("click", () => {
     if (!state?.won) start(stageIndex);
     else if (stageIndex + 1 < stages.length) start(stageIndex + 1, { preservePlayerHp: true });
-    else returnToTitle();
+    else restartFromBoot();
   });
   document.addEventListener("visibilitychange", () => { last = document.hidden ? null : performance.now(); });
   window.addEventListener("pagehide", () => { clearInterval(timer); timer = null; battleMusic.pause(); });
@@ -484,5 +531,5 @@
     loadFrame(requestedAsset, requestedType, requestedType !== "square");
   }
   useFrame();
-  window.dungeonBattle = { start, startDungeon, returnToTitle, useFrame, stages, frameAssets, subjectFiles, battleAudioSettings, getState: () => state ? { ...state, subject: currentSubject } : null };
+  window.dungeonBattle = { start, startDungeon, returnToTitle, restartFromBoot, useFrame, stages, frameAssets, subjectFiles, battleAudioSettings, getState: () => state ? { ...state, subject: currentSubject } : null };
 })();
