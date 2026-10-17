@@ -295,10 +295,10 @@
     .mistakes-drawer__title { margin: 0; color: #ffe6a0; font: 700 clamp(1.25rem, 7cqw, 2.2rem) serif; line-height: 1.1; text-shadow: 0 3px 3px #170b02; white-space: nowrap; }
     .mistakes-list {
       position: absolute;
-      top: 24%;
-      right: 19.5%;
-      bottom: 11%;
-      left: 19%;
+      top: 25.5%;
+      right: 21%;
+      bottom: 17.5%;
+      left: 21%;
       min-height: 0;
       margin: 0;
       padding: 0 5px 16px 0;
@@ -634,6 +634,7 @@
       mistakesToggle.setAttribute("aria-label", open ? "今日の間違いを閉じる" : "今日の間違いを開く");
       if (open) {
         renderTodaysMistakes();
+        mistakesList.scrollTop = 0;
         markTodaysMistakesSeen(getTodaysMistakes());
       }
     }
