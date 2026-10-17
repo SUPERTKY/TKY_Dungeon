@@ -1,7 +1,6 @@
 (() => {
   "use strict";
   const subjectFiles = { math: "./math.json", social: "./social.json", japanese: "./japanese.json", english: "./english.json", science: "./science.json" };
-  const subjectNames = { math: "数学", social: "社会", japanese: "国語", english: "英語", science: "理科" };
   let currentSubject = "math";
   let questions = [];
   let questionsLoadError = null;
@@ -383,7 +382,7 @@
     state.running = true;
     choices.disabled = false;
     form.querySelector("button").disabled = false;
-    feedback.textContent = "答えを選んで攻撃しよう。";
+    feedback.textContent = "";
     last = performance.now();
     tick(last);
     timer = setInterval(tick, 200);
@@ -443,8 +442,8 @@
     completeTitleButton.hidden = true;
     completeSound.pause();
     completeSound.currentTime = 0;
-    countdown.textContent = "戦闘開始まで…";
-    feedback.textContent = "準備して…";
+    countdown.textContent = "";
+    feedback.textContent = "";
     updateHp(); showQuestion();
     beginCountdown(options.countdownDelayMs ?? 150);
     return true;
@@ -452,7 +451,7 @@
   async function startDungeon(subject, options = {}) {
     const submitButton = form.querySelector("button");
     submitButton.disabled = true;
-    feedback.textContent = `${subjectNames[subject] || "教科"}の問題を読み込んでいます…`;
+    feedback.textContent = "";
     try {
       await loadQuestions(subject);
     } catch (error) {
