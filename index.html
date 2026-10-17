@@ -222,47 +222,66 @@
     .play-button:focus-visible { outline: 3px solid #b7edff; outline-offset: 5px; }
 
     /* ===== Today's mistakes ===== */
-    .mistakes-toggle {
+    .mistakes-drawer-shell {
       position: absolute;
       left: max(18px, env(safe-area-inset-left));
-      bottom: max(18px, env(safe-area-inset-bottom));
+      bottom: 0;
       z-index: 4;
-      display: grid;
-      grid-template-columns: 42px auto;
-      align-items: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 5px 13px 5px 5px;
-      border: 2px solid #c69a55;
-      border-radius: 999px;
+      width: min(680px, calc(100vw - max(36px, env(safe-area-inset-left))));
+      height: min(55dvh, 520px);
+      transform: translateY(calc(100% - 58px));
+      transition: transform 380ms cubic-bezier(.2,.8,.2,1);
+      pointer-events: none;
+    }
+    .mistakes-drawer-shell.is-open { transform: translateY(0); }
+    .mistakes-toggle {
+      position: absolute;
+      top: 0;
+      left: 12px;
+      z-index: 2;
+      width: 58px;
+      height: 58px;
+      padding: 0;
+      border: 0;
       color: #fff1c7;
-      background: linear-gradient(180deg, #26394d, #101c29);
-      box-shadow: 0 5px 15px #000b, inset 0 0 0 2px #07101a;
+      background: transparent;
+      filter: drop-shadow(0 5px 7px #000b);
+      pointer-events: auto;
       font: inherit;
-      font-weight: 700;
       cursor: pointer;
       transition: transform 160ms ease, filter 160ms ease;
     }
     .mistakes-toggle:hover,
-    .mistakes-toggle:focus-visible { transform: translateY(-3px); filter: brightness(1.18); outline: 3px solid #ffe2a0; outline-offset: 3px; }
+    .mistakes-toggle:focus-visible { transform: translateY(-3px) scale(1.06); filter: brightness(1.18) drop-shadow(0 5px 7px #000b); outline: 3px solid #ffe2a0; outline-offset: 3px; }
     .mistakes-toggle__arrow {
-      display: grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      color: #172433;
-      background: linear-gradient(#fff0b8, #c89543);
-      font-size: 1.75rem;
-      line-height: 1;
-      text-shadow: 0 1px #fff8;
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
       transition: transform 260ms ease;
     }
+    .mistakes-toggle__arrow::before {
+      content: "↑";
+      position: absolute;
+      inset: 7px;
+      display: grid;
+      place-items: center;
+      z-index: -1;
+      border: 2px solid #c69a55;
+      border-radius: 50%;
+      color: #fff0b8;
+      background: #152536;
+      font-size: 1.8rem;
+    }
+    .mistakes-toggle__arrow img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .mistakes-toggle[aria-expanded="true"] .mistakes-toggle__arrow { transform: rotate(180deg); }
     .mistakes-toggle__count {
-      min-width: 1.8em;
-      margin-left: 2px;
-      padding: 2px 7px;
+      position: absolute;
+      top: 0;
+      right: -3px;
+      z-index: 2;
+      min-width: 1.65em;
+      padding: 2px 5px;
       border-radius: 999px;
       color: #fff;
       background: #a92e28;
@@ -272,34 +291,24 @@
     .mistakes-toggle__count:empty { display: none; }
     .mistakes-drawer {
       position: absolute;
-      inset: auto 0 0;
-      z-index: 3;
-      height: min(72dvh, 680px);
-      padding: 40px clamp(22px, 6vw, 80px) max(28px, env(safe-area-inset-bottom));
+      inset: 54px 0 0;
+      padding: 40px 46px max(32px, env(safe-area-inset-bottom));
       color: #fff3d2;
-      visibility: hidden;
-      transform: translateY(105%);
-      transition: transform 380ms cubic-bezier(.2,.8,.2,1), visibility 0s linear 380ms;
-    }
-    .mistakes-drawer.is-open {
-      visibility: visible;
-      transform: translateY(0);
-      transition-delay: 0s;
+      pointer-events: auto;
     }
     .mistakes-drawer::before {
       content: "";
       position: absolute;
       inset: 0;
       z-index: -1;
-      border: 54px solid transparent;
-      border-image: url("./assets/frame3.png") 260 fill / 54px / 0 stretch;
+      border: 42px solid transparent;
+      border-image: url("./assets/frame3.png") 260 fill / 42px / 0 stretch;
       background: linear-gradient(180deg, #26394df5, #09121cf8);
       box-shadow: 0 -14px 34px #000a;
     }
-    .mistakes-drawer__inner { width: min(940px, 100%); height: 100%; margin: 0 auto; display: flex; flex-direction: column; min-height: 0; }
-    .mistakes-drawer__header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .mistakes-drawer__inner { width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column; min-height: 0; }
+    .mistakes-drawer__header { margin-bottom: 12px; text-align: center; }
     .mistakes-drawer__title { margin: 0; color: #ffe6a0; font: 700 clamp(1.35rem, 4vw, 2rem) serif; text-shadow: 0 3px 3px #170b02; }
-    .mistakes-drawer__close { min-width: 44px; min-height: 44px; border: 1px solid #a9834d; border-radius: 50%; color: #fff3d2; background: #172535; font-size: 1.55rem; cursor: pointer; }
     .mistakes-list { flex: 1; min-height: 0; margin: 0; padding: 0 6px 20px 0; overflow-y: auto; list-style: none; scrollbar-color: #bd8b43 #101a25; }
     .mistake-card { margin-bottom: 12px; padding: 14px 16px; border: 1px solid #8e744d; border-radius: 8px; background: #0c1725e8; box-shadow: inset 0 0 18px #0005; text-align: left; }
     .mistake-card__meta { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 8px; color: #d5bd89; font-size: .78rem; }
@@ -328,10 +337,10 @@
       .subject-button:last-child { grid-column: auto; }
       .subject-button { min-height: 48px; }
       .subject-button small { display: none; }
-      .mistakes-toggle { grid-template-columns: 40px auto; left: max(10px, env(safe-area-inset-left)); bottom: max(10px, env(safe-area-inset-bottom)); padding-right: 10px; }
-      .mistakes-toggle__label { font-size: .82rem; }
-      .mistakes-drawer { height: min(80dvh, 680px); padding: 34px 24px max(20px, env(safe-area-inset-bottom)); }
-      .mistakes-drawer::before { border-width: 34px; border-image-width: 34px; }
+      .mistakes-drawer-shell { left: max(8px, env(safe-area-inset-left)); width: calc(100vw - max(16px, env(safe-area-inset-left))); height: min(62dvh, 500px); }
+      .mistakes-toggle { left: 8px; }
+      .mistakes-drawer { padding: 34px 28px max(25px, env(safe-area-inset-bottom)); }
+      .mistakes-drawer::before { border-width: 30px; border-image-width: 30px; }
       .mistake-card__answers { grid-template-columns: 1fr; }
     }
 
@@ -365,7 +374,7 @@
       .title-effects { visibility: hidden !important; }
       .play-button { transition: none; }
       .game-transition { transition: none; }
-      .mistakes-drawer, .mistakes-toggle__arrow { transition: none; }
+      .mistakes-drawer-shell, .mistakes-toggle__arrow { transition: none; }
     }
     /* Keep controls reachable on short screens and inside display cutouts. */
     .intro, .main-screen { height: 100%; height: 100dvh; }
@@ -421,20 +430,20 @@
         <img src="./assets/Play.png" alt="" width="1774" height="887" draggable="false" />
       </button>
     </div>
-    <button class="mistakes-toggle" id="mistakesToggle" type="button" aria-expanded="false" aria-controls="mistakesDrawer">
-      <span class="mistakes-toggle__arrow" aria-hidden="true">↑</span>
-      <span class="mistakes-toggle__label">今日の間違い</span>
-      <span class="mistakes-toggle__count" id="mistakesCount" aria-label="0件"></span>
-    </button>
-    <section class="mistakes-drawer" id="mistakesDrawer" aria-labelledby="mistakesTitle" aria-hidden="true">
-      <div class="mistakes-drawer__inner">
-        <header class="mistakes-drawer__header">
-          <h2 class="mistakes-drawer__title" id="mistakesTitle">今日の間違い</h2>
-          <button class="mistakes-drawer__close" id="mistakesClose" type="button" aria-label="今日の間違いを閉じる">×</button>
-        </header>
-        <ol class="mistakes-list" id="mistakesList"></ol>
-      </div>
-    </section>
+    <div class="mistakes-drawer-shell" id="mistakesDrawerShell">
+      <button class="mistakes-toggle" id="mistakesToggle" type="button" aria-expanded="false" aria-controls="mistakesDrawer" aria-label="今日の間違いを開く">
+        <span class="mistakes-toggle__arrow" aria-hidden="true"><img src="./assets/yazirusi.png" alt="" draggable="false" onerror="this.hidden=true" /></span>
+        <span class="mistakes-toggle__count" id="mistakesCount" aria-label="0件"></span>
+      </button>
+      <section class="mistakes-drawer" id="mistakesDrawer" aria-labelledby="mistakesTitle" aria-hidden="true">
+        <div class="mistakes-drawer__inner">
+          <header class="mistakes-drawer__header">
+            <h2 class="mistakes-drawer__title" id="mistakesTitle">今日の間違い</h2>
+          </header>
+          <ol class="mistakes-list" id="mistakesList"></ol>
+        </div>
+      </section>
+    </div>
   </main>
   <section class="subject-select" id="subjectSelect" role="dialog" aria-modal="true" aria-labelledby="subjectSelectTitle" hidden>
     <div class="subject-select__frame">
@@ -538,9 +547,9 @@
     const titleMusic = document.getElementById("titleMusic");
 
     const MISTAKES_STORAGE_KEY = "tky-dungeon-mistakes-v1";
+    const mistakesDrawerShell = document.getElementById("mistakesDrawerShell");
     const mistakesToggle = document.getElementById("mistakesToggle");
     const mistakesDrawer = document.getElementById("mistakesDrawer");
-    const mistakesClose = document.getElementById("mistakesClose");
     const mistakesList = document.getElementById("mistakesList");
     const mistakesCount = document.getElementById("mistakesCount");
     const todayKey = () => {
@@ -603,19 +612,16 @@
       });
     }
     function setMistakesOpen(open) {
-      mistakesDrawer.classList.toggle("is-open", open);
+      mistakesDrawerShell.classList.toggle("is-open", open);
       mistakesDrawer.setAttribute("aria-hidden", String(!open));
       mistakesToggle.setAttribute("aria-expanded", String(open));
+      mistakesToggle.setAttribute("aria-label", open ? "今日の間違いを閉じる" : "今日の間違いを開く");
       if (open) {
         renderTodaysMistakes();
-        mistakesClose.focus({ preventScroll: true });
-      } else {
-        mistakesToggle.focus({ preventScroll: true });
       }
     }
     mistakesToggle.addEventListener("click", () => setMistakesOpen(mistakesToggle.getAttribute("aria-expanded") !== "true"));
-    mistakesClose.addEventListener("click", () => setMistakesOpen(false));
-    mistakesDrawer.addEventListener("keydown", event => { if (event.key === "Escape") setMistakesOpen(false); });
+    mistakesDrawerShell.addEventListener("keydown", event => { if (event.key === "Escape") setMistakesOpen(false); });
     window.addEventListener("tky:mistakes-updated", renderTodaysMistakes);
     window.addEventListener("storage", event => { if (event.key === MISTAKES_STORAGE_KEY) renderTodaysMistakes(); });
     renderTodaysMistakes();
