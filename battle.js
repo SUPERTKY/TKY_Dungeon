@@ -154,6 +154,37 @@
   function currentQuestion() {
     return state.questionOrder[state.questionIndex];
   }
+  function localDateKey(date = new Date()) {
+    const pad = value => String(value).padStart(2, "0");
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+  }
+  function saveMistake(question, selectedChoiceId) {
+    const storageKey = "tky-dungeon-mistakes-v1";
+    const selectedChoice = question.choices.find(choice => choice.id === selectedChoiceId);
+    const correctChoice = question.choices.find(choice => choice.id === question.answer.choiceId);
+    const now = new Date();
+    const entry = {
+      date: localDateKey(now),
+      timestamp: now.toISOString(),
+      questionId: question.id,
+      subject: question.subject,
+      grade: question.grade,
+      category: question.category,
+      prompt: question.prompt,
+      selectedText: selectedChoice?.text || "",
+      correctText: correctChoice?.text || "",
+      explanation: question.explanation || ""
+    };
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+      const history = Array.isArray(saved) ? saved : [];
+      history.push(entry);
+      localStorage.setItem(storageKey, JSON.stringify(history.slice(-300)));
+      window.dispatchEvent(new CustomEvent("tky:mistakes-updated"));
+    } catch (error) {
+      console.warn("間違い履歴を保存できませんでした。", error);
+    }
+  }
   function renderStageNumber(number) {
     const stageNumber = String(Math.max(0, Math.trunc(Number(number) || 1)));
     const container = document.querySelector(".stage-display__number");
@@ -478,6 +509,7 @@
       playHitEffect(monsterImage, "monster-hit");
       feedback.textContent = `正解！ モンスターに ${stage.answerDamage} ダメージ！`;
     } else {
+      saveMistake(question, selected.value);
       state.playerHp = Math.max(0, state.playerHp - stage.wrongAnswerDamage);
       updateHp();
       playHitEffect(screen, "player-hit");

@@ -221,6 +221,95 @@
     .play-button:active { transform: translateY(2px) scale(0.96); }
     .play-button:focus-visible { outline: 3px solid #b7edff; outline-offset: 5px; }
 
+    /* ===== Today's mistakes ===== */
+    .mistakes-toggle {
+      position: absolute;
+      left: max(18px, env(safe-area-inset-left));
+      bottom: max(18px, env(safe-area-inset-bottom));
+      z-index: 4;
+      display: grid;
+      grid-template-columns: 42px auto;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 5px 13px 5px 5px;
+      border: 2px solid #c69a55;
+      border-radius: 999px;
+      color: #fff1c7;
+      background: linear-gradient(180deg, #26394d, #101c29);
+      box-shadow: 0 5px 15px #000b, inset 0 0 0 2px #07101a;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 160ms ease, filter 160ms ease;
+    }
+    .mistakes-toggle:hover,
+    .mistakes-toggle:focus-visible { transform: translateY(-3px); filter: brightness(1.18); outline: 3px solid #ffe2a0; outline-offset: 3px; }
+    .mistakes-toggle__arrow {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: #172433;
+      background: linear-gradient(#fff0b8, #c89543);
+      font-size: 1.75rem;
+      line-height: 1;
+      text-shadow: 0 1px #fff8;
+      transition: transform 260ms ease;
+    }
+    .mistakes-toggle[aria-expanded="true"] .mistakes-toggle__arrow { transform: rotate(180deg); }
+    .mistakes-toggle__count {
+      min-width: 1.8em;
+      margin-left: 2px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      color: #fff;
+      background: #a92e28;
+      font-size: .78rem;
+      text-align: center;
+    }
+    .mistakes-toggle__count:empty { display: none; }
+    .mistakes-drawer {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 3;
+      height: min(72dvh, 680px);
+      padding: 40px clamp(22px, 6vw, 80px) max(28px, env(safe-area-inset-bottom));
+      color: #fff3d2;
+      visibility: hidden;
+      transform: translateY(105%);
+      transition: transform 380ms cubic-bezier(.2,.8,.2,1), visibility 0s linear 380ms;
+    }
+    .mistakes-drawer.is-open {
+      visibility: visible;
+      transform: translateY(0);
+      transition-delay: 0s;
+    }
+    .mistakes-drawer::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border: 54px solid transparent;
+      border-image: url("./assets/frame3.png") 260 fill / 54px / 0 stretch;
+      background: linear-gradient(180deg, #26394df5, #09121cf8);
+      box-shadow: 0 -14px 34px #000a;
+    }
+    .mistakes-drawer__inner { width: min(940px, 100%); height: 100%; margin: 0 auto; display: flex; flex-direction: column; min-height: 0; }
+    .mistakes-drawer__header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .mistakes-drawer__title { margin: 0; color: #ffe6a0; font: 700 clamp(1.35rem, 4vw, 2rem) serif; text-shadow: 0 3px 3px #170b02; }
+    .mistakes-drawer__close { min-width: 44px; min-height: 44px; border: 1px solid #a9834d; border-radius: 50%; color: #fff3d2; background: #172535; font-size: 1.55rem; cursor: pointer; }
+    .mistakes-list { flex: 1; min-height: 0; margin: 0; padding: 0 6px 20px 0; overflow-y: auto; list-style: none; scrollbar-color: #bd8b43 #101a25; }
+    .mistake-card { margin-bottom: 12px; padding: 14px 16px; border: 1px solid #8e744d; border-radius: 8px; background: #0c1725e8; box-shadow: inset 0 0 18px #0005; text-align: left; }
+    .mistake-card__meta { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 8px; color: #d5bd89; font-size: .78rem; }
+    .mistake-card__question { margin: 0 0 10px; line-height: 1.55; font-weight: 700; white-space: pre-wrap; }
+    .mistake-card__answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 14px; font-size: .92rem; }
+    .mistake-card__wrong { color: #ffaaa2; }
+    .mistake-card__correct { color: #aee9b6; }
+    .mistake-card__explanation { margin: 9px 0 0; padding-top: 9px; border-top: 1px solid #ffffff1f; color: #d9e2eb; line-height: 1.5; font-size: .9rem; }
+    .mistakes-empty { margin: auto; color: #d8ccb0; text-align: center; line-height: 1.8; }
+
     .subject-select { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 18px; background: rgba(0,0,0,.62); backdrop-filter: blur(3px); }
     .subject-select[hidden] { display: none; }
     .subject-select__frame { width: min(760px,94vw); min-height: min(560px,88vh); display: flex; flex-direction: column; justify-content: center; padding: clamp(62px,9vw,96px); border: 70px solid transparent; border-image: url("./assets/frame.png") 280 fill / 70px / 0 stretch; color: #fff4d1; text-align: center; filter: drop-shadow(0 18px 30px #000c); }
@@ -239,6 +328,11 @@
       .subject-button:last-child { grid-column: auto; }
       .subject-button { min-height: 48px; }
       .subject-button small { display: none; }
+      .mistakes-toggle { grid-template-columns: 40px auto; left: max(10px, env(safe-area-inset-left)); bottom: max(10px, env(safe-area-inset-bottom)); padding-right: 10px; }
+      .mistakes-toggle__label { font-size: .82rem; }
+      .mistakes-drawer { height: min(80dvh, 680px); padding: 34px 24px max(20px, env(safe-area-inset-bottom)); }
+      .mistakes-drawer::before { border-width: 34px; border-image-width: 34px; }
+      .mistake-card__answers { grid-template-columns: 1fr; }
     }
 
     .game-transition {
@@ -271,6 +365,7 @@
       .title-effects { visibility: hidden !important; }
       .play-button { transition: none; }
       .game-transition { transition: none; }
+      .mistakes-drawer, .mistakes-toggle__arrow { transition: none; }
     }
     /* Keep controls reachable on short screens and inside display cutouts. */
     .intro, .main-screen { height: 100%; height: 100dvh; }
@@ -326,6 +421,20 @@
         <img src="./assets/Play.png" alt="" width="1774" height="887" draggable="false" />
       </button>
     </div>
+    <button class="mistakes-toggle" id="mistakesToggle" type="button" aria-expanded="false" aria-controls="mistakesDrawer">
+      <span class="mistakes-toggle__arrow" aria-hidden="true">↑</span>
+      <span class="mistakes-toggle__label">今日の間違い</span>
+      <span class="mistakes-toggle__count" id="mistakesCount" aria-label="0件"></span>
+    </button>
+    <section class="mistakes-drawer" id="mistakesDrawer" aria-labelledby="mistakesTitle" aria-hidden="true">
+      <div class="mistakes-drawer__inner">
+        <header class="mistakes-drawer__header">
+          <h2 class="mistakes-drawer__title" id="mistakesTitle">今日の間違い</h2>
+          <button class="mistakes-drawer__close" id="mistakesClose" type="button" aria-label="今日の間違いを閉じる">×</button>
+        </header>
+        <ol class="mistakes-list" id="mistakesList"></ol>
+      </div>
+    </section>
   </main>
   <section class="subject-select" id="subjectSelect" role="dialog" aria-modal="true" aria-labelledby="subjectSelectTitle" hidden>
     <div class="subject-select__frame">
@@ -420,13 +529,96 @@
   <audio id="missSound" src="./assets/MISS.mp3" preload="none"></audio>
   <audio id="battleStartSound" src="./assets/start.mp3" preload="auto"></audio>
   <audio id="battleMusic" src="./assets/battle1.mp3" preload="auto" loop></audio>
-  <script src="./battle.js?v=battle17"></script>
+  <script src="./battle.js?v=battle18"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
   <script>
     const intro = document.getElementById("intro");
     const mainScreen = document.getElementById("mainScreen");
     const titleMusic = document.getElementById("titleMusic");
+
+    const MISTAKES_STORAGE_KEY = "tky-dungeon-mistakes-v1";
+    const mistakesToggle = document.getElementById("mistakesToggle");
+    const mistakesDrawer = document.getElementById("mistakesDrawer");
+    const mistakesClose = document.getElementById("mistakesClose");
+    const mistakesList = document.getElementById("mistakesList");
+    const mistakesCount = document.getElementById("mistakesCount");
+    const todayKey = () => {
+      const date = new Date();
+      const pad = value => String(value).padStart(2, "0");
+      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+    };
+    function getTodaysMistakes() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(MISTAKES_STORAGE_KEY) || "[]");
+        return Array.isArray(saved) ? saved.filter(item => item?.date === todayKey()) : [];
+      } catch {
+        return [];
+      }
+    }
+    function renderTodaysMistakes() {
+      const entries = getTodaysMistakes();
+      mistakesCount.textContent = entries.length ? String(entries.length) : "";
+      mistakesCount.setAttribute("aria-label", `${entries.length}件`);
+      mistakesList.replaceChildren();
+      if (!entries.length) {
+        const empty = document.createElement("li");
+        empty.className = "mistakes-empty";
+        empty.textContent = "今日はまだ間違いがありません。\n冒険の記録はここに残ります。";
+        mistakesList.append(empty);
+        return;
+      }
+      const subjectNames = { math: "数学", social: "社会", japanese: "国語", english: "英語", science: "理科" };
+      entries.forEach((entry, index) => {
+        const card = document.createElement("li");
+        card.className = "mistake-card";
+        const meta = document.createElement("div");
+        meta.className = "mistake-card__meta";
+        const label = document.createElement("span");
+        label.textContent = `${index + 1}. ${subjectNames[entry.subject] || "問題"}${entry.grade ? `・中${entry.grade - 6}` : ""}${entry.category ? `・${entry.category}` : ""}`;
+        const time = document.createElement("time");
+        time.dateTime = entry.timestamp || "";
+        time.textContent = entry.timestamp ? new Date(entry.timestamp).toLocaleTimeString("ja-JP", { hour: "2-digit", minute: "2-digit" }) : "";
+        meta.append(label, time);
+        const question = document.createElement("p");
+        question.className = "mistake-card__question";
+        question.textContent = entry.prompt || "問題文を取得できませんでした。";
+        const answers = document.createElement("div");
+        answers.className = "mistake-card__answers";
+        const wrong = document.createElement("span");
+        wrong.className = "mistake-card__wrong";
+        wrong.textContent = `あなたの答え：${entry.selectedText || "―"}`;
+        const correct = document.createElement("span");
+        correct.className = "mistake-card__correct";
+        correct.textContent = `正解：${entry.correctText || "―"}`;
+        answers.append(wrong, correct);
+        card.append(meta, question, answers);
+        if (entry.explanation) {
+          const explanation = document.createElement("p");
+          explanation.className = "mistake-card__explanation";
+          explanation.textContent = entry.explanation;
+          card.append(explanation);
+        }
+        mistakesList.append(card);
+      });
+    }
+    function setMistakesOpen(open) {
+      mistakesDrawer.classList.toggle("is-open", open);
+      mistakesDrawer.setAttribute("aria-hidden", String(!open));
+      mistakesToggle.setAttribute("aria-expanded", String(open));
+      if (open) {
+        renderTodaysMistakes();
+        mistakesClose.focus({ preventScroll: true });
+      } else {
+        mistakesToggle.focus({ preventScroll: true });
+      }
+    }
+    mistakesToggle.addEventListener("click", () => setMistakesOpen(mistakesToggle.getAttribute("aria-expanded") !== "true"));
+    mistakesClose.addEventListener("click", () => setMistakesOpen(false));
+    mistakesDrawer.addEventListener("keydown", event => { if (event.key === "Escape") setMistakesOpen(false); });
+    window.addEventListener("tky:mistakes-updated", renderTodaysMistakes);
+    window.addEventListener("storage", event => { if (event.key === MISTAKES_STORAGE_KEY) renderTodaysMistakes(); });
+    renderTodaysMistakes();
 
     // アイコンのフェードイン（2秒）より少し前からタイトル曲を開始する。
     setTimeout(() => {
