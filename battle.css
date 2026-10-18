@@ -110,7 +110,10 @@
 .battle-screen :focus-visible { outline: 3px solid #aeeaff; outline-offset: 3px; }
 .battle-feedback { min-height: 1.6em; margin: 12px 0 0; line-height: 1.5; color: #ffe1a0; }
 .player-status { position: relative; z-index: 3; grid-column: 1; grid-row: 1; display: flex; justify-content: space-between; align-items: end; gap: 12px; min-width: 0; padding: 0 5px; }
-.player-status .hp-block { width: min(100%, 300px); }
+.player-status .hp-block { position: relative; width: min(100%, 300px); }
+.player-status .hp-block::after { content: ""; position: absolute; z-index: 2; inset: -55%; pointer-events: none; background: url('./assets/heal.png') center / contain no-repeat; opacity: 0; }
+.player-status .hp-block.healing { animation: heal-glow 1.5s ease-out; }
+.player-status .hp-block.healing::after { animation: heal-image 1.5s ease-out; }
 .battle-end[hidden] { display: none; }
 .battle-end { padding: 10px 14px; color: #fff; background: #344c6c; border: 1px solid #b3e8ff; border-radius: 6px; }
 @media (max-width: 800px) {
@@ -136,6 +139,7 @@
   .battle-countdown img, .battle-countdown span { animation: none; }
   .battle-screen.player-hit { animation: none; }
   .battle-screen.low-health::before, .battle-screen.low-health .player-status .hp-meter { animation: none; opacity: .42; }
+  .player-status .hp-block.healing, .player-status .hp-block.healing::after { animation: none; }
   .enemy-area.monster-defeated .enemy-image { animation-name: monster-defeat-reduced; }
   .enemy-image.monster-spawn { animation-name: monster-spawn-reduced; }
   .miss-effect { animation-name: miss-burst-reduced; }
@@ -148,6 +152,8 @@
 @keyframes complete-rays { to { transform: rotate(1turn); } }
 @keyframes complete-sparks { from { transform: translateY(22px) scale(.98); opacity: .3; } to { transform: translateY(-22px) scale(1.04); opacity: .75; } }
 @keyframes complete-pulse { 50% { transform: scale(1.09); opacity: .72; } }
+@keyframes heal-glow { 35% { filter: drop-shadow(0 0 14px #8dffb8) brightness(1.18); } }
+@keyframes heal-image { 0% { opacity: 0; transform: scale(.65); } 25%, 70% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.18); } }
 @keyframes complete-title-appear { from { opacity: 0; transform: scale(.35) rotate(-3deg); } 65% { opacity: 1; transform: scale(1.08) rotate(1deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
 @keyframes complete-button-appear { from { opacity: 0; transform: translateY(25px) scale(.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes game-over-fade-in { from { opacity: 0; } to { opacity: 1; } }
