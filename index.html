@@ -7,7 +7,7 @@
   <title>TKY Dungeon</title>
   <link rel="icon" href="./TKYDUNGEON_Icon.ico" />
 
-  <link rel="stylesheet" href="./battle.css?v=responsive17" />
+  <link rel="stylesheet" href="./battle.css?v=responsive18" />
   <style>
     :root {
       color-scheme: dark;
@@ -496,6 +496,9 @@
       </button>
     </header>
     <div class="enemy-area">
+      <div class="combo-display" id="comboDisplay" role="status" aria-live="polite" hidden>
+        <div class="combo-digits" id="comboDigits" aria-hidden="true"></div>
+      </div>
       <div class="miss-effects" id="missEffects" aria-hidden="true"></div>
       <img class="enemy-image" id="monsterImage" alt="スライム" draggable="false" />
       <div class="hp-block enemy-hp-block">
@@ -546,7 +549,7 @@
   <audio id="missSound" src="./assets/MISS.mp3" preload="none"></audio>
   <audio id="battleStartSound" src="./assets/start.mp3" preload="auto"></audio>
   <audio id="battleMusic" src="./assets/battle1.mp3" preload="auto" loop></audio>
-  <script src="./battle.js?v=battle23"></script>
+  <script src="./battle.js?v=battle24"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
   <script>

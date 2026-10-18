@@ -72,6 +72,31 @@
 .enemy-area.monster-defeated .enemy-image { animation: monster-defeat 1.3s ease-in forwards; }
 .enemy-area.monster-defeated .enemy-hp-block { animation: enemy-ui-fade 650ms ease-in 350ms forwards; }
 .enemy-image.monster-spawn { animation: monster-spawn 650ms cubic-bezier(.2, .8, .25, 1); }
+.combo-display {
+  position: fixed; top: clamp(90px, 13vh, 130px); right: clamp(8px, 6vw, 90px); z-index: 7;
+  display: grid; justify-items: center; pointer-events: none; transform-origin: 50% 65%;
+  filter: drop-shadow(0 5px 2px #4a1200cc) drop-shadow(0 0 13px #ff9d00b8);
+}
+.combo-display[hidden] { display: none; }
+.combo-display::after {
+  content: "COMBO"; margin-top: clamp(-15px, -1.5vw, -7px); color: #fff0ac;
+  font-size: clamp(.72rem, 1.4vw, 1.05rem); font-weight: 1000; letter-spacing: .16em;
+  text-shadow: 0 2px 0 #8b2800, 0 0 8px #ff7800;
+}
+.combo-digits { display: flex; align-items: center; justify-content: center; }
+.combo-digits img {
+  display: block; width: clamp(62px, 8vw, 100px); height: auto; object-fit: contain;
+  margin-inline: clamp(-18px, -1.5vw, -10px); animation: combo-digit-pop 380ms cubic-bezier(.16, 1.35, .32, 1) both;
+  animation-delay: calc(var(--combo-index) * 35ms);
+}
+.combo-display.is-updated { animation: combo-pop 420ms cubic-bezier(.16, 1.25, .3, 1); }
+.combo-display.is-milestone { filter: drop-shadow(0 6px 2px #551000dd) drop-shadow(0 0 21px #fff36a) drop-shadow(0 0 38px #ff7800); }
+.combo-display.is-milestone::before {
+  content: ""; position: absolute; inset: -25%; z-index: -1;
+  background: radial-gradient(circle, #fff7a9b8 0 4%, #ffb00070 5% 18%, transparent 55%);
+  animation: combo-flare 600ms ease-out both;
+}
+.combo-display.is-breaking { animation: combo-break 420ms ease-in forwards; }
 .miss-effects { position: absolute; inset: 0; z-index: 5; overflow: visible; pointer-events: none; }
 .miss-effect { --x: 0px; --y: 0px; --rotation: 0deg; position: absolute; left: 50%; top: 38%; width: clamp(100px, 14vw, 178px); height: auto; pointer-events: none; filter: drop-shadow(0 3px 5px #001c48cc); animation: miss-burst 950ms ease-out forwards; }
 .hp-block { width: min(300px, 68vw); }
@@ -142,6 +167,7 @@
   .player-status .hp-block.healing, .player-status .hp-block.healing::after { animation: none; }
   .enemy-area.monster-defeated .enemy-image { animation-name: monster-defeat-reduced; }
   .enemy-image.monster-spawn { animation-name: monster-spawn-reduced; }
+  .combo-display.is-updated, .combo-display.is-breaking, .combo-display.is-milestone::before, .combo-digits img { animation: none; }
   .miss-effect { animation-name: miss-burst-reduced; }
   .game-over-screen, .game-over-screen img,
   .complete-screen, .complete-screen::before, .complete-screen::after,
@@ -173,6 +199,25 @@
 @keyframes monster-hit-reduced {
   0%, 100% { filter: drop-shadow(0 12px 12px #0006); }
   35% { filter: drop-shadow(0 0 16px #ff241c) sepia(1) saturate(9) hue-rotate(315deg) brightness(1.4); }
+}
+@keyframes combo-pop {
+  0% { opacity: .25; transform: translateY(12px) scale(.48) rotate(-5deg); }
+  58% { opacity: 1; transform: translateY(-5px) scale(1.14) rotate(2deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+@keyframes combo-digit-pop {
+  0% { opacity: 0; transform: translateY(16px) scale(.35) rotate(-9deg); }
+  70% { opacity: 1; transform: translateY(-3px) scale(1.09) rotate(2deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+@keyframes combo-flare {
+  from { opacity: 1; transform: scale(.45) rotate(-12deg); }
+  to { opacity: 0; transform: scale(1.7) rotate(12deg); }
+}
+@keyframes combo-break {
+  0% { opacity: 1; transform: translateY(0) scale(1) rotate(0); filter: brightness(1); }
+  35% { opacity: 1; transform: translateY(-4px) scale(1.1) rotate(-4deg); filter: brightness(1.8) saturate(.4); }
+  100% { opacity: 0; transform: translateY(28px) scale(.58) rotate(10deg); filter: brightness(.55); }
 }
 @keyframes player-hit-flash {
   0% { opacity: 0; }

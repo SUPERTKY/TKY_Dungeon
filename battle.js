@@ -97,6 +97,8 @@
   const form = document.getElementById("answerForm");
   const choices = document.getElementById("answerChoices");
   const enemyArea = document.querySelector(".enemy-area");
+  const comboDisplay = document.getElementById("comboDisplay");
+  const comboDigits = document.getElementById("comboDigits");
   const missEffects = document.getElementById("missEffects");
   const monsterImage = document.getElementById("monsterImage");
   const feedback = document.getElementById("battleFeedback");
@@ -125,7 +127,7 @@
   const framePanel = document.querySelector(".quiz-panel");
   const hitEffectHandlers = new WeakMap();
   const battleAudioSettings = { musicVolume: .42, musicPlaybackRate: 1, startPlaybackRate: 1 };
-  let frameRequestId = 0, countdownRunId = 0, gameOverRunId = 0, completeRunId = 0;
+  let frameRequestId = 0, countdownRunId = 0, gameOverRunId = 0, completeRunId = 0, comboRunId = 0;
   let stage = stages[0], stageIndex = 0, state = null, timer = null, last = null;
   function updateHp() {
     const updateMeter = (meter, value, max) => {
@@ -218,6 +220,48 @@
       return image;
     }));
     document.getElementById("stageName").setAttribute("aria-label", `ステージ ${stageNumber}`);
+  }
+  function comboAsset(digit) {
+    // Uploaded files are numbered 1-10, representing the visible digits 0-9.
+    return `./assets/combo_${Number(digit) + 1}.png`;
+  }
+  function resetComboDisplay() {
+    comboRunId += 1;
+    comboDisplay.hidden = true;
+    comboDisplay.classList.remove("is-updated", "is-milestone", "is-breaking");
+    comboDisplay.removeAttribute("aria-label");
+    comboDigits.replaceChildren();
+  }
+  function renderCombo(value) {
+    if (value < 2) {
+      resetComboDisplay();
+      return;
+    }
+    comboRunId += 1;
+    const digits = [...String(value)].map((digit, index) => {
+      const image = document.createElement("img");
+      image.src = comboAsset(digit);
+      image.alt = "";
+      image.draggable = false;
+      image.style.setProperty("--combo-index", index);
+      return image;
+    });
+    comboDigits.replaceChildren(...digits);
+    comboDisplay.hidden = false;
+    comboDisplay.setAttribute("aria-label", `${value}コンボ`);
+    comboDisplay.classList.remove("is-updated", "is-milestone", "is-breaking");
+    void comboDisplay.offsetWidth;
+    comboDisplay.classList.add("is-updated");
+    if (value % 5 === 0) comboDisplay.classList.add("is-milestone");
+  }
+  function breakCombo() {
+    if (comboDisplay.hidden) return;
+    const runId = ++comboRunId;
+    comboDisplay.classList.remove("is-updated", "is-milestone");
+    comboDisplay.classList.add("is-breaking");
+    setTimeout(() => {
+      if (runId === comboRunId) resetComboDisplay();
+    }, 420);
   }
   function showQuestion() {
     const question = currentQuestion();
@@ -439,6 +483,7 @@
     const shouldHeal = options.fullHeal && Number.isFinite(previousPlayerHp);
     if (shouldHeal) playerHp = stage.playerHp;
     state = { running: false, won: false, playerHp, monsterHp: stage.monsterHp, questionIndex: 0, questionOrder, remainingMs: stage.attackIntervalMs, correctStreak: 0 };
+    resetComboDisplay();
     title.hidden = true; title.inert = true; title.style.display = "none";
     window.titleBackground?.stop();
     const titleMusic = document.getElementById("titleMusic");
@@ -530,6 +575,7 @@
     const isCorrect = selected.value === question.answer.choiceId;
     if (isCorrect) {
       state.correctStreak += 1;
+      renderCombo(state.correctStreak);
       const streakMultiplier = state.correctStreak >= 10 ? 2 : state.correctStreak >= 5 ? 1.5 : state.correctStreak >= 3 ? 1.25 : 1;
       const answerDamage = Math.ceil(stage.answerDamage * streakMultiplier);
       state.monsterHp = Math.max(0, state.monsterHp - answerDamage);
@@ -539,6 +585,7 @@
       const streakText = streakMultiplier > 1 ? ` ${state.correctStreak}連続正解！` : "";
       feedback.textContent = `正解！ モンスターに ${answerDamage} ダメージ！${streakText}`;
     } else {
+      breakCombo();
       state.correctStreak = 0;
       saveMistake(question, selected.value);
       state.playerHp = Math.max(0, state.playerHp - stage.wrongAnswerDamage);
