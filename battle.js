@@ -419,11 +419,12 @@
     }
     await preloadImage(stage.monster);
     useFrame(stage.frameType);
-    let playerHp = options.preservePlayerHp && state
-      ? Math.max(0, Math.min(stage.playerHp, state.playerHp))
+    const previousPlayerHp = state?.playerHp;
+    let playerHp = options.preservePlayerHp && Number.isFinite(previousPlayerHp)
+      ? Math.max(0, Math.min(stage.playerHp, previousPlayerHp))
       : stage.playerHp;
-    const shouldHeal = options.preservePlayerHp && state && stage.healAmount;
-    if (shouldHeal) playerHp = Math.min(stage.playerHp, playerHp + stage.healAmount);
+    const shouldHeal = Number.isFinite(previousPlayerHp) && stage.healAmount > 0;
+    if (shouldHeal) playerHp = Math.min(stage.playerHp, Math.max(0, previousPlayerHp) + stage.healAmount);
     state = { running: false, won: false, playerHp, monsterHp: stage.monsterHp, questionIndex: 0, questionOrder, remainingMs: stage.attackIntervalMs };
     title.hidden = true; title.inert = true; title.style.display = "none";
     window.titleBackground?.stop();
