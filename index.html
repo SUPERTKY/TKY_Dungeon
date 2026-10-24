@@ -7,7 +7,7 @@
   <title>TKY Dungeon</title>
   <link rel="icon" href="./TKYDUNGEON_Icon.ico" />
 
-  <link rel="stylesheet" href="./battle.css?v=responsive18" />
+  <link rel="stylesheet" href="./battle.css?v=applied1" />
   <style>
     :root {
       color-scheme: dark;
@@ -336,7 +336,8 @@
     .subject-select__lead { margin: 0 0 20px; color: #d9cba8; }
     .subject-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
     .subject-button,.subject-cancel { min-height: 58px; border: 2px solid #bb8a45; border-radius: 7px; color: #fff4d1; background: linear-gradient(#35475b,#152334); font: inherit; font-weight: 700; cursor: pointer; box-shadow: inset 0 0 0 2px #0a1019,0 4px 8px #0008; transition: transform 140ms ease,filter 140ms ease; }
-    .subject-button:last-child { grid-column: 1 / -1; }
+    .subject-button--applied, .subject-button--applied small { color: #d6a0ff; }
+    .applied-mentor-option { display: block; margin-top: 16px; color: #e2c0ff; }
     .subject-button:hover,.subject-button:focus-visible { transform: translateY(-2px); filter: brightness(1.25); outline: 3px solid #ffe09a; outline-offset: 2px; }
     .subject-button:active { transform: translateY(1px); }
     .subject-button small { display: block; margin-top: 3px; color: #b9c8d9; font-weight: 400; }
@@ -462,7 +463,9 @@
         <button class="subject-button" type="button" data-subject="japanese">国語<small>漢字・文法・読解のダンジョン</small></button>
         <button class="subject-button" type="button" data-subject="english">英語<small>単語・文法のダンジョン</small></button>
         <button class="subject-button" type="button" data-subject="science">理科<small>自然と実験のダンジョン</small></button>
+        <button class="subject-button subject-button--applied" type="button" data-subject="applied">応用<small>数学の応用問題・グラフ</small></button>
       </div>
+      <label class="applied-mentor-option"><input type="checkbox" id="appliedMentorEnabled" checked /> 応用：師匠と一緒に挑戦する</label>
       <button class="subject-cancel" id="subjectCancel" type="button">もどる</button>
     </div>
   </section>
@@ -549,7 +552,8 @@
   <audio id="missSound" src="./assets/MISS.mp3" preload="none"></audio>
   <audio id="battleStartSound" src="./assets/start.mp3" preload="auto"></audio>
   <audio id="battleMusic" src="./assets/battle1.mp3" preload="auto" loop></audio>
-  <script src="./battle.js?v=battle24"></script>
+  <script src="./applied-dungeon.js?v=applied1"></script>
+  <script src="./battle.js?v=applied1"></script>
 
   <script src="./title-background.js?v=20261015-light1"></script>
   <script>
@@ -608,7 +612,7 @@
         mistakesList.append(empty);
         return;
       }
-      const subjectNames = { math: "数学", social: "社会", japanese: "国語", english: "英語", science: "理科" };
+      const subjectNames = { math: "数学", social: "社会", japanese: "国語", english: "英語", science: "理科", applied: "数学（応用）" };
       [...entries].reverse().forEach((entry, index) => {
         const card = document.createElement("li");
         card.className = "mistake-card";
@@ -722,7 +726,7 @@
       requestAnimationFrame(() => transition.classList.add("is-dark"));
       await new Promise(resolve => setTimeout(resolve, fadeDuration));
 
-      const started = await window.dungeonBattle.startDungeon(button.dataset.subject, { countdownDelayMs: fadeDuration + 120 });
+      const started = await window.dungeonBattle.startDungeon(button.dataset.subject, { countdownDelayMs: fadeDuration + 120, mentorEnabled: document.getElementById("appliedMentorEnabled").checked });
       if (!started) {
         transition.classList.remove("is-dark", "active");
         titleMusic.play().catch(() => {});
