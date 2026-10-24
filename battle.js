@@ -1,7 +1,8 @@
 (() => {
   "use strict";
-  const subjectFiles = { math: "./math.json", social: "./social.json", japanese: "./japanese.json", english: "./english.json", science: "./science.json" };
+  const subjectFiles = { math: "./math.json", social: "./social.json", japanese: "./japanese.json", english: "./english.json", science: "./science.json", applied: "./math_applied.json" };
   let currentSubject = "math";
+  let mentorEnabled = true;
   let questions = [];
   let questionsLoadError = null;
   async function loadQuestions(subject) {
@@ -11,7 +12,8 @@
     try {
       const response = await fetch(questionsUrl);
       if (!response.ok) throw new Error(`問題データの読み込みに失敗しました (${response.status})`);
-      const data = await response.json();
+      const payload = await response.json();
+      const data = subject === "applied" ? window.appliedDungeon.normalize(payload) : payload;
       if (!Array.isArray(data) || data.length === 0) throw new Error("問題データが空です");
       questions = data;
       currentSubject = subject;
@@ -35,7 +37,7 @@
   const floor3Defaults = { ...stageDefaults, background: "./assets/background3.png", music: "./assets/battle3.mp3", damage: 16, wrongAnswerDamage: 10 };
   const floor4Defaults = { ...stageDefaults, background: "./assets/background4.png", music: "./assets/battle4.mp3", damage: 20, wrongAnswerDamage: 12 };
   const floor5Defaults = { ...stageDefaults, background: "./assets/background5.png", music: "./assets/battle5.mp3", damage: 24, wrongAnswerDamage: 14 };
-  const stages = [
+  const normalStages = [
     { ...stageDefaults, name: "ステージ 1", number: 1, level: 1, monster: "./assets/monster1.png", monsterName: "スライム", monsterHp: 20, questionFilter: { grade: 7, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 2", number: 2, level: 2, monster: "./assets/kinoko.png", monsterName: "キノコ", monsterHp: 25, questionFilter: { grade: 7, difficulty: 1 } },
     { ...stageDefaults, name: "ステージ 3", number: 3, level: 3, monster: "./assets/ko-mori.png", monsterName: "コウモリ", monsterHp: 30, questionFilter: { grade: 8, difficulty: 1 } },
@@ -86,12 +88,28 @@
     { lastStage: 34, normalAnswers: 18, bossAnswers: 27 },
     { lastStage: 42, normalAnswers: 20, bossAnswers: 30 }
   ];
-  stages.forEach(currentStage => {
+  normalStages.forEach(currentStage => {
     const balance = floorBalance.find(floor => currentStage.number <= floor.lastStage) || floorBalance.at(-1);
     const targetAnswers = currentStage.isBoss ? balance.bossAnswers : balance.normalAnswers;
     currentStage.targetAnswers = targetAnswers;
     currentStage.answerDamage = Math.ceil(currentStage.monsterHp / targetAnswers);
   });
+  const specialEnemies = [
+    ["kokutetsu_no_makishi.png", "黒鉄の魔騎士"],
+    ["meien_no_maryu.png", "冥炎の魔竜"],
+    ["norowareta_mimic.png", "呪われたミミック"],
+    ["shinku_no_akuma.png", "深紅の悪魔"],
+    ["tagan_no_magan.png", "多眼の魔眼"],
+    ["Boss_special.png", "応用ダンジョンのボス"]
+  ];
+  const specialStages = specialEnemies.map(([asset, name], index) => ({
+    ...stageDefaults, name: `応用ステージ ${index + 1}`, number: index + 1, level: index + 1,
+    background: "./assets/background_special.png", monster: `./assets/${asset}`,
+    monsterName: name, monsterHp: 1, answerDamage: 1, wrongAnswerDamage: 25,
+    damage: 10, attackIntervalMs: 60000, isBoss: index === specialEnemies.length - 1,
+    questionFilter: { questionId: `math-applied-00${index + 1}` }
+  }));
+  let stages = normalStages;
   const screen = document.getElementById("battleScreen");
   const title = document.getElementById("mainScreen");
   const form = document.getElementById("answerForm");
@@ -162,6 +180,7 @@
     return questions.filter(question =>
       question.type === "choice" &&
       question.subject === currentSubject &&
+      (!filter.questionId || question.id === filter.questionId) &&
       (!filter.grade || question.grade === filter.grade) &&
       (!filter.difficulty || question.difficulty === filter.difficulty)
     );
@@ -267,6 +286,12 @@
     const question = currentQuestion();
     document.getElementById("questionText").textContent = question.prompt;
     document.getElementById("questionCategory").textContent = `中${question.grade - 6}・${question.category}`;
+    window.appliedDungeon.render(question, {
+      enabled: currentSubject === "applied", mentorEnabled,
+      canHelp: () => Boolean(state?.running),
+      pause: () => { tick(); if (!state?.running) return false; state.mentorOpen = true; last = null; return true; },
+      resume: () => { if (state) state.mentorOpen = false; last = performance.now(); }
+    });
     choices.replaceChildren();
     question.choices.forEach(option => {
       const label = document.createElement("label");
@@ -397,7 +422,7 @@
     }
   }
   function tick(now = performance.now()) {
-    if (!state?.running || document.hidden) { last = null; return; }
+    if (!state?.running || state.mentorOpen || document.hidden) { last = null; return; }
     if (last !== null) state.remainingMs -= Math.max(0, now - last);
     last = now;
     if (state.remainingMs <= 0) {
@@ -465,6 +490,7 @@
       submitButton.disabled = false;
       return false;
     }
+    window.appliedDungeon.reset();
     clearInterval(timer); timer = null; countdownRunId += 1; completeRunId += 1;
     stageIndex = stages[index] ? index : 0;
     stage = stages[stageIndex];
@@ -488,6 +514,7 @@
     window.titleBackground?.stop();
     const titleMusic = document.getElementById("titleMusic");
     titleMusic.pause();
+    screen.classList.toggle("applied-mode", currentSubject === "applied");
     screen.hidden = false; screen.style.backgroundImage = `url("${stage.background}")`;
     if (battleMusic.dataset.track !== stage.music) {
       battleMusic.pause();
@@ -525,6 +552,8 @@
     feedback.textContent = "";
     try {
       await loadQuestions(subject);
+      stages = subject === "applied" ? specialStages : normalStages;
+      mentorEnabled = options.mentorEnabled !== false;
     } catch (error) {
       feedback.textContent = "問題データを読み込めませんでした。ページをWebサーバーから開いてください。";
       submitButton.disabled = false;
@@ -533,6 +562,7 @@
     return start(0, options);
   }
   function returnToTitle() {
+    window.appliedDungeon.reset();
     clearInterval(timer); timer = null; countdownRunId += 1; gameOverRunId += 1; completeRunId += 1; if (state) state.running = false;
     startCountdown.hidden = true;
     countdownDigit.hidden = true;
@@ -562,7 +592,7 @@
     window.location.reload();
   }
   form.addEventListener("submit", event => {
-    event.preventDefault(); if (!state?.running) return;
+    event.preventDefault(); if (!state?.running || state.mentorOpen) return;
     // Account for the exact answer submission time before resolving combat.
     tick(); if (!state.running) return;
     const question = currentQuestion();
@@ -641,5 +671,5 @@
     loadFrame(requestedAsset, requestedType, requestedType !== "square");
   }
   useFrame();
-  window.dungeonBattle = { start, startDungeon, returnToTitle, restartFromBoot, useFrame, stages, frameAssets, subjectFiles, battleAudioSettings, getState: () => state ? { ...state, subject: currentSubject } : null };
+  window.dungeonBattle = { start, startDungeon, returnToTitle, restartFromBoot, useFrame, stages, frameAssets, subjectFiles, battleAudioSettings, specialStages, getState: () => state ? { ...state, subject: currentSubject } : null };
 })();

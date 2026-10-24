@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "description": "中学数学の応用問題。gradeは7=中1、8=中2、9=中3。answerIndexは0始まり。graphはapplied-dungeon.jsで描画する。",
+  "questions": [
+    {
+      "id": "math-applied-001",
+      "subject": "math",
+      "grade": 7,
+      "difficulty": 3,
+      "mode": "applied",
+      "topic": "水量と方程式",
+      "question": "水槽には最初60Lの水がある。毎分一定の量の水を抜くと、残量はグラフのように変化した。残量が15Lになるのは何分後か。",
+      "choices": [
+        "6分後",
+        "7分後",
+        "7.5分後",
+        "8分後"
+      ],
+      "answerIndex": 2,
+      "graph": {
+        "type": "cartesian",
+        "xAxis": {
+          "label": "時間",
+          "unit": "分",
+          "min": 0,
+          "max": 10,
+          "tickStep": 1
+        },
+        "yAxis": {
+          "label": "残量",
+          "unit": "L",
+          "min": 0,
+          "max": 60,
+          "tickStep": 10
+        },
+        "series": [
+          {
+            "label": "水の残量",
+            "type": "polyline",
+            "points": [
+              [
+                0,
+                60
+              ],
+              [
+                2,
+                48
+              ],
+              [
+                4,
+                36
+              ],
+              [
+                6,
+                24
+              ],
+              [
+                8,
+                12
+              ],
+              [
+                10,
+                0
+              ]
+            ]
+          }
+        ],
+        "accessibleDescription": "0、2、4、6、8、10分の残量は60、48、36、24、12、0L。点を直線で結ぶ。"
+      },
+      "mentor": {
+        "hints": [
+          "2分で何L減っているかを読み取ろう。",
+          "1分で6L減る。15Lになるまでに抜く量を求めよう。"
+        ],
+        "explanation": "2分で12L減るので毎分6L減る。(60−15)÷6=7.5より7.5分後。"
+      }
+    },
+    {
+      "id": "math-applied-002",
+      "subject": "math",
+      "grade": 8,
+      "difficulty": 3,
+      "mode": "applied",
+      "topic": "一次関数と速さ",
+      "question": "Aさんの出発から2分後、Bさんが同じ地点から同じ道を進んだ。2人はそれぞれ一定の速さで進み、距離はグラフのように変化した。Bさんが追いつくのはAさんの出発から何分後か。",
+      "choices": [
+        "3分後",
+        "4分後",
+        "6分後",
+        "8分後"
+      ],
+      "answerIndex": 2,
+      "graph": {
+        "type": "cartesian",
+        "xAxis": {
+          "label": "Aさんの出発からの時間",
+          "unit": "分",
+          "min": 0,
+          "max": 8,
+          "tickStep": 1
+        },
+        "yAxis": {
+          "label": "出発地点からの距離",
+          "unit": "m",
+          "min": 0,
+          "max": 540,
+          "tickStep": 60
+        },
+        "series": [
+          {
+            "label": "Aさん",
+            "type": "polyline",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                2,
+                120
+              ],
+              [
+                4,
+                240
+              ],
+              [
+                6,
+                360
+              ],
+              [
+                8,
+                480
+              ]
+            ]
+          },
+          {
+            "label": "Bさん",
+            "type": "polyline",
+            "points": [
+              [
+                2,
+                0
+              ],
+              [
+                4,
+                180
+              ],
+              [
+                6,
+                360
+              ],
+              [
+                8,
+                540
+              ]
+            ]
+          }
+        ],
+        "accessibleDescription": "Aさんは0分で0m、2分で120m、4分で240m。Bさんは2分で0m、4分で180m。以後もそれぞれ一定の割合で増える。"
+      },
+      "mentor": {
+        "hints": [
+          "2本の直線が交わる点に注目しよう。",
+          "Aさんは毎分60m、Bさんは毎分90m。Bさんが歩いた時間はx−2分だよ。"
+        ],
+        "explanation": "Aさんの出発からx分後として60x=90(x−2)。これを解くとx=6。Bさんが歩いた時間は4分だが、答えはAさんの出発から6分後。"
+      }
+    },
+    {
+      "id": "math-applied-003",
+      "subject": "math",
+      "grade": 8,
+      "difficulty": 3,
+      "mode": "applied",
+      "topic": "一次関数と料金",
+      "question": "施設の料金は、Aプランが基本料金300円と毎分40円、Bプランが基本料金なしで毎分70円。1分未満も時間に比例して計算する。Aの方が安くなるのはどのときか。",
+      "choices": [
+        "10分未満",
+        "10分ちょうど",
+        "10分より長いとき",
+        "いつでもAが安い"
+      ],
+      "answerIndex": 2,
+      "graph": null,
+      "mentor": {
+        "hints": [
+          "料金が同じになる時間を求めよう。",
+          "300+40x=70xを解き、その時間の前後を比べよう。"
+        ],
+        "explanation": "300+40x=70xよりx=10。10分では両方700円。10分より長く使うと、毎分の料金が低いAの方が安い。"
+      }
+    },
+    {
+      "id": "math-applied-004",
+      "subject": "math",
+      "grade": 9,
+      "difficulty": 3,
+      "mode": "applied",
+      "topic": "関数y=ax²",
+      "question": "グラフは関数y=ax²を表し、点(2, 2)を通る。x=3のときのyの値はいくつか。",
+      "choices": [
+        "3",
+        "4.5",
+        "6",
+        "9"
+      ],
+      "answerIndex": 1,
+      "graph": {
+        "type": "cartesian",
+        "xAxis": {
+          "label": "x",
+          "unit": "",
+          "min": -4,
+          "max": 4,
+          "tickStep": 1
+        },
+        "yAxis": {
+          "label": "y",
+          "unit": "",
+          "min": 0,
+          "max": 8,
+          "tickStep": 1
+        },
+        "series": [
+          {
+            "label": "y=ax²",
+            "type": "quadratic",
+            "coefficients": {
+              "a": 0.5,
+              "b": 0,
+              "c": 0
+            },
+            "domain": [
+              -4,
+              4
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "type": "point",
+            "x": 2,
+            "y": 2,
+            "label": "(2, 2)"
+          }
+        ],
+        "accessibleDescription": "原点を頂点とし、y軸について対称な下に凸の放物線。点(2, 2)が示されている。"
+      },
+      "mentor": {
+        "hints": [
+          "x=2、y=2を式に代入しよう。",
+          "2=4aなのでa=1/2。次にx=3を代入しよう。"
+        ],
+        "explanation": "2=a×2²よりa=1/2。y=(1/2)x²にx=3を代入するとy=4.5。"
+      }
+    },
+    {
+      "id": "math-applied-005",
+      "subject": "math",
+      "grade": 9,
+      "difficulty": 3,
+      "mode": "applied",
+      "topic": "二次方程式と面積",
+      "question": "縦8m、横12mの長方形の庭の内側の周囲に同じ幅の通路を作ると、中央の長方形の花壇が60m²になった。通路の幅は何mか。",
+      "choices": [
+        "0.5m",
+        "1m",
+        "1.5m",
+        "2m"
+      ],
+      "answerIndex": 1,
+      "graph": null,
+      "mentor": {
+        "hints": [
+          "幅をxmとして花壇の縦と横を表そう。",
+          "両側に通路があるので、縦は8−2x、横は12−2xになる。"
+        ],
+        "explanation": "(8−2x)(12−2x)=60よりx²−10x+9=0。(x−1)(x−9)=0よりx=1,9。0<x<4が必要なので幅は1m。"
+      }
+    },
+    {
+      "id": "math-applied-006",
+      "subject": "math",
+      "grade": 8,
+      "difficulty": 3,
+      "mode": "applied",
+      "topic": "確率",
+      "question": "袋に赤玉3個、白玉2個が入っている。どの玉も同じ確率で取り出される。戻さずに1個ずつ2個取り出すとき、色が異なる確率はいくつか。",
+      "choices": [
+        "2/5",
+        "1/2",
+        "3/5",
+        "2/3"
+      ],
+      "answerIndex": 2,
+      "graph": null,
+      "mentor": {
+        "hints": [
+          "赤→白と白→赤に分けよう。",
+          "2個目を取るとき、袋には4個残っている。"
+        ],
+        "explanation": "赤→白は(3/5)×(2/4)=3/10。白→赤は(2/5)×(3/4)=3/10。合計3/5。"
+      }
+    }
+  ]
+}
